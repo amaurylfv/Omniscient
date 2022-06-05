@@ -1,10 +1,24 @@
-allow_embedding: false
-package_name: Material_Design_1
-name: Material Design 1
-startup_form: Form1
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+package_name: AutoCHD
+allow_embedding: false
+name: AutoCHD
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: AutoCHD}
+startup_form: Form1
+db_schema:
+  revenue:
+    title: Table 1
+    client: none
+    server: full
+    columns:
+    - name: amount
+      admin_ui: {width: 200}
+      type: number
+    - name: date
+      admin_ui: {width: 200}
+      type: date
+uplink_visible: true
