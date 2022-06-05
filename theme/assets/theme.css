@@ -1,6 +1,6 @@
 /**
- This CSS implements the Material Design look and feel for Anvil apps.
- **/
+/** This CSS implements the Material Design look and feel for Anvil apps. **/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 /* Stop panel-cols cutting off drop shadows */
 .anvil-panel-col {
@@ -95,8 +95,8 @@ a>.anvil-component-icon.right_edge-icon,
 
 
 /* Typography */
-body {
-  font-family: Roboto, Noto, Arial, sans-serif;
+body { 
+  font-family: 'Noto Sans', sans-serif; /* edit this line */
   font-size: 14px;
   line-height: 1.4286;
   background-color: #fafafa;
