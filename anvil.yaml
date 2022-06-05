@@ -21,5 +21,22 @@ db_schema:
     - name: date
       admin_ui: {width: 200}
       type: date
+  sig:
+    title: sig
+    client: none
+    server: full
+    columns:
+    - name: Year
+      admin_ui: {width: 200}
+      type: date
+    - name: Marge commerciale
+      admin_ui: {width: 200}
+      type: number
+    - name: Production de l'exercice
+      admin_ui: {width: 200}
+      type: number
+    - name: Valeur ajoutée
+      admin_ui: {width: 200}
+      type: number
 uplink_visible: true
 renamed: true
