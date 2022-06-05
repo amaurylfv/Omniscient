@@ -16,3 +16,10 @@ class Form11(Form11Template):
   def button_2_click(self, **event_args):
     open_form('Form1', my_parameter="an_argument") #Accueil
 
+    
+
+  def file_loader_1_change(self, file, **event_args):
+    invoice_data = anvil.server.call('get_invoice_data', self.file_loader_1.file)
+    self.label_2 = invoice_data
+    
+

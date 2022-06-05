@@ -14,6 +14,8 @@ import anvil.server
 def get_revenue():
   return app_tables.revenue.search()
 
+
+
 @anvil.server.callable
 def get_sig(): # Table des SIG
   return app_tables.sig.search()
