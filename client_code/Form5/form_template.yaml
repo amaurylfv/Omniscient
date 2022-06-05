@@ -24,3 +24,10 @@ components:
     name: button_1
     layout_properties: {grid_position: 'ATKYBJ,VVCVJD'}
     event_bindings: {click: button_1_click}
+- type: RichText
+  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+    foreground: '', visible: true, font_size: null, content: "AutoCHD \ud83e\udd16\
+      \ud83e\uddfe", font: '', spacing_above: small, spacing_below: small, data: null,
+    background: '', format: markdown}
+  name: rich_text_1
+  layout_properties: {slot: title}

@@ -1,4 +1,6 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  data_bindings:
+  - {property: auto_display_data, code: 'self.item[''year'']'}
 components: []
 is_package: true
-untouched: true
