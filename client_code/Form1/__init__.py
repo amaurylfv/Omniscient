@@ -1,3 +1,4 @@
+#Import des diverses librairies
 from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
@@ -6,8 +7,22 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+#Import des pages de navigation de la nav-bar
+from ..Form2 import Form2
+from ..Form3 import Form3
+from ..Form4 import Form4
+from ..Form5 import Form5
+from ..Form6 import Form6
+from ..Form7 import Form7
+from ..Form8 import Form8
+from ..Form9 import Form9
+from ..Form10 import Form10
+from ..Form11 import Form11
+
+
 class Form1(Form1Template):
 
+  
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -16,6 +31,38 @@ class Form1(Form1Template):
     self.temp_data = []
     self.build_revenue_graph()
     self.build_marketing_graph()
+
+#boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
+  def button_1_click(self, **event_args):
+    open_form('Form2', my_parameter="an_argument") #Marketing
+    
+  def button_2_click(self, **event_args):
+    open_form('Form3', my_parameter="an_argument") #Comptabilité
+    
+  def button_3_click(self, **event_args):
+    open_form('Form4', my_parameter="an_argument") #Gestion
+    
+  def button_4_click(self, **event_args):
+    open_form('Form5', my_parameter="an_argument") #Finance
+    
+  def button_5_click(self, **event_args):
+    open_form('Form6', my_parameter="an_argument") #Audit
+    
+  def button_6_click(self, **event_args):
+    open_form('Form7', my_parameter="an_argument") #Juridique
+    
+  def button_7_click(self, **event_args):
+    open_form('Form8', my_parameter="an_argument") #Fiscalité
+    
+  def button_8_click(self, **event_args):
+    open_form('Form9', my_parameter="an_argument") #Social
+    
+  def button_9_click(self, **event_args):
+    open_form('Form10', my_parameter="an_argument") #Données
+    
+  def button_10_click(self, **event_args):
+    open_form('Form11', my_parameter="an_argument") #Paramètres IA
+
     
   def style_plot(self, plot):
     plot.layout = go.Layout(
@@ -78,9 +125,11 @@ class Form1(Form1Template):
     # Style the plot and add a plot title
     self.style_plot(self.plot_3)
     self.plot_3.layout.title = "TEST 2"
-    
+        
 
-  def btn1_click(self, **event_args):
-    open_form('Form2', my_parameter="an_argument")
+
+
+
+
 
 
