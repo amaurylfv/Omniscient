@@ -12,3 +12,8 @@ class Form5(Form5Template):
 
     # Any code you write here will run when the form opens.
     
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+

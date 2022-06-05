@@ -11,4 +11,4 @@ class Form12(Form12Template):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.repeating_panel_employees.items = anvil.server.call('get_employees')
+    self.repeating_panel_1.items = anvil.server.call('get_sig')

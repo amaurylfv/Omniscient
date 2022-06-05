@@ -9,6 +9,7 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: AutoCHD}
 startup_form: Form1
+native_deps: {head_html: ''}
 db_schema:
   revenue:
     title: Table 1
@@ -36,6 +37,24 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     - name: Valeur ajoutée
+      admin_ui: {width: 200}
+      type: number
+    - name: EBE
+      admin_ui: {width: 200}
+      type: number
+    - name: Résultat d'exploitation
+      admin_ui: {width: 200}
+      type: number
+    - name: Résultat courant avant impôt
+      admin_ui: {width: 200}
+      type: number
+    - name: Résultat exceptionnel
+      admin_ui: {width: 200}
+      type: number
+    - name: Résultat de l'exercice
+      admin_ui: {width: 200}
+      type: number
+    - name: Plus-value et Moins-value sur cessions d'éléments d'actif
       admin_ui: {width: 200}
       type: number
 uplink_visible: true
