@@ -11,6 +11,15 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:home'}
+    name: button_2
+    layout_properties: {}
+    event_bindings: {click: button_2_click}
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
   name: card_1
@@ -24,6 +33,13 @@ components:
     name: button_1
     layout_properties: {grid_position: 'ATKYBJ,VVCVJD'}
     event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Répartition de la VA, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'EJJMWY,XWGXNN'}
 - type: RichText
   properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
     foreground: '', visible: true, font_size: null, content: "AutoCHD \ud83e\udd16\

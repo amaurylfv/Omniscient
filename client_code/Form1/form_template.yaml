@@ -18,59 +18,66 @@ components:
     - type: Plot
       properties: {height: 211}
       name: plot_1
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK JELJMC,THHTQK', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK JELJMC,THHTQK', full_width_row: true,
+        row_background: ''}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: ''}
       name: card_2
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK MNFOAB,KHBCLI', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK MNFOAB,KHBCLI', full_width_row: true,
+        row_background: ''}
       components:
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
           visible: true, text: Highest revenue, font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_1
-        layout_properties: {grid_position: 'SZWFHA,GWGNBX'}
+        layout_properties: {grid_position: 'SZWFHA,GWGNBX', full_width_row: false,
+          row_background: '#F5CBA7'}
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
           visible: true, text: revenue_label, font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: revenue_label
-        layout_properties: {grid_position: 'BEFYVZ,XUUOWB'}
+        layout_properties: {grid_position: 'BEFYVZ,XUUOWB', row_background: '#F5CBA7'}
     - type: Plot
       properties: {height: 196}
       name: plot_2
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK WYLXOO,TPFQLL', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK WYLXOO,TPFQLL', full_width_row: true,
+        row_background: ''}
     - type: Plot
       properties: {height: 211}
       name: plot_3
-      layout_properties: {grid_position: 'PRQZUS,HUZKJW ZHWOCX,YEATAA', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,HUZKJW ZHWOCX,YEATAA', full_width_row: true,
+        row_background: ''}
     - type: ColumnPanel
       properties: {role: card, col_widths: '{}'}
       name: card_3
-      layout_properties: {grid_position: 'PRQZUS,HUZKJW WOTOVA,SYJRES', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,HUZKJW WOTOVA,SYJRES', full_width_row: true,
+        row_background: ''}
       components:
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
           visible: true, text: Highest signups, font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_2
-        layout_properties: {grid_position: 'LRSEIB,RJRGYX'}
+        layout_properties: {grid_position: 'LRSEIB,RJRGYX', row_background: '#F1948A'}
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
           visible: true, text: signups_label, font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: signups_label
-        layout_properties: {grid_position: 'AJHQIG,QTTVQI'}
+        layout_properties: {grid_position: 'AJHQIG,QTTVQI', row_background: '#F1948A'}
     - type: Plot
       properties: {height: 196}
       name: plot_4
-      layout_properties: {grid_position: 'PRQZUS,HUZKJW ZQWYNE,XGUHQW', full_width_row: true}
+      layout_properties: {grid_position: 'PRQZUS,HUZKJW ZQWYNE,XGUHQW', full_width_row: true,
+        row_background: ''}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',

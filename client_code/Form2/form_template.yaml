@@ -19,6 +19,7 @@ components:
       underline: false, icon: 'fa:home'}
     name: button_1
     layout_properties: {expand: false, width: null}
+    event_bindings: {click: button_1_click}
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
   name: card_1

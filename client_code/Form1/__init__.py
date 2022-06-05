@@ -104,11 +104,11 @@ class Form1(Form1Template):
     self.plot_1.data = go.Bar(
       x = [x['date'] for x in db_data],
       y = [x['amount'] for x in db_data],
-      marker=dict(color='#2196f3')
+      marker=dict(color='#F7DC6F')
     )
     # Style the plot and add a plot title
     self.style_plot(self.plot_1)
-    self.plot_1.layout.title = "REVENUE GROWTH"
+    self.plot_1.layout.title = "Chiffre d'affaires mensuel"
   
     
   def build_marketing_graph(self):
@@ -121,10 +121,10 @@ class Form1(Form1Template):
     self.plot_3.data = go.Scatter(x = [x['strategy'] for x in marketing_data],
                                   y = [x['count'] for x in marketing_data],
                                   mode='lines+markers',
-                                  line=dict(color='#2196f3'))
+                                  line=dict(color='#F0B27A'))
     # Style the plot and add a plot title
     self.style_plot(self.plot_3)
-    self.plot_3.layout.title = "TEST 2"
+    self.plot_3.layout.title = "Impact des campagnes"
         
 
 
