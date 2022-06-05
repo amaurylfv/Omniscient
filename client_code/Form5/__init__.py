@@ -4,6 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Form12 import Form12
 
 class Form5(Form5Template):
   def __init__(self, **properties):
@@ -14,6 +15,5 @@ class Form5(Form5Template):
     
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    open_form('Form12', my_parameter="an_argument") #Marketing
 

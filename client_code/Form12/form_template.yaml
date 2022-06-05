@@ -1,0 +1,47 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: XJOPSO, title: Year, data_key: Year}
+      - {id: OVWTGL, title: Marge Commerciale, data_key: Marge commerciale}
+      - {id: CCTEGF, title: Production De L'exercice, data_key: Production de l'exercice}
+      - {id: GMSOIU, title: Valeur Ajoutée, data_key: Valeur ajoutée}
+      - {id: XGILSY, title: EBE, data_key: EBE}
+      - {id: ROEQNL, title: Résultat D'exploitation, data_key: Résultat d'exploitation}
+      - {id: UKDDPP, title: Résultat Courant Avant Impôt, data_key: Résultat courant avant impôt}
+      - {id: ZJRPHT, title: Résultat Exceptionnel, data_key: Résultat exceptionnel}
+      - {id: WABFWE, title: Résultat De L'exercice, data_key: Résultat de l'exercice}
+      - {id: GEAGUO, title: Plus-value Et Moins-value Sur Cessions D'éléments D'actif,
+        data_key: Plus-value et Moins-value sur cessions d'éléments d'actif}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'UQLQYZ,WTNXEE'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Form12.RowTemplate2}
+      name: repeating_panel_1
+      layout_properties: {}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
