@@ -80,3 +80,7 @@ class Form1(Form1Template):
     self.plot_3.layout.title = "TEST 2"
     
 
+  def btn1_click(self, **event_args):
+    open_form('Form2', my_parameter="an_argument")
+
+
