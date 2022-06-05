@@ -11,3 +11,39 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: top, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:home'}
+    name: button_1
+    layout_properties: {expand: false, width: null}
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Prévision des ventes, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'ALPQCU,RITDJF'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: 'Saisonnalité
+
+        des ventes', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'FLAMLL,OAAIAN'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Objectifs commerciaux, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_4
+    layout_properties: {grid_position: 'UTGPLS,BUONRS'}

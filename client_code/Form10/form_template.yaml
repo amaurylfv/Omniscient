@@ -11,3 +11,22 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Attestation de vigilance, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'FHNMUX,KKWVPF'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Masse salariale, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'IFNETY,TQDSFO'}

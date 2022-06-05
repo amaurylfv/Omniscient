@@ -124,7 +124,7 @@ components:
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Marketing, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: button_1
     layout_properties: {grid_position: 'JAXYFD,SIOSLT'}
@@ -133,46 +133,46 @@ components:
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Comptabilité, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
+      background: '', bold: true, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'QMJDMZ,SNBJOS'}
     event_bindings: {click: button_2_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Gestion, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABdxJREFUeF7tnc2PFFUUxX8TnAn/gx+oCxJFw5jgRhZEI6iJIeFfUJeakQUJC3easHAjsDT6N0jcQNToRhduJFEwfsRvWLMj4CSYC9XSGaa7zhvqdVfdOrWCmTNV75x73r3vVne9WuHusQZcBJ6Y+tkZYGPq//5nMgVWGj4vAp/N4TbBJaNvOhHYVeBmixSbDc6KJVMgDHB5S9qfRfFp4Idk/EdPJwxwS1ThE+CYiDVsIAqUGOAS8NRAeHmYogI2gChUVpgNkDWyIi8bQBQqK8wGyBpZkZcNIAqVFWYDZI2syMsGEIXKCrMBskZW5GUDiEJlhdkAWSMr8rIBRKGywmyArJEVedkAolBZYTZA1siKvGwAUaisMBsga2RFXjaAKFRWmA2QNbIiLxtAFCorzAbIGlmRlw0gCpUVZgNkjazIywYQhcoKswGyRlbkZQOIQmWF2QBZIyvyGoMBYo+Dt6b0+BHYD/wrarQo2FL2Z8hugHkPvh5p2RNhUYGP6yxtf4bMBog9DXa1RDFm3bIzwVL3Z8hqgHiK+XthCsfeCPsEXE3IUvdnyGqAc8BRMWqhwTKPpe7PkNUAsZOJOrOHYoAq+zPYAGADiPmvigPFa5fCnAFExZwBnAHkTaKcAcRZVQhTF4FV9HcGcAZwBiicsV3DnQG6VrTZ0NJtoCCsS4BLgEuAMFFqQlwCKqjr+wCiqC4BLgEuAeJkqQVzCaigrEuAKKpLgEuAS4A4WWrBXAIqKOsSIIrqEuAS4BIgTpZaMJeACsq6BIiiugS4BPSuBOwGHgF+Fk28HWxRGeCh5uL/3MdYXQIa8U4BJ7cR8nHg90KBaxvgL+DhLWOKn+0pHGfAbQDgO2B9jngHgW8KxK1pgLaAlX7LuO18E9ppvxJ2CPhKCG6JsLUM8GdTnuYNNzCPCnwmkNEbIJ7Ne0AQ7A3gIwEXkFoGUINVYlb1nGkzgCpAlIAoBcpRwwCx4PtbuTjwIHBVxKr8R2+AEgFqGOBJIMagHPF9xHjoUzlsAEWlRnz13cU2gChqH24E1ZgBNoAN0PnTwS4BlV4f7wygzdaSNZB2Ru7cB68RAHkAla7vEiBGwAbQPwxyCXAJcBuotmFiAroNq1GCXALECLgEuARUmYGi/5wBKmVAWX9nAGcAZwBxurgLcBfgLsBdgJYu/GmgppMXgV4E+j5Ajfsg8vxzF+AuwF2AOF3cBbgLcBfgLkBLF+4CNJ3cBbgLcBfgLkDMFiVfifLHwaKobgPdBroNFCeL20C3gW4D3QZq6cJtoKaT20C3gW4D3QaK2cJtIHRegt0Gug10GyhmILeBbgPdBnZegyqtgn0rWExrXgN4DeA1gDhZvAZY8hrgIvCMGKzA7hex6pZue4GfxHMG9hcRq94HKOEvXnpYG0R8ABwXmQV2Q8SqBih5krnGOUv4i9T7YQA1WKvApsgsNp6MDSjbjtPA222gqd+rs7XEADX4y5T6sAhUZtZ54BWZ1R3gBeBIy9+UBCpO9RjwW8s5A/NH4VjbjLUT/tIQ+mKAGOysLWMjkC9LbO4FzTJBZJLIKDs5ngO+nvGHpZtaT5+mBv9Wfn0yQAw27jO812y2/CVwoiDtzyIb5eB94Plm2/l3Cnb8nCfg68BrDeDjgn2M552zBv+5JuibAVoda0C3CtgA3eo5uLPZAIMLWbcDtgG61XNwZ7MBBheybgdcYoB4M9bWFyV1OxqfbeEKlBggBld642ThhHzBMgVKDRCvRYvXo/lIokAYIG4zvlTAx1mgQKy+QyOYzwLfFg7UmaBQsL7CJ7O57cOIWeO/AlzrKzmP6x4FfgXiVnh8Ze72MTHAF8ALFmw0Cvz/Ydh0Pd9pFhiNagmJrkwb4EMg3s7pYzwKnN66oo/UsGs8/M10u5bOpWBEvtjOALuB6yPSYNRU593UuQGsjVqd/OQvt93VOwu8mV+H0TJcazPARJlPgVdHK1NO4oeBz1UDTCQ4ALx7H9/SzSnlsFjFa+3XJ89N/AdLw6QGC8PQxQAAAABJRU5ErkJggg=='}
     name: button_3
     layout_properties: {grid_position: 'WRGYKM,HLMSGJ'}
     event_bindings: {click: button_3_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Finance, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: 'fa:money'}
     name: button_4
-    layout_properties: {grid_position: 'ORTTNI,AWFPWD'}
+    layout_properties: {grid_position: 'ORTTNI,AWFPWD', full_width_row: false}
     event_bindings: {click: button_4_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Audit, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: 'fa:search'}
     name: button_5
     layout_properties: {grid_position: 'SGJAOP,NDQBIC'}
     event_bindings: {click: button_5_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Juridique, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: 'fa:black-tie'}
     name: button_6
-    layout_properties: {grid_position: 'RLHSVV,YZAUBJ'}
+    layout_properties: {grid_position: 'RLHSVV,YZAUBJ', row_background: '', full_width_row: false}
     event_bindings: {click: button_6_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Fiscalité, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: button_7
     layout_properties: {grid_position: 'ZHHEGH,APAAKI'}
@@ -180,7 +180,7 @@ components:
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Social, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: button_8
     layout_properties: {grid_position: 'FXTPCW,LEGEHS'}
@@ -188,7 +188,7 @@ components:
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Données, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: button_9
     layout_properties: {grid_position: 'DZDFOF,SKQKEU'}
@@ -197,7 +197,7 @@ components:
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: 'Paramètres ', font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
+      background: '', bold: true, underline: false, icon: ''}
     name: button_10
     layout_properties: {grid_position: 'AOYBGM,OZFUJQ'}
     event_bindings: {click: button_10_click}
