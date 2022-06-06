@@ -18,10 +18,8 @@ class Form11(Form11Template):
 
     
 
-  def file_loader_1_change(self, file):
+  def file_loader_1_change(self, file, **event_args):
     # Upload the selected file into a Server Module
-    invoice = self.file_loader_1.file
-    data_display = anvil.server.call('get_invoice_data', invoice)
-    self.label_2 = data_display
+    invoice_data = anvil.server.call('get_invoice_data', file)
     c.clear()    
 
