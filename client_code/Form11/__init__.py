@@ -9,7 +9,6 @@ class Form11(Form11Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.get_invoice_data()
 
     # Any code you write here will run when the form opens.
     
@@ -19,9 +18,10 @@ class Form11(Form11Template):
 
     
 
-  def get_invoice_data(self, **event_args):
-    file = self.file_loader_1
-    invoice_data = anvil.server.call('get_invoice_data')
-    self.label_2 = invoice_data
-    
+  def file_loader_1_change(self, file):
+    # Upload the selected file into a Server Module
+    invoice = self.file_loader_1.file
+    data_display = anvil.server.call('get_invoice_data', invoice)
+    self.label_2 = data_display
+    c.clear()    
 
