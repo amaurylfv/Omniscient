@@ -1,5 +1,6 @@
 from ._anvil_designer import Form12Template
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 from tables import app_tables
 import anvil.tables as tables

@@ -56,3 +56,7 @@ components:
     background: '', format: markdown}
   name: rich_text_1
   layout_properties: {slot: title}
+- type: Plot
+  properties: {}
+  name: plot_1
+  layout_properties: {slot: default}
