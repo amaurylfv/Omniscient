@@ -8,6 +8,7 @@ import anvil.server
 import plotly.graph_objects as go
 import anvil.tables as tables
 import anvil.tables.query as q
+import anvil.google.auth
 from anvil.tables import app_tables
 
 #Import des pages de navigation de la nav-bar
@@ -35,6 +36,9 @@ class Form1(Form1Template):
     self.build_revenue_graph()
     self.build_marketing_graph()
 
+    email_addr = anvil.google.auth.login()
+    print(f"User logged in as {email_addr}")
+    
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
   def button_1_click(self, **event_args):
     open_form('Form2', my_parameter="an_argument") #Marketing
