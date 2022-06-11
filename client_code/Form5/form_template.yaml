@@ -38,34 +38,58 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - type: Button
-    properties: {text: button_2}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Profitabilité, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'WRTIJG,OLFCHR'}
   - type: Button
-    properties: {text: button_3}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Structure financiere, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_3
     layout_properties: {grid_position: 'SHFNHM,CFNKBH'}
   - type: Button
-    properties: {text: button_4}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Rentabilité, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_4
     layout_properties: {grid_position: 'LCDMLX,RXBOMO'}
   - type: Button
-    properties: {text: button_5}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Pérennité, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: button_5
     layout_properties: {grid_position: 'EWVKFX,EKUKMD'}
   - type: Button
-    properties: {text: button_6}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Financement, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_6
     layout_properties: {grid_position: 'YQIOCN,XNHCOK'}
   - type: Button
-    properties: {text: button_7}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Solvabilité, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_7
     layout_properties: {grid_position: 'URCLHP,ISOKRH'}
   - type: Button
-    properties: {text: button_8}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Investissement, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: button_8
     layout_properties: {grid_position: 'CRTLWZ,HXYTKD'}
   - type: Button
-    properties: {text: button_9}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Ratios, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: button_9
     layout_properties: {grid_position: 'HOWUIR,CHUQYE'}
