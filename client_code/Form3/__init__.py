@@ -8,6 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from ..Form3_1 import Form3_1
+
 class Form3(Form3Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -18,4 +20,9 @@ class Form3(Form3Template):
 
   def button_1_click(self, **event_args):
     open_form('Form1', my_parameter="an_argument") #Accueil
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form3_1', my_parameter="an_argument") #Accueil
+
 

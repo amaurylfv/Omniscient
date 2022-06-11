@@ -39,6 +39,7 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'TVELAG,PCJFNJ'}
+    event_bindings: {click: button_2_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: IMMOBILISATIONS, font_size: null, font: '',

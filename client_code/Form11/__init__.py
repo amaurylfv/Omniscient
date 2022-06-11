@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+
 class Form11(Form11Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -25,6 +26,5 @@ class Form11(Form11Template):
     # Upload the selected file into a Server Module
     c = FileLoader()
     invoice_data = anvil.server.call('get_invoice_data', file)
-    self.label_2 = print(invoice_data)
     c.clear()    
 
