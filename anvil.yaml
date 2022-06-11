@@ -3,16 +3,24 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: false, enable_automatically: true, use_email: true,
-    confirm_email: true}
-  server_config: {user_table: users}
+  client_config: {allow_signup: true, enable_automatically: false, use_email: true,
+    confirm_email: true, use_google: true, allow_remember_me: true, remember_me_days: 365}
+  server_config:
+    user_table: users
+    email_content:
+      confirm_address: {html: "<p>Merci de vous \xeatre enregistr\xe9e sur AutoCHD\
+          \ ! Veuillez cliquer sur le lien suivant pour confirmer votre identit\xe9\
+          \ :\n\n<p>{{confirm_link}}\n\n<p>Merci \ud83e\udd16", subject: Confirm your email address}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Form13}
 package_name: AutoCHD
 allow_embedding: false
 name: AutoCHD
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {title: AutoCHD}
-startup_form: Form1
 native_deps: {head_html: ''}
 db_schema:
   users:
@@ -26,6 +34,12 @@ db_schema:
     - name: enabled
       admin_ui: {width: 100}
       type: bool
+    - name: last_login
+      admin_ui: {width: 200}
+      type: datetime
+    - name: remembered_logins
+      admin_ui: {width: 200}
+      type: simpleObject
   revenue:
     title: Table 1
     client: none

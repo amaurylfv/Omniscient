@@ -1,3 +1,5 @@
+import anvil.google.auth, anvil.google.drive, anvil.google.mail
+from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -19,10 +21,4 @@ def get_revenue():
 def get_sig(): # Table des SIG
   return app_tables.sig.search()
 
-@anvil.server.callable
-def get_users(): 
-  me = anvil.users.get_user()
-  
-  if me:
-    return app_tables.users.client_writable(owner = me)
 
