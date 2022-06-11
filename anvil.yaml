@@ -122,15 +122,6 @@ db_schema:
     - name: issuer
       admin_ui: {width: 200}
       type: string
-    - name: Réference
-      admin_ui: {width: 200}
-      type: string
-    - name: NuméroTVA
-      admin_ui: {width: 200}
-      type: string
-    - name: Devise
-      admin_ui: {width: 200}
-      type: string
     - name: vat
       admin_ui: {width: 200}
       type: string
