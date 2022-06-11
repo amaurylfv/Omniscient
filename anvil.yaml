@@ -104,8 +104,47 @@ db_schema:
     - name: DateEmission
       admin_ui: {width: 200}
       type: date
-    - name: MontantTotalTVA
+    - name: MontantTVATotal
       admin_ui: {width: 200}
       type: number
+    - name: amount
+      admin_ui: {width: 200}
+      type: number
+    - name: partner_name
+      admin_ui: {width: 200}
+      type: string
+    - name: date
+      admin_ui: {width: 200}
+      type: string
+    - name: desc
+      admin_ui: {width: 200}
+      type: string
+    - name: lines
+      admin_ui: {width: 200}
+      type: string
+    - name: invoice_number
+      admin_ui: {width: 200}
+      type: number
+    - name: partner_website
+      admin_ui: {width: 200}
+      type: string
+    - name: currency
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_untaxed
+      admin_ui: {width: 200}
+      type: number
+    - name: issuer
+      admin_ui: {width: 200}
+      type: string
+    - name: Réference
+      admin_ui: {width: 200}
+      type: string
+    - name: NuméroTVA
+      admin_ui: {width: 200}
+      type: string
+    - name: Devise
+      admin_ui: {width: 200}
+      type: string
 uplink_visible: true
 renamed: true
