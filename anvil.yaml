@@ -91,6 +91,21 @@ db_schema:
     title: invoice
     client: none
     server: full
-    columns: []
+    columns:
+    - name: NomFournisseur
+      admin_ui: {width: 200}
+      type: string
+    - name: MontantNetHT
+      admin_ui: {width: 200}
+      type: number
+    - name: MontantNetTTC
+      admin_ui: {width: 200}
+      type: number
+    - name: DateEmission
+      admin_ui: {width: 200}
+      type: date
+    - name: MontantTotalTVA
+      admin_ui: {width: 200}
+      type: number
 uplink_visible: true
 renamed: true
