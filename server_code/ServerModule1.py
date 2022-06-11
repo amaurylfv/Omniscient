@@ -21,4 +21,7 @@ def get_revenue():
 def get_sig(): # Table des SIG
   return app_tables.sig.search()
 
+@anvil.server.callable
+def get_invoice(): #Extraction des données des factures
+  return app_tables.invoice.search()
 

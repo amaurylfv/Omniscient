@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from ..Form11_1 import Form11_1
 
 class Form11(Form11Template):
   def __init__(self, **properties):
@@ -20,7 +21,9 @@ class Form11(Form11Template):
   def button_2_click(self, **event_args):
     open_form('Form1', my_parameter="an_argument") #Accueil
 
-    
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form11_1', my_parameter="an_argument")
 
   def file_loader_1_change(self, file, **event_args):
     # Upload the selected file into a Server Module
@@ -34,5 +37,8 @@ class Form11(Form11Template):
     """This method is called when the button is clicked"""
     text = anvil.server.call('get_invoice_data',self.file_loader_1.text)
     self.data_row_panel_1.text = text
+
+
+
 
 
