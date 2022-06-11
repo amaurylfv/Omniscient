@@ -26,5 +26,13 @@ class Form11(Form11Template):
     # Upload the selected file into a Server Module
     c = FileLoader()
     invoice_data = anvil.server.call('get_invoice_data', file)
+    data = anvil.server.call('get_invoice_data', file)
+    
     c.clear()    
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    text = anvil.server.call('get_invoice_data',self.file_loader_1.text)
+    self.data_row_panel_1.text = text
+
 
