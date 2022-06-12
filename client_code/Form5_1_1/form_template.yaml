@@ -22,7 +22,7 @@ components:
     columns:
     - {id: WPRJYP, title: Year, data_key: Year}
     - {id: CZMWGZ, title: Marge Commerciale, data_key: Marge commerciale}
-    - {id: XCRMSE, title: Production De L'exercice, data_key: Production de l'exercice}
+    - {id: XCRMSE, title: Production De L'exercice, data_key: Production_exercice}
     - {id: KXNEUI, title: Valeur Ajoutée, data_key: Valeur ajoutée}
     - {id: BBNWUF, title: EBE, data_key: EBE}
     - {id: TGRSPV, title: Résultat D'exploitation, data_key: Résultat d'exploitation}

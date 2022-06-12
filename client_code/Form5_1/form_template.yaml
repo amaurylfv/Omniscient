@@ -4,71 +4,171 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"AGXINR":40}'}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - type: Plot
-    properties: {height: 234}
-    name: plot_3
-    layout_properties: {grid_position: 'WWSWYH,JVGUCV'}
-  - type: Label
     properties: {}
-    name: label_5
-    layout_properties: {grid_position: 'NRWKKM,QJGFZV'}
-  - type: Label
-    properties: {}
-    name: label_6
-    layout_properties: {grid_position: 'NRWKKM,TDXZLM'}
-  - type: Label
-    properties: {}
-    name: label_7
-    layout_properties: {grid_position: 'NRWKKM,PQTCGW'}
-  - type: Label
-    properties: {}
-    name: label_8
-    layout_properties: {grid_position: 'NRWKKM,PXVAGR'}
+    name: plot_1
+    layout_properties: {grid_position: 'BWIAMK,SGBSBX'}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_1
-    layout_properties: {grid_position: 'XDKXYD,AGXINR'}
+    layout_properties: {grid_position: 'BWIAMK,DXKWVC'}
     components:
     - type: Plot
-      properties: {height: 316}
-      name: plot_1
-      layout_properties: {grid_position: 'AAYXRX,CVVILP'}
-  - type: Label
-    properties: {}
-    name: label_1
-    layout_properties: {grid_position: 'DHIBWR,FNWTQZ'}
-  - type: Label
-    properties: {}
-    name: label_2
-    layout_properties: {grid_position: 'DHIBWR,NQFIPH'}
-  - type: Label
-    properties: {}
-    name: label_3
-    layout_properties: {grid_position: 'DHIBWR,CLQWXN'}
-  - type: Label
-    properties: {}
-    name: label_4
-    layout_properties: {grid_position: 'DHIBWR,UPKWIC'}
+      properties: {}
+      name: plot_2
+      layout_properties: {grid_position: 'XPPJJM,ATFAXC'}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_2
+    layout_properties: {grid_position: 'WTILGK,DWZLQR', row_background: ''}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:White', visible: true, font_size: null, content: Marge commerciale,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'TCEOPA,RJHYWB', row_background: '#003049'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_3
+    layout_properties: {grid_position: 'WTILGK,BVOVHV', row_background: ''}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:White', visible: true, font_size: null, content: Production de l'exercice,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_2
+      layout_properties: {grid_position: 'XGDYFG,FDODXU', row_background: '#d62828'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_4
+    layout_properties: {grid_position: 'WTILGK,HVXGZY', row_background: ''}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:White', visible: true, font_size: null, content: Valeur ajoutée,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_3
+      layout_properties: {grid_position: 'MYNPAN,LOYRNK', row_background: '#fcbf49'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_5
+    layout_properties: {grid_position: 'WTILGK,MOVOPM', row_background: ''}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: EBE, font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
+      name: rich_text_4
+      layout_properties: {grid_position: 'COBUMR,RWVPIN', row_background: '#eae2b7'}
+      components:
+      - type: Label
+        properties: {}
+        name: label_4
+        layout_properties: {}
   - type: Plot
-    properties: {height: 306}
-    name: plot_2
-    layout_properties: {grid_position: 'JXKGZX,WUKMZN'}
+    properties: {}
+    name: plot_3
+    layout_properties: {grid_position: 'CQMQRV,KLBTMM'}
   - type: Plot
     properties: {}
     name: plot_4
-    layout_properties: {grid_position: 'EBWSXI,TDAUWH'}
+    layout_properties: {grid_position: 'CQMQRV,YIRZQX'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_6
+    layout_properties: {grid_position: 'MIURHQ,VMABXE'}
+    components:
+    - type: RichText
+      properties: {}
+      name: rich_text_5
+      layout_properties: {grid_position: 'ODRIWB,LLONDZ'}
+      components:
+      - type: Label
+        properties: {}
+        name: label_5
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_7
+    layout_properties: {grid_position: 'MIURHQ,RZGFVU'}
+    components:
+    - type: RichText
+      properties: {}
+      name: rich_text_6
+      layout_properties: {grid_position: 'NRWCPT,ZOXNCB'}
+      components:
+      - type: Label
+        properties: {}
+        name: label_6
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_8
+    layout_properties: {grid_position: 'MIURHQ,OQWUPE'}
+    components:
+    - type: RichText
+      properties: {}
+      name: rich_text_7
+      layout_properties: {grid_position: 'GHARCL,QTNKZR'}
+      components:
+      - type: Label
+        properties: {}
+        name: label_7
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_9
+    layout_properties: {grid_position: 'MIURHQ,CVZUEQ'}
+    components:
+    - type: RichText
+      properties: {}
+      name: rich_text_8
+      layout_properties: {grid_position: 'BZACBS,GVCZUE'}
+      components:
+      - type: Label
+        properties: {}
+        name: label_8
+        layout_properties: {}
   - type: Plot
     properties: {}
     name: plot_5
-    layout_properties: {grid_position: 'WFOUBC,DUMISP'}
-  - type: Plot
-    properties: {}
-    name: plot_6
-    layout_properties: {grid_position: 'OKSSTV,DMELRA'}
+    layout_properties: {grid_position: 'JXYBCB,SFTJET'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -103,7 +203,7 @@ components:
     name: button_3
     layout_properties: {grid_position: 'EJJMWY,XWGXNN'}
 - type: Link
-  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+  properties: {role: selected, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: "AutoCHD \ud83e\udd16\ud83e\uddfe", font_size: null, wrap_on: mobile,
     font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
     spacing_below: small, italic: false, background: '', bold: false, underline: false,

@@ -75,8 +75,8 @@ class Form5_1(Form5_1Template):
       marker=dict(color='#FCBF49')
     )
     
-    max_marge = sorted(db_data, key=lambda x: x['Marge commerciale'], reverse=True)[0]
-    self.label_1.text = f"{max_marge['date']:%d %b %Y}, {max_marge['Marge commerciale']:,}"
+    max_marge = sorted(db, key=lambda x: x['Marge commerciale'], reverse=True)[0]
+    self.label_1.text = f"{max_marge['Year']:%d %b %Y}, {max_marge['Marge commerciale']:,}"
     
     # Style the plot and add a plot title
     self.style_plot(self.plot_1)
@@ -89,9 +89,13 @@ class Form5_1(Form5_1Template):
       # Create a Bar plot with this data, and change the colour of the markers
     self.plot_2.data = go.Bar(
       x = [x['Year'] for x in db],
-      y = [x["Production de l'exercice"] for x in db],
+      y = [x["Production_exercice"] for x in db],
       marker=dict(color='#219EBC')
     )
+    
+    max_production = sorted(db, key=lambda x: x["Production_exercice"], reverse=True)[0]
+    self.label_2.text = f"{max_production['Year']:%d %b %Y}, {max_production['Production_exercice']:,}"
+    
     # Style the plot and add a plot title
     self.style_plot(self.plot_2)
     self.plot_2.layout.title = "Evolution de la Production de l'exercice"
@@ -106,6 +110,9 @@ class Form5_1(Form5_1Template):
       y = [x['Marge commerciale'] for x in db],
       marker=dict(color='#D62828')
     )
+    
+    
+    
     # Style the plot and add a plot title
     self.style_plot(self.plot_3)
     self.plot_3.layout.title = "Evolution de la Production de l'exercice"
