@@ -8,7 +8,6 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import plotly.figure_factory as ff
 
 class Form4_1(Form4_1Template):
   def __init__(self, **properties):

@@ -42,5 +42,17 @@ class Form5_1(Form5_1Template):
     # Style the plot and add a plot title
     self.plot_1.layout.title = "Structure financière"
 
-
+  def build_structure_graph_2(self):
+    # Get the data from our server function, and store it as 'db_data'
+    db = anvil.server.call('get_sig')
+      
+      # Create a Bar plot with this data, and change the colour of the markers
+    self.plot_2.data = go.Bar(
+      x = [x['Year'] for x in db],
+      y = [x['EBE'] for x in db],
+      y = [x['Marge commerciale'] for x in db],
+      marker=dict(color='#FCBF49')
+    )
+    # Style the plot and add a plot title
+    self.plot_1.layout.title = "Structure financière"
 
