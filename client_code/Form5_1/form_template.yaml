@@ -206,6 +206,7 @@ components:
       background: '', bold: true, underline: false, icon: ''}
     name: button_3
     layout_properties: {grid_position: 'EJJMWY,XWGXNN'}
+    event_bindings: {click: button_3_click}
 - type: Link
   properties: {role: selected, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: "AutoCHD \ud83e\udd16\ud83e\uddfe", font_size: null, wrap_on: mobile,

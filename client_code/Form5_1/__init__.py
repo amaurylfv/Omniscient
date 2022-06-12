@@ -157,3 +157,8 @@ class Form5_1(Form5_1Template):
     # Style the plot and add a plot title
     self.style_plot(self.plot_6)
     self.plot_6.layout.title = "Evolution du Résultat d'exploitation"
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form5_1_2', my_parameter="an_argument")
+
