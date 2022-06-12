@@ -18,8 +18,7 @@ startup: {type: form, module: Form1}
 package_name: AutoCHD
 allow_embedding: false
 name: AutoCHD
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: AutoCHD, logo_img: ''}
 startup_form: Form12
 native_deps: {head_html: ''}
@@ -89,7 +88,7 @@ db_schema:
       type: number
   invoice:
     title: invoice
-    client: none
+    client: search
     server: full
     columns:
     - name: amount
