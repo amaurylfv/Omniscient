@@ -20,7 +20,7 @@ allow_embedding: false
 name: AutoCHD
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: AutoCHD, logo_img: ''}
-startup_form: Form12
+startup_form: Form5_1_1
 native_deps: {head_html: ''}
 db_schema:
   users:

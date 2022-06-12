@@ -1,4 +1,4 @@
-from ._anvil_designer import Form12Template
+from ._anvil_designer import Form5_1_1Template
 from anvil import *
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -10,7 +10,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Form12(Form12Template):
+class Form5_1_1(Form5_1_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -20,5 +20,5 @@ class Form12(Form12Template):
     
 
   def button_1_click(self, **event_args):
-    open_form('Form5', my_parameter="an_argument") #Accueil
+    open_form('Form5_1', my_parameter="an_argument") #Retour
 

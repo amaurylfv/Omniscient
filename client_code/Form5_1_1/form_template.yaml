@@ -46,7 +46,7 @@ components:
   layout_properties: {slot: default}
   components:
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: Form12.RowTemplate1}
+    properties: {spacing_above: none, spacing_below: none, item_template: Form5_1_1.RowTemplate1}
     name: repeating_panel_1
     layout_properties: {}
 - type: RichText
