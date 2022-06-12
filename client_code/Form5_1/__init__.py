@@ -50,7 +50,7 @@ class Form5_1(Form5_1Template):
                               tickfont=dict(
                                   family='Noto Sans',
                                   size=11,
-                                  color='#219EBC'
+                                  color='#03071E'
                               ),
                             ),
                             # Format y-axis
@@ -59,7 +59,7 @@ class Form5_1(Form5_1Template):
                                 tickfont=dict(
                                     family='Noto Sans',
                                     size=11,
-                                    color='#FCBF49'
+                                    color='#03071E'
                                 ),
                             )
                           ) 
@@ -94,7 +94,7 @@ class Form5_1(Form5_1Template):
     )
     
     max_production = sorted(db, key=lambda x: x["Production_exercice"], reverse=True)[0]
-    self.label_2.text = f"{max_production['Year']:%d %b %Y}, {max_production['Production_exercice']:,}"
+    self.label_2.text = f"{max_production['Production_exercice']:,}"
     
     # Style the plot and add a plot title
     self.style_plot(self.plot_2)
@@ -150,11 +150,10 @@ class Form5_1(Form5_1Template):
     db = anvil.server.call('get_sig')
       
       # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_6.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x["Résultat d'exploitation"] for x in db],
-      marker=dict(color='#EAE2B7')
-    )
+    self.plot_6.data = go.Scatter(x = [x['Year'] for x in db],
+                                  y = [x["Résultat d'exploitation"] for x in db],
+                                  mode='lines+markers',
+                                  line=dict(color='#EAE2B7'))
     # Style the plot and add a plot title
     self.style_plot(self.plot_6)
     self.plot_6.layout.title = "Evolution du Résultat d'exploitation"
