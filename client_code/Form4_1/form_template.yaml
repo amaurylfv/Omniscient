@@ -9,9 +9,26 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {}
+    properties: {col_widths: '{}'}
     name: column_panel_1
     layout_properties: {grid_position: 'FIIKFY,PPJOYN'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {grid_position: 'SGRBWT,IVCYLD'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Méthode des potentiels métra, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'DKSPTT,WVOJTJ'}
+      - type: Plot
+        properties: {}
+        name: plot_1
+        layout_properties: {grid_position: 'UQWXZM,YNGFDZ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

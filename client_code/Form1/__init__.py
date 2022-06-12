@@ -15,6 +15,9 @@ from anvil.tables import app_tables
 from ..Form2 import Form2
 from ..Form3 import Form3
 from ..Form4 import Form4
+from ..Form4_1 import Form4_1
+from ..Form4_4 import Form4_4
+from ..Form4_6 import Form4_6
 from ..Form5 import Form5
 from ..Form5_1 import Form5_1
 from ..Form6 import Form6

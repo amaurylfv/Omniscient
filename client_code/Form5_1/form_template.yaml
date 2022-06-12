@@ -4,19 +4,59 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"AGXINR":40,"DDMSDF":50,"LRNNFG":10}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - type: Plot
+    properties: {height: 125}
+    name: plot_3
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF WWSWYH,JVGUCV'}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_1
-    layout_properties: {grid_position: 'XDKXYD,AGXINR'}
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF XDKXYD,AGXINR'}
     components:
     - type: Plot
-      properties: {}
+      properties: {height: 145}
       name: plot_1
       layout_properties: {grid_position: 'AAYXRX,CVVILP'}
+    - type: Plot
+      properties: {height: 145}
+      name: plot_2
+      layout_properties: {grid_position: 'AAYXRX,UQIJAA'}
+  - type: Label
+    properties: {}
+    name: label_5
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF KSSZIJ,STOFTK'}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF KSSZIJ,PGQEPM'}
+  - type: Label
+    properties: {}
+    name: label_7
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF KSSZIJ,EZZJLD'}
+  - type: Label
+    properties: {}
+    name: label_8
+    layout_properties: {grid_position: 'LFNFNQ,DDMSDF KSSZIJ,IDENDB'}
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {grid_position: 'LFNFNQ,LRNNFG LIGVBO,HGYGXK'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'LFNFNQ,LRNNFG DCOODN,WAJSRO'}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {grid_position: 'LFNFNQ,LRNNFG ZPOXLQ,EAQKLF'}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {grid_position: 'LFNFNQ,LRNNFG ZPUEST,NJTIWW'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -26,7 +66,7 @@ components:
     properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:home'}
+      underline: false, icon: 'fa:chevron-left'}
     name: button_2
     layout_properties: {}
     event_bindings: {click: button_2_click}
