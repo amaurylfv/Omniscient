@@ -119,10 +119,28 @@ db_schema:
     - name: amount_untaxed
       admin_ui: {width: 200}
       type: number
+    - name: amount_consumption_HPE
+      admin_ui: {width: 200}
+      type: string
     - name: issuer
       admin_ui: {width: 200}
       type: string
+    - name: amount_unit_taxe_departementales
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_TVA
+      admin_ui: {width: 200}
+      type: string
+    - name: address
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_unit_HCE
+      admin_ui: {width: 200}
+      type: string
     - name: vat
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_HPH
       admin_ui: {width: 200}
       type: string
     - name: client_id
@@ -131,7 +149,67 @@ db_schema:
     - name: line_number
       admin_ui: {width: 200}
       type: string
+    - name: amount_unit_HPE
+      admin_ui: {width: 200}
+      type: string
     - name: date_due
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_unit_service_public
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_consumption_HCE
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_subscription
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_consumption_HPH
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_unit_HCH
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_unit_taxe_communales
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_total_consumption
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_taxe_communales
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_service_public
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_HCH
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_unit_HPH
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_taxe_departementales
+      admin_ui: {width: 200}
+      type: number
+    - name: amount_HPE
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_HCE
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_consumption_HCH
+      admin_ui: {width: 200}
+      type: string
+    - name: energy_type
+      admin_ui: {width: 200}
+      type: string
+    - name: amount_acheminement
+      admin_ui: {width: 200}
+      type: string
+    - name: compteur_id
+      admin_ui: {width: 200}
+      type: number
+    - name: description
       admin_ui: {width: 200}
       type: string
 uplink_visible: true

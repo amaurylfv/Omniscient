@@ -21,7 +21,6 @@ components:
         - {id: DWARNK, title: Nom Fournisseur, data_key: partner_name}
         - {id: VAIEON, title: Date, data_key: date}
         - {id: FSVVBH, title: Réfèrence, data_key: invoice_number}
-        - {id: NZORPS, title: Partner Website, data_key: partner_website}
         - {id: AQJKRQ, title: Devise, data_key: currency}
         - {id: REHUHE, title: Montant Net HT Total, data_key: amount_untaxed}
         - {id: YJZLRY, title: Fournisseur, data_key: issuer}
