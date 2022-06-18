@@ -30,8 +30,8 @@ def get_invoice(): #Extraction des données des factures
 
 @anvil.server.callable
 def create_fig():
-    df = anvil.server.call('get_sig')
-    fig = px.pie(df, values='Year', names='EBE')
+    df = px.data.tips()
+    fig = px.pie(df, values='tip', names='day', color_discrete_sequence=px.colors.sequential.RdBu)
     return fig
 
 
