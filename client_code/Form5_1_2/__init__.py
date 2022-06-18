@@ -18,8 +18,5 @@ class Form5_1_2(Form5_1_2Template):
     
   def build_pie_chart_1(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-    self.plot_1.data = go.Pie(x = [x['Year'] for x in db],
-                              y = [x["Résultat d'exploitation"] for x in db],
-                              mode='lines+markers',
-                              line=dict(color='#EAE2B7'))
+    fig = anvil.server.call('create_fig') 
+    self.plot_1.figure = fig

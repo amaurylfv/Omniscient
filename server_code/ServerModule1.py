@@ -28,6 +28,10 @@ def get_sig(): # Table des SIG
 def get_invoice(): #Extraction des données des factures
   return app_tables.invoice.search()
 
-
+@anvil.server.callable
+def create_fig():
+    df = anvil.server.call('get_sig')
+    fig = px.pie(df, values='Year', names='EBE')
+    return fig
 
 
