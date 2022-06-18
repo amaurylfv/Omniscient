@@ -14,9 +14,16 @@ class Form5_1_2(Form5_1_2Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.build_pie_chart_1()
+    self.build_pie_chart_2()
     # Any code you write here will run when the form opens.
     
   def build_pie_chart_1(self):
     # Get the data from our server function, and store it as 'db_data'
     fig = anvil.server.call('create_fig') 
     self.plot_1.figure = fig
+    
+  def build_pie_chart_2(self):  
+    fig = anvil.server.call('create_fig_2')
+    self.plot_2 = fig
+    
+  

@@ -19,6 +19,10 @@ components:
     properties: {}
     name: plot_1
     layout_properties: {grid_position: 'UEMUZC,EBGPPD'}
+  - type: Plot
+    properties: {}
+    name: plot_2
+    layout_properties: {grid_position: 'EDCXUB,NNBBUE'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

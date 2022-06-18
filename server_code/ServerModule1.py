@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import io
@@ -34,4 +35,10 @@ def create_fig():
     fig = px.pie(df, values='tip', names='day', color_discrete_sequence=px.colors.sequential.RdBu)
     return fig
 
+@anvil.server.callable
+def create_fig_2():
+  labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
+  values = [4500, 2500, 1053, 500]
+  fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
+  return fig
 
