@@ -23,7 +23,5 @@ class Form5_1_2(Form5_1_2Template):
     self.plot_1.figure = fig
     
   def build_pie_chart_2(self):  
-    fig = anvil.server.call('create_fig_2')
-    self.plot_2 = fig
-    
-  
+    fig = anvil.server.call('create_pie') 
+    self.plot_2.figure = fig

@@ -36,9 +36,12 @@ def create_fig():
     return fig
 
 @anvil.server.callable
-def create_fig_2():
-  labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
-  values = [4500, 2500, 1053, 500]
-  fig = go.Figure(data=[go.Pie(labels=labels, values=values)])
-  return fig
+def create_pie():
+    all_records = app_tables.sig.search()
+    # For each row, pull out only the data we want to put into pandas
+    dicts = [{'name': r['Year'], 'age': r['EBE'], 'group_name': r['Marge commerciale']}
+          for r in all_records]
+    df = pandas.DataFrame.from_dict(dicts)
+    fig = px.pie(df, values='EBE', names='Year', color_discrete_sequence=px.colors.sequential.RdBu)
+    return fig
 
