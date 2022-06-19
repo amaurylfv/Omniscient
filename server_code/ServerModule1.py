@@ -39,9 +39,10 @@ def create_fig():
 def create_pie():
     all_records = app_tables.sig.search()
     # For each row, pull out only the data we want to put into pandas
-    dicts = [{'name': r['Year'], 'age': r['EBE'], 'group_name': r['Marge commerciale']}
+    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']['']}
           for r in all_records]
     df = pd.DataFrame.from_dict(dicts)
-    fig = px.pie(df, values='EBE', names='name', color_discrete_sequence=px.colors.sequential.RdBu)
+    fig = px.pie(df, values='sig', names='années', color_discrete_sequence=px.colors.sequential.RdBu, hole=.3)
+    fig.update_traces(textposition='inside', textinfo='percent+label')
     return fig
 
