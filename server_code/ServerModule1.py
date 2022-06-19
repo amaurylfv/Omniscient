@@ -56,3 +56,23 @@ def create_line():
   fig.add_hline(y=1, line_dash="dot",
               annotation_position="bottom right")
   fig.show()
+  
+@anvil.server.callable
+def create_gantt_chart():
+  df = pd.DataFrame([
+      dict(Task="Recherche financement", Start='2022-01-01', Finish='2022-02-28', Resource="Elodie"),
+      dict(Task="Mise en production", Start='2022-03-05', Finish='2022-04-15', Resource="Rebwar"),
+      dict(Task="Campagne de pub", Start='2022-02-20', Finish='2022-05-30', Resource="Virginie")
+  ])
+  
+  fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Resource")
+  fig.update_yaxes(autorange="reversed")
+  fig.show()
+  
+  
+@anvil.server.callable
+def create_histogram():
+  df = px.data.tips()
+  fig = px.histogram(df, x="total_bill", y="tip", color="sex", facet_row="time", facet_col="day",
+        category_orders={"day": ["Thur", "Fri", "Sat", "Sun"], "time": ["Lunch", "Dinner"]})
+  fig.show()
