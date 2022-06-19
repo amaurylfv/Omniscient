@@ -20,6 +20,8 @@ from ..Form4_4 import Form4_4
 from ..Form4_6 import Form4_6
 from ..Form5 import Form5
 from ..Form5_1 import Form5_1
+from ..Form5_1_2 import Form5_1_2
+from ..Form5_3 import Form5_3
 from ..Form6 import Form6
 from ..Form7 import Form7
 from ..Form8 import Form8

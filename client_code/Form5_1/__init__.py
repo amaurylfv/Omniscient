@@ -10,6 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 from ..Form5_1_1 import Form5_1_1
+from ..Form5_1_2 import Form5_1_2
 
 class Form5_1(Form5_1Template):
   def __init__(self, **properties):

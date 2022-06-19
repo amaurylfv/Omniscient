@@ -39,10 +39,20 @@ def create_fig():
 def create_pie():
     all_records = app_tables.sig.search()
     # For each row, pull out only the data we want to put into pandas
-    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']['']}
+    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']}
           for r in all_records]
     df = pd.DataFrame.from_dict(dicts)
     fig = px.pie(df, values='sig', names='années', color_discrete_sequence=px.colors.sequential.RdBu, hole=.3)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     return fig
 
+@anvil.server.callable
+def create_line():
+  data = app_tables.sig.search()
+  dicts = [{'années': r['Year'], 'sig': r['Marge commerciale']}
+        for r in data]
+  df = pd.DataFrame.from_dict(dicts)
+  fig = px.line(df, facet_col="années", facet_col_wrap=2)
+  fig.add_hline(y=1, line_dash="dot",
+              annotation_position="bottom right")
+  fig.show()

@@ -8,21 +8,15 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Répartition de la valeur ajoutée, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'QVLHXY,GQHEPZ'}
-  - type: Plot
-    properties: {}
-    name: plot_1
-    layout_properties: {grid_position: 'UEMUZC,EBGPPD'}
-  - type: Plot
-    properties: {}
-    name: plot_2
-    layout_properties: {grid_position: 'EDCXUB,NNBBUE'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'OAJIUE,IUVPIQ'}
+    components:
+    - type: Plot
+      properties: {}
+      name: plot_1
+      layout_properties: {grid_position: 'KWRSZF,CXUTAA'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -36,3 +30,11 @@ components:
     name: button_1
     layout_properties: {}
     event_bindings: {click: button_1_click}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: AutoCHD, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: link_1
+  layout_properties: {slot: title}
+  event_bindings: {click: link_1_click}
