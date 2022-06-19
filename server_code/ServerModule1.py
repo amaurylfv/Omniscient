@@ -76,3 +76,43 @@ def create_histogram():
   fig = px.histogram(df, x="total_bill", y="tip", color="sex", facet_row="time", facet_col="day",
         category_orders={"day": ["Thur", "Fri", "Sat", "Sun"], "time": ["Lunch", "Dinner"]})
   return fig
+
+@anvil.server.callable
+def map_chart():
+
+  df = px.data.carshare()
+  fig = px.scatter_mapbox(df, lat="centroid_lat", lon="centroid_lon", color="peak_hour", size="car_hours",
+                    color_continuous_scale=px.colors.cyclical.IceFire, size_max=15, zoom=10,
+                    mapbox_style="carto-positron")
+  return fig
+
+@anvil.server.callable
+def filled_area():
+    all_records = app_tables.sig.search()
+    # For each row, pull out only the data we want to put into pandas
+    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    fig = px.area(df, x="années", y="EBE", color="EBE", line_group="sig")
+    return fig
+
+@anvil.server.callable
+def bar_chart():
+    all_records = app_tables.sig.search()
+    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    fig = px.bar(df, x='années', y='EBE')
+    return fig
+  
+@anvil.server.callable
+def funnel_chart():
+  fig = px.funnel_area(names=["Boutique","Site internet", "Salons", "Bouches à oreilles", "Syndicat des fleuristes"],
+                      values=[5, 4, 3, 2, 1])
+  return fig
+
+@anvil.server.callable
+def time_series_chart():
+  df = px.data.stocks(indexed=True)-1
+  fig = px.bar(df, x=df.index, y="GOOG")
+  return fig

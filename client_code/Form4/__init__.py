@@ -1,5 +1,6 @@
 from ._anvil_designer import Form4Template
 from anvil import *
+import plotly.graph_objects as go
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
@@ -16,6 +17,9 @@ class Form4(Form4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.filled_area_chart()
+    self.bar_chart()
+    self.time_series_chart()
 
     # Any code you write here will run when the form opens.
     
@@ -33,7 +37,16 @@ class Form4(Form4Template):
     """This method is called when the button is clicked"""
     open_form('Form4_6', my_parameter="an_argument") #Analyse des risques
 
+  def filled_area_chart(self):
+    fig = anvil.server.call('filled_area')
+    self.plot_1.figure = fig
 
-
+  def bar_chart(self):
+    fig = anvil.server.call('bar_chart')
+    self.plot_2.figure = fig
+    
+  def time_series_chart(self):
+    fig = anvil.server.call('time_series_chart')
+    self.plot_3.figure = fig
 
 

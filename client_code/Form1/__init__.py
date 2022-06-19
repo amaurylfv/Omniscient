@@ -41,9 +41,6 @@ class Form1(Form1Template):
     self.temp_data = []
     self.build_revenue_graph()
     self.build_marketing_graph()
-
-    email_addr = anvil.google.auth.login()
-    print(f"User logged in as {email_addr}")
     
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
   def button_1_click(self, **event_args):

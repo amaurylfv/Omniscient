@@ -1,0 +1,52 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'QLRLYJ,CILGVZ'}
+    components:
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: IMPORTER DES FACTURES, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_1
+      layout_properties: {grid_position: 'TUAWVM,XMMPLL'}
+      event_bindings: {click: button_1_click}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'IUQTLV,UQIATV'}
+  - type: Button
+    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: TABLEAU DE BORD, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'ZNJZXV,NHRDMT'}
+    event_bindings: {click: button_2_click}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_2
+    layout_properties: {grid_position: 'BNUHET,XUCVGH'}
+  - type: Link
+    properties: {role: selected, url: '', align: center, tooltip: '', border: '',
+      foreground: '', visible: true, text: J'ai un problème, font_size: 14, wrap_on: mobile,
+      font: roboto, col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: true,
+      icon: ''}
+    name: link_1
+    layout_properties: {grid_position: 'DZATYK,NAEMFP'}
+    event_bindings: {click: link_1_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
