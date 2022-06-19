@@ -48,14 +48,14 @@ def create_pie():
 
 @anvil.server.callable
 def create_line():
-  data = app_tables.sig.search()
-  dicts = [{'années': r['Year'], 'sig': r['Marge commerciale']}
-        for r in data]
-  df = pd.DataFrame.from_dict(dicts)
-  fig = px.line(df, facet_col="années", facet_col_wrap=2)
-  fig.add_hline(y=1, line_dash="dot",
-              annotation_position="bottom right")
-  fig.show()
+    data = app_tables.sig.search()
+    dicts = [{'années': r['Year'], 'sig': r['Marge commerciale']}
+          for r in data]
+    df = pd.DataFrame.from_dict(dicts)
+    fig = px.line(df, facet_col="années", facet_col_wrap=2)
+    fig.add_hline(y=1, line_dash="dot",
+                annotation_position="bottom right")
+    return fig
   
 @anvil.server.callable
 def create_gantt_chart():
@@ -67,7 +67,7 @@ def create_gantt_chart():
   
   fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Resource")
   fig.update_yaxes(autorange="reversed")
-  fig.show()
+  return fig
   
   
 @anvil.server.callable
@@ -75,4 +75,4 @@ def create_histogram():
   df = px.data.tips()
   fig = px.histogram(df, x="total_bill", y="tip", color="sex", facet_row="time", facet_col="day",
         category_orders={"day": ["Thur", "Fri", "Sat", "Sun"], "time": ["Lunch", "Dinner"]})
-  fig.show()
+  return fig

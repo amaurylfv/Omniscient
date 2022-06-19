@@ -18,8 +18,7 @@ class Form4_6(Form4_6Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.build_cost_graph_1()
-    self.build_cost_graph_2()
-    
+
 
     # Any code you write here will run when the form opens.
 
