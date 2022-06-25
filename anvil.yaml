@@ -70,7 +70,7 @@ db_schema:
     - name: EBE
       admin_ui: {width: 200}
       type: number
-    - name: Résultat d'exploitation
+    - name: Résultat_exploitation
       admin_ui: {width: 200}
       type: number
     - name: Résultat courant avant impôt
@@ -79,7 +79,7 @@ db_schema:
     - name: Résultat exceptionnel
       admin_ui: {width: 200}
       type: number
-    - name: Résultat de l'exercice
+    - name: Résultat_exercice
       admin_ui: {width: 200}
       type: number
     - name: Plus-value et Moins-value sur cessions d'éléments d'actif

@@ -77,7 +77,7 @@ class Form5_1(Form5_1Template):
     )
     
     max_marge = sorted(db, key=lambda x: x['Marge commerciale'], reverse=True)[0]
-    self.label_1.text = f"{max_marge['Year']:%d %b %Y}, {max_marge['Marge commerciale']:,}"
+    self.label_1.text = f"{max_marge['Marge commerciale']:,}"
     
     # Style the plot and add a plot title
     self.style_plot(self.plot_1)
@@ -112,7 +112,8 @@ class Form5_1(Form5_1Template):
       marker=dict(color='#D62828')
     )
     
-    
+    max_VA = sorted(db, key=lambda x: x['Valeur ajoutée'], reverse=True)[0]
+    self.label_3.text = f"{max_VA['Valeur ajoutée']:,}"
     
     # Style the plot and add a plot title
     self.style_plot(self.plot_3)
@@ -128,6 +129,10 @@ class Form5_1(Form5_1Template):
       y = [x["Valeur ajoutée"] for x in db],
       marker=dict(color='#003049')
     )
+    
+    max_EBE = sorted(db, key=lambda x: x['EBE'], reverse=True)[0]
+    self.label_4.text = f"{max_EBE['EBE']:,}"    
+    
     # Style the plot and add a plot title
     self.style_plot(self.plot_4)
     self.plot_4.layout.title = "Evolution de la valeur ajoutée"
@@ -142,6 +147,10 @@ class Form5_1(Form5_1Template):
       y = [x["EBE"] for x in db],
       marker=dict(color='#F77F00')
     )
+    
+    max_Résultat_exploitation = sorted(db, key=lambda x: x["Résultat_exploitation"], reverse=True)[0]
+    self.label_5.text = f"{max_Résultat_exploitation['Résultat_exploitation']:,}"      
+    
     # Style the plot and add a plot title
     self.style_plot(self.plot_5)
     self.plot_5.layout.title = "Evolution de l'EBE"
@@ -152,13 +161,23 @@ class Form5_1(Form5_1Template):
       
       # Create a Bar plot with this data, and change the colour of the markers
     self.plot_6.data = go.Scatter(x = [x['Year'] for x in db],
-                                  y = [x["Résultat d'exploitation"] for x in db],
+                                  y = [x["Résultat_exploitation"] for x in db],
                                   mode='lines+markers',
                                   line=dict(color='#EAE2B7'))
+    
+    max_RCAI = sorted(db, key=lambda x: x['Résultat courant avant impôt'], reverse=True)[0]
+    self.label_6.text = f"{max_RCAI['Résultat courant avant impôt']:,}"  
+    
     # Style the plot and add a plot title
     self.style_plot(self.plot_6)
     self.plot_6.layout.title = "Evolution du Résultat d'exploitation"
+    
+    max_Résultat_exceptionnel = sorted(db, key=lambda x: x['Résultat exceptionnel'], reverse=True)[0]
+    self.label_7.text = f"{max_Résultat_exceptionnel['Résultat exceptionnel']:,}"  
 
+    max_Résultat_exercice = sorted(db, key=lambda x: x['Résultat_exercice'], reverse=True)[0]
+    self.label_8.text = f"{max_Résultat_exercice['Résultat_exercice']:,}"      
+    
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form5_1_2', my_parameter="an_argument")
