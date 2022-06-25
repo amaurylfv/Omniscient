@@ -116,3 +116,10 @@ def time_series_chart():
   df = px.data.stocks(indexed=True)-1
   fig = px.bar(df, x=df.index, y="GOOG")
   return fig
+
+@anvil.server.callable
+def taux_profitabilité():
+  taux_profitabilité = app_tables.sig.search(Year=Year, Résultat_exercice=Résultat_exercice, Chiffre_affaires=Chiffre_affaires,Taux_profitabilité=Résultat_exercice/Chiffre_affaires)
+  return taux_profitabilité
+  
+  

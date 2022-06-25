@@ -15,6 +15,7 @@ class Form5(Form5Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.taux_profitabilité()
 
     # Any code you write here will run when the form opens.
     
@@ -28,3 +29,9 @@ class Form5(Form5Template):
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form5_3', my_parameter="an_argument") #Rentabilité
+    
+  def taux_profitabilité(self, **event_args):
+    db = anvil.server.call('taux_profitabilité')
+    self.label_2.text = db
+    
+    
