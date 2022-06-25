@@ -119,9 +119,18 @@ def time_series_chart():
 
 @anvil.server.callable
 def taux_profitabilité():
-    CA = app_tables.sig.get(Year='31 Dec 2022')
-    Résultat = float[r['Résultat_exercice']]
-    taux_profitabilité = float(Résultat / CA)
+  today = date.today()
+  start_month = date(today.year, today.month, 1)
+  
+  query_month = q.greater_than_or_equal_to(start_month)
+  
+  Chiffres_daffaires = app_tables.sig.search()
+  group = []
+    
+  for Chiffre_daffaire in Chiffres_daffaires:
+    Chiffre_daffaire_m = app_tables.sig.search(Chiffre_affaires=Chiffre_affaires, Year=query_month)
+    Résultat_m = app_tables.sig.search(Résultat_exercice=Résultat_exercice, Year=query_month)
+    taux_profitabilité = Résultat_m / Chiffre_daffaire_m
     return taux_profitabilité
   
   
