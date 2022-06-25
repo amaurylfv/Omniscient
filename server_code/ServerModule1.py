@@ -125,6 +125,7 @@ def taux_profitabilité():
           for r in all_records]
     df = pd.DataFrame.from_dict(dicts)
     df['taux_profitabilité'] = df['Résultat_exercice']/df['Chiffre_affaires']
-    return df['taux_profitabilité']
+    print(df['taux_profitabilité'])
+    return str(df['taux_profitabilité'])
   
   
