@@ -9,7 +9,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import io
-
+from datetime import date, timedelta
+from itertools import groupby, accumulate
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -119,18 +120,11 @@ def time_series_chart():
 
 @anvil.server.callable
 def taux_profitabilité():
-  today = date.today()
-  start_month = date(today.year, today.month, 1)
-  
-  query_month = q.greater_than_or_equal_to(start_month)
-  
-  Chiffres_daffaires = app_tables.sig.search()
-  group = []
-    
-  for Chiffre_daffaire in Chiffres_daffaires:
-    Chiffre_daffaire_m = app_tables.sig.search(Chiffre_affaires=Chiffre_affaires, Year=query_month)
-    Résultat_m = app_tables.sig.search(Résultat_exercice=Résultat_exercice, Year=query_month)
-    taux_profitabilité = Résultat_m / Chiffre_daffaire_m
-    return taux_profitabilité
+    all_records = app_tables.sig.search()
+    dicts = [{'années': r['Year'], 'Chiffre_affaires': r['Chiffre_affaires'], 'Résultat_exercice': r['Résultat_exercice']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    df['taux_profitabilité'] = df['Résultat_exercice']/df['Chiffre_affaires']
+    return df['taux_profitabilité']
   
   
