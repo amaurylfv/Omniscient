@@ -17,7 +17,7 @@ class Form5(Form5Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.build_structure_graph_1()
-    self.repeating_panel_1.items = anvil.server.call('get_sig')
+    self.profitabilité()
 
     # Any code you write here will run when the form opens.
     
@@ -41,6 +41,10 @@ class Form5(Form5Template):
                                   y = [x['Chiffre_affaires'] for x in db],
                                   mode='lines+markers',
                                   line=dict(color='#EAE2B7'))
+    
+  def profitabilité(self):
+    self.label_2.text = anvil.server.call('profitabilité')
+    
   
   
     

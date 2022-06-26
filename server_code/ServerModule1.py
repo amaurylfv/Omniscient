@@ -118,6 +118,14 @@ def time_series_chart():
   fig = px.bar(df, x=df.index, y="GOOG")
   return fig
 
-
+@anvil.server.callable
+def profitabilité():
+  rows = []
+  for row in app_tables.sig.search():
+      row = dict(row)
+      row['taux de profitabilité'] = row['Résultat_exercice'] / row['Chiffre_affaires']
+      absolue = row['taux de profitabilité']
+      relative = (f"{absolue:.0%}")
+      return relative
   
   
