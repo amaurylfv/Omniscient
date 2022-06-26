@@ -118,14 +118,6 @@ def time_series_chart():
   fig = px.bar(df, x=df.index, y="GOOG")
   return fig
 
-@anvil.server.callable
-def taux_profitabilité():
-    all_records = app_tables.sig.search()
-    dicts = [{'années': r['Year'], 'Chiffre_affaires': r['Chiffre_affaires'], 'Résultat_exercice': r['Résultat_exercice']}
-          for r in all_records]
-    taux_profitabilité = ['Résultat_exercice']/['Chiffre_affaires']
-    app_tables.sig.add_row(Taux_profitabilité=taux_profitabilité)
-    
-    return taux_profitabilité
+
   
   

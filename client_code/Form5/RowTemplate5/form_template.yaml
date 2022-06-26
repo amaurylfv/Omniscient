@@ -1,0 +1,6 @@
+container:
+  type: DataRowPanel
+  data_bindings:
+  - {property: tag, code: 'self.item[''Résultat_exercice'']/self.item[''Chiffre_affaires'']'}
+components: []
+is_package: true
