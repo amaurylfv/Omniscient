@@ -139,7 +139,6 @@ def total_charges_fixes():
     df2 = df.sum()
     df3 = (df2.to_string(index=False))
     
-    print(df3)
     return df3
     
 @anvil.server.callable   
@@ -151,7 +150,6 @@ def total_charges_variables():
     df2 = df.sum()
     df3 = (df2.to_string(index=False))
     
-    print(df3)
     return df3
       
 @anvil.server.callable
