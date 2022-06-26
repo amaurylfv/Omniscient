@@ -165,17 +165,17 @@ def total_charges_variables():
 def taux_de_marge_sur_coûts_variables():
   total_charges_variables = anvil.server.call('total_charges_variables')
   chiffre_affaires = anvil.server.call('chiffre_affaires')
-  taux_de_marge_sur_coûts_variables = float(total_charges_variables / chiffre_affaires)
-  relative = (f"{absolue:.0%}")
+  taux_de_marge_sur_coûts_variables = float(total_charges_variables) / float(chiffre_affaires)
+  relative = (f"{taux_de_marge_sur_coûts_variables:.0%}")
   
-  print(relative)
-  return relative
+  print(taux_de_marge_sur_coûts_variables)
+  return taux_de_marge_sur_coûts_variables
   
 @anvil.server.callable
 def seuil_de_rentabilité():
   charges_fixes = anvil.server.call('total_charges_fixes')
   taux_de_marge_sur_coûts_variables = anvil.server.call('taux_de_marge_sur_coûts_variables')
-  seuil_de_rentabilité = float(charges_fixes / taux_de_marge_sur_coûts_variables)
+  seuil_de_rentabilité = float(charges_fixes) / float(taux_de_marge_sur_coûts_variables)
   
   print(seuil_de_rentabilité)
   return seuil_de_rentabilité
