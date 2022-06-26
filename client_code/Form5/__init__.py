@@ -21,6 +21,8 @@ class Form5(Form5Template):
     self.profitabilité()
     self.total_charges_fixes()
     self.total_charges_variables()
+    self.taux_de_marges_sur_cv()
+    self.seuil_de_rentabilite()
     
     # Any code you write here will run when the form opens.
     
@@ -63,6 +65,11 @@ class Form5(Form5Template):
     
   def total_charges_variables(self):
     self.label_6.text = anvil.server.call('total_charges_variables')
+    
+  def taux_de_marges_sur_cv(self):
+    self.label_7.text = anvil.server.call('taux_de_marge_sur_coûts_variables')
   
+  def seuil_de_rentabilite(self):
+    self.label_3.text = anvil.server.call('seuil_de_rentabilité')
     
     

@@ -53,9 +53,31 @@ components:
       layout_properties: {grid_position: 'NAGHRT,VOKUWJ', row_background: ''}
       data_bindings: []
   - type: ColumnPanel
-    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: '#370617'}
+    name: card_5
+    layout_properties: {grid_position: 'NNLNST,VQXPTX'}
+    components:
+    - type: RichText
+      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: Taux de marge sur coût variable,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_6
+      layout_properties: {grid_position: 'APYQPP,BRTUDV'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_7
+        layout_properties: {}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#6a040f'}
     name: card_2
     layout_properties: {grid_position: 'NNLNST,MDXIJQ'}
     components:
@@ -76,7 +98,7 @@ components:
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#6a040f'}
+      spacing_below: small, background: '#9d0208'}
     name: card_3
     layout_properties: {grid_position: 'NNLNST,JCOVSC'}
     components:
@@ -98,7 +120,7 @@ components:
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#9d0208'}
+      spacing_below: small, background: '#d00000'}
     name: card_4
     layout_properties: {grid_position: 'NNLNST,VLHWZQ'}
     components:

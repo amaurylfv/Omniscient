@@ -20,6 +20,7 @@ allow_embedding: false
 name: AutoCHD
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: AutoCHD, logo_img: ''}
+startup_form: Form4_6
 native_deps: {head_html: ''}
 db_schema:
   users:
@@ -86,9 +87,6 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     - name: Plus-value et Moins-value sur cessions d'éléments d'actif
-      admin_ui: {width: 200}
-      type: number
-    - name: Taux_profitabilité
       admin_ui: {width: 200}
       type: number
   invoice:

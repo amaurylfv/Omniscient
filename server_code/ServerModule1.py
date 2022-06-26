@@ -131,6 +131,15 @@ def profitabilité():
       return relative
 
 @anvil.server.callable
+def chiffre_affaires():
+  rows = {}
+  for row in app_tables.sig.search():
+      row = dict(row)
+      chiffre_affaires = row['Chiffre_affaires']
+      
+      return chiffre_affaires
+      
+@anvil.server.callable
 def total_charges_fixes():
     all_records = app_tables.invoice.search(fixe='true')
     dicts = [{'amount': r['amount']}
@@ -155,10 +164,19 @@ def total_charges_variables():
 @anvil.server.callable
 def taux_de_marge_sur_coûts_variables():
   total_charges_variables = anvil.server.call('total_charges_variables')
-  chiffre_affaires = app_tables.sig.get(Year='31 Dec 2022')
-  taux_de_marge_sur_coûts_variables = total_charges_variables / chiffre_affaires
+  chiffre_affaires = anvil.server.call('chiffre_affaires')
+  taux_de_marge_sur_coûts_variables = float(total_charges_variables / chiffre_affaires)
+  relative = (f"{absolue:.0%}")
   
-  print(taux_de_marge_sur_coûts_variables)
-  return taux_de_marge_sur_coûts_variables
+  print(relative)
+  return relative
   
+@anvil.server.callable
+def seuil_de_rentabilité():
+  charges_fixes = anvil.server.call('total_charges_fixes')
+  taux_de_marge_sur_coûts_variables = anvil.server.call('taux_de_marge_sur_coûts_variables')
+  seuil_de_rentabilité = float(charges_fixes / taux_de_marge_sur_coûts_variables)
   
+  print(seuil_de_rentabilité)
+  return seuil_de_rentabilité
+      
