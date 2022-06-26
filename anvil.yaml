@@ -88,6 +88,9 @@ db_schema:
     - name: Plus-value et Moins-value sur cessions d'éléments d'actif
       admin_ui: {width: 200}
       type: number
+    - name: Taux_profitabilité
+      admin_ui: {width: 200}
+      type: number
   invoice:
     title: invoice
     client: search
