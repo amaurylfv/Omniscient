@@ -11,6 +11,7 @@ import pandas as pd
 import io
 from datetime import date, timedelta
 from itertools import groupby, accumulate
+
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -120,12 +121,46 @@ def time_series_chart():
 
 @anvil.server.callable
 def profitabilité():
-  rows = []
+  rows = {}
   for row in app_tables.sig.search():
       row = dict(row)
       row['taux de profitabilité'] = row['Résultat_exercice'] / row['Chiffre_affaires']
       absolue = row['taux de profitabilité']
       relative = (f"{absolue:.0%}")
+      
       return relative
+
+@anvil.server.callable
+def total_charges_fixes():
+    all_records = app_tables.invoice.search(fixe='true')
+    dicts = [{'amount': r['amount']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    df2 = df.sum()
+    df3 = (df2.to_string(index=False))
+    
+    print(df3)
+    return df3
+    
+@anvil.server.callable   
+def total_charges_variables():
+    all_records = app_tables.invoice.search(variable='true')
+    dicts = [{'amount': r['amount']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    df2 = df.sum()
+    df3 = (df2.to_string(index=False))
+    
+    print(df3)
+    return df3
+      
+@anvil.server.callable
+def taux_de_marge_sur_coûts_variables():
+  total_charges_variables = anvil.server.call('total_charges_variables')
+  chiffre_affaires = app_tables.sig.get(Year='31 Dec 2022')
+  taux_de_marge_sur_coûts_variables = total_charges_variables / chiffre_affaires
+  
+  print(taux_de_marge_sur_coûts_variables)
+  return taux_de_marge_sur_coûts_variables
   
   

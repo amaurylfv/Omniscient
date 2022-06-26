@@ -17,8 +17,11 @@ class Form5(Form5Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.build_structure_graph_1()
+    self.build_structure_graph_2()
     self.profitabilité()
-
+    self.total_charges_fixes()
+    self.total_charges_variables()
+    
     # Any code you write here will run when the form opens.
     
   def button_1_click(self, **event_args):
@@ -42,10 +45,24 @@ class Form5(Form5Template):
                                   mode='lines+markers',
                                   line=dict(color='#EAE2B7'))
     
+  def build_structure_graph_2(self):
+    # Get the data from our server function, and store it as 'db_data'
+    db = anvil.server.call('get_sig')
+      
+      # Create a Bar plot with this data, and change the colour of the markers
+    self.plot_2.data = go.Scatter(x = [x['Year'] for x in db],
+                                  y = [x['Résultat_exercice'] for x in db],
+                                  mode='lines+markers',
+                                  line=dict(color='#EAE2B7'))
+  
   def profitabilité(self):
     self.label_2.text = anvil.server.call('profitabilité')
     
-  
+  def total_charges_fixes(self):
+    self.label_5.text = anvil.server.call('total_charges_fixes')
+    
+  def total_charges_variables(self):
+    self.label_6.text = anvil.server.call('total_charges_variables')
   
     
     
