@@ -29,7 +29,6 @@ class Form11(Form11Template):
     # Upload the selected file into a Server Module
     c = FileLoader()
     invoice_data = anvil.server.call('get_invoice_data', file)
-    data = anvil.server.call('get_invoice_data', file)
     
     c.clear()    
 
