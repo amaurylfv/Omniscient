@@ -138,7 +138,19 @@ def chiffre_affaires():
       chiffre_affaires = row['Chiffre_affaires']
       
       return chiffre_affaires
-      
+
+@anvil.server.callable
+def total_charges():
+    all_records = app_tables.invoice.search()
+    dicts = [{'amount_untaxed': r['amount_untaxed']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    df2 = df.sum()
+    df3 = (df2.to_string(index=False))
+    
+    return df3
+    
+    
 @anvil.server.callable
 def total_charges_fixes():
     all_records = app_tables.invoice.search(fixe='true')
