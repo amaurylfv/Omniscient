@@ -40,6 +40,7 @@ class Form1(Form1Template):
     # Any code you write here will run when the form opens.
     self.temp_data = []
     self.build_revenue_graph()
+    self.build_charges_graph()
     
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
   def button_1_click(self, **event_args):
@@ -111,8 +112,8 @@ class Form1(Form1Template):
     
     # Create a Bar plot with this data, and change the colour of the markers
     self.plot_1.data = go.Bar(
-      x = [x['date'] for x in db_data],
-      y = [x['amount'] for x in db_data],
+      x = [x['Year'] for x in db_data],
+      y = [x['Chiffre_affaires'] for x in db_data],
       marker=dict(color='#F7DC6F')
     )
     # Style the plot and add a plot title
