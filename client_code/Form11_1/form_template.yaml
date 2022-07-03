@@ -18,7 +18,6 @@ components:
         role: null
         columns:
         - {id: FJQUNL, title: Montant TTC Total, data_key: amount}
-        - {id: DWARNK, title: Nom Fournisseur, data_key: partner_name}
         - {id: VAIEON, title: Date, data_key: date}
         - {id: FSVVBH, title: Réfèrence, data_key: invoice_number}
         - {id: AQJKRQ, title: Devise, data_key: currency}
