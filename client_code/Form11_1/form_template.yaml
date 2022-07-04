@@ -48,7 +48,10 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - type: Button
-    properties: {text: button_1}
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:chevron-left'}
     name: button_1
     layout_properties: {}
     event_bindings: {click: button_1_click}
