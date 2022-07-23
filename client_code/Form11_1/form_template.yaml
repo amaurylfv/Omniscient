@@ -42,6 +42,50 @@ components:
         name: repeating_panel_1
         layout_properties: {}
       data_bindings: []
+  - type: ColumnPanel
+    properties: {role: card}
+    name: card_1
+    layout_properties: {grid_position: 'DQKADJ,FMAMJS'}
+  - type: ColumnPanel
+    properties: {role: card}
+    name: card_2
+    layout_properties: {grid_position: 'DQKADJ,MYELMR'}
+  - type: ColumnPanel
+    properties: {role: card}
+    name: card_3
+    layout_properties: {grid_position: 'DQKADJ,DICUPU'}
+  - type: ColumnPanel
+    properties: {role: card}
+    name: card_4
+    layout_properties: {grid_position: 'DQKADJ,FPPBSE'}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      tooltip: '', interactive: true}
+    name: plot_1
+    layout_properties: {grid_position: 'ZBHWSC,QCFJNX'}
+    event_bindings: {click: plot_1_click}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      tooltip: '', interactive: true}
+    name: plot_2
+    layout_properties: {grid_position: 'PMNRRO,JZHHDF'}
+    event_bindings: {click: plot_2_click}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      tooltip: '', interactive: true}
+    name: plot_3
+    layout_properties: {grid_position: 'PMNRRO,COHUWZ'}
+    event_bindings: {click: plot_3_click}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      tooltip: '', interactive: true}
+    name: plot_4
+    layout_properties: {grid_position: 'VXYMFN,WNMUFP'}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      tooltip: '', interactive: true}
+    name: plot_5
+    layout_properties: {grid_position: 'VXYMFN,EBRXHL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

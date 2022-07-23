@@ -26,11 +26,11 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: Form0}
-package_name: AutoCHD
+package_name: Omniscient
 allow_embedding: false
-name: AutoCHD
+name: Omniscient
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: AutoCHD, logo_img: ''}
+metadata: {title: Omniscient, logo_img: ''}
 startup_form: Form4_6
 native_deps: {head_html: ''}
 db_schema:
