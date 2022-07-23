@@ -39,12 +39,12 @@ def create_fig():
 
 @anvil.server.callable
 def create_pie():
-    all_records = app_tables.sig.search()
+    all_records = app_tables.invoice.search()
     # For each row, pull out only the data we want to put into pandas
-    dicts = [{'années': r['Year'], 'EBE': r['EBE'], 'sig': r['Marge commerciale']}
+    dicts = [{'date': r['date'], 'fournisseurs': r['issuer'], 'Montants': r['amount']}
           for r in all_records]
     df = pd.DataFrame.from_dict(dicts)
-    fig = px.pie(df, values='sig', names='années', color_discrete_sequence=px.colors.sequential.RdBu, hole=.3)
+    fig = px.pie(df, values='Montants', names='fournisseurs', color_discrete_sequence=px.colors.sequential.RdBu, hole=.3)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     return fig
 
