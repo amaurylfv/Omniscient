@@ -255,5 +255,20 @@ db_schema:
     - name: variable
       admin_ui: {width: 200}
       type: string
+    - name: country
+      admin_ui: {width: 200}
+      type: string
+    - name: postalCode
+      admin_ui: {width: 200}
+      type: number
+    - name: city
+      admin_ui: {width: 200}
+      type: string
+    - name: house_number
+      admin_ui: {width: 200}
+      type: number
+    - name: address
+      admin_ui: {width: 200}
+      type: string
 uplink_visible: true
 renamed: true

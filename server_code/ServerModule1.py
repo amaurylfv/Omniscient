@@ -11,6 +11,8 @@ import pandas as pd
 import io
 from datetime import date, timedelta
 from itertools import groupby, accumulate
+import anvil.http
+import urllib.parse
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -90,16 +92,31 @@ def map_chart():
 
 @anvil.server.callable
 def issuer_map():
-  locations = app_tables.invoice.search()
-  dicts = [{'pays': r['country'], 'ville': r['city'], 'Numéro': r['street_number'], 'adresse':r['adress']}
-        for r in locations]
-  df = pd.DataFrame.from_dict(dicts)
-  fig = px.scatter_mapbox(locations, lat="lat", lon="lon", hover_name="City", hover_data=["State", "Population"],
-                        color_discrete_sequence=["fuchsia"], zoom=3, height=300)
-  fig.update_layout(mapbox_style="open-street-map")
-  fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-  fig.show()
-
+  api_key = "UEJNpy9I6ZsI3J8Dwd_SAOeqnYJvMvM0guqwd7sVkgc"
+  root_url = "https://geocode.search.hereapi.com/v1/geocode?"
+  rows = {}
+  for row in app_tables.invoice.search():
+    row = dict(row)
+    
+    country = row['country']
+    
+    city = row['city']
+    
+    postalCode = row['postalCode']
+    
+    house_number = row['house_number']
+    
+    address = row['address']
+    
+    attributes = {"houseNumber": house_number, "street": address, "city": city, "postalCode": postalCode, "country": country}
+    encoded_attributes = urllib.parse.urlencode(attributes)
+    url = f"{root_url}qq={encoded_attributes}&apiKey={api_key}"
+    
+    resp = anvil.http.request(url,json=True)
+    print(url)
+    print(resp)
+    return resp
+    
 @anvil.server.callable
 def filled_area():
     all_records = app_tables.sig.search()
