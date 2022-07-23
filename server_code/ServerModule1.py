@@ -99,21 +99,32 @@ def issuer_map():
     row = dict(row)
     
     country = row['country']
+    a = {"country": country}
     
     city = row['city']
+    e = {"city": city}
     
     postalCode = row['postalCode']
+    b = {"postalCode": postalCode}
     
     house_number = row['house_number']
+    c = {"houseNumber": house_number}
     
     address = row['address']
+    d = {"street": address}
     
-    attributes = {"houseNumber": house_number, "street": address, "city": city, "postalCode": postalCode, "country": country}
-    encoded_attributes = urllib.parse.urlencode(attributes)
-    url = f"{root_url}qq={encoded_attributes}&apiKey={api_key}"
+    encoded_a = urllib.parse.urlencode(a)
+    encoded_b = urllib.parse.urlencode(b)
+    encoded_c = urllib.parse.urlencode(c)
+    encoded_d = urllib.parse.urlencode(d)
+    encoded_e = urllib.parse.urlencode(e)
+    
+    params = str(encoded_a+";"+encoded_b+";"+encoded_c+";"+encoded_d+";"+encoded_e)
+    
+    url = f"{root_url}&qq={params}&apiKey={api_key}"
+    print(url)
     
     resp = anvil.http.request(url,json=True)
-    print(url)
     print(resp)
     return resp
     
