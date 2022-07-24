@@ -18,7 +18,8 @@ class Form11_1(Form11_1Template):
     self.build_pie_chart_issuer()
     self.get_locations()
     self.issuer_map()
-    self.typology_charges()
+    self.total_charges_fixes()
+    self.total_charges_variables()
 
     # Any code you write here will run when the form opens.
     
@@ -52,10 +53,11 @@ class Form11_1(Form11_1Template):
       y = [x['amount'] for x in db],
       marker=dict(color='#f4a261')
     )
-    
-    # Style the plot and add a plot title
-    self.plot_1.layout.title = "Evolution des charges"
-    
+
+    #Nombre de fournisseurs
+    number_issuer = anvil.server.call('number_of_issuer')
+    self.label_3.text = number_issuer
+ 
     #Charge la plus élevée
     max_invoice = sorted(db, key=lambda x: x['amount'], reverse=True)[0]
     self.label_1.text = f"{max_invoice['amount']:}"    
@@ -67,8 +69,7 @@ class Form11_1(Form11_1Template):
   def build_pie_chart_issuer(self):  
     fig = anvil.server.call('create_pie') 
     self.plot_2.figure = fig
-    
-    self.plot_2.layout.title = "Dépendance économique"
+
     
   def get_locations(self):
     anvil.server.call('get_locations')
@@ -77,14 +78,20 @@ class Form11_1(Form11_1Template):
     db = anvil.server.call('issuer_map')
     self.plot_3.figure = db
     
-  def typology_charges(self):
-    var = anvil.server.call('total_charges_variables')
+  def total_charges_fixes(self):
     fixe = anvil.server.call('total_charges_fixes')
     self.plot_4.data = go.Bar(
-      x = [var],
+      x = [fixe],
       y = [fixe],
       marker=dict(color='#e76f51')
     )
     
+  def total_charges_variables(self):
+    var = anvil.server.call('total_charges_variables')
+    self.plot_5.data = go.Bar(
+      x = [var],
+      y = [var],
+      marker=dict(color='#adc178')
+    )
   
     

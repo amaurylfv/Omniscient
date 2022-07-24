@@ -256,4 +256,22 @@ def seuil_de_rentabilité():
   
   print(seuil_de_rentabilité)
   return seuil_de_rentabilité
-      
+
+@anvil.server.callable
+def number_of_issuer():
+  all_records = app_tables.invoice.search()
+  dicts = [{'issuer': r['issuer']}
+        for r in all_records]
+
+  seen = set()
+  new_l = []
+  for d in dicts:
+      t = tuple(d.items())
+      if t not in seen:
+          seen.add(t)
+          new_l.append(d)
+  
+  df = pd.DataFrame.from_dict(new_l)
+  df2 = len(df)
+  
+  return df2

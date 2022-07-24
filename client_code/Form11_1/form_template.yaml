@@ -123,12 +123,26 @@ components:
       properties: {}
       name: label_4
       layout_properties: {grid_position: 'IJBUTG,FBXZGA'}
+  - type: RichText
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Evolution des charges dans le temps,
+      font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: markdown}
+    name: rich_text_9
+    layout_properties: {grid_position: 'POUOHW,ATSQYN'}
   - type: Plot
     properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
       tooltip: '', interactive: true}
     name: plot_1
     layout_properties: {grid_position: 'ZBHWSC,QCFJNX'}
     event_bindings: {click: plot_1_click}
+  - type: RichText
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Représentation des fournisseurs dans la part des charges,
+      font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: markdown}
+    name: rich_text_8
+    layout_properties: {grid_position: 'RWJASS,HPTTSK'}
   - type: Plot
     properties: {spacing_above: small, spacing_below: small, height: '450', visible: true,
       tooltip: '', interactive: true}
@@ -136,7 +150,7 @@ components:
     layout_properties: {grid_position: 'PMNRRO,JZHHDF'}
     event_bindings: {click: plot_2_click}
   - type: RichText
-    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Répartition géographique des fournisseurs,
       font: '', spacing_above: small, spacing_below: small, data: null, background: '',
       format: markdown}
@@ -148,16 +162,29 @@ components:
     name: plot_3
     layout_properties: {grid_position: 'QJQTXA,EZPATM'}
     event_bindings: {click: plot_3_click}
+  - type: RichText
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Charges fixes, font: '',
+      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+    name: rich_text_6
+    layout_properties: {grid_position: 'VXYMFN,WNMUFP DPNCKU,GWQHWL'}
   - type: Plot
     properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
       tooltip: '', interactive: true}
     name: plot_4
-    layout_properties: {grid_position: 'VXYMFN,WNMUFP'}
+    layout_properties: {grid_position: 'VXYMFN,WNMUFP NEIJPY,HAEOST'}
+  - type: RichText
+    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Charges variables,
+      font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: markdown}
+    name: rich_text_7
+    layout_properties: {grid_position: 'VXYMFN,EBRXHL CLPSRA,AAZKFQ'}
   - type: Plot
     properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
       tooltip: '', interactive: true}
     name: plot_5
-    layout_properties: {grid_position: 'VXYMFN,EBRXHL'}
+    layout_properties: {grid_position: 'VXYMFN,EBRXHL QYOYWO,IJVYKS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
