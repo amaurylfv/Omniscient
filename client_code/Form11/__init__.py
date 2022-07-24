@@ -9,6 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 from ..Form11_1 import Form11_1
+from ..Form11_2 import Form11_2
 
 class Form11(Form11Template):
   def __init__(self, **properties):
@@ -32,10 +33,13 @@ class Form11(Form11Template):
     
     c.clear()    
 
-  def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
     text = anvil.server.call('get_invoice_data',self.file_loader_1.text)
     self.data_row_panel_1.text = text
+    
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form11_2', my_parameter="an_argument")
+    
 
 
 

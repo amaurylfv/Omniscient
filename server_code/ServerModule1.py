@@ -34,7 +34,7 @@ def get_sig(): # Table des SIG
 
 @anvil.server.callable
 def get_invoice(): #Extraction des données des factures
-  return app_tables.invoice.search()
+  return app_tables.invoice.search(amount=q.not_(None))
 
 @anvil.server.callable
 def create_fig():
@@ -288,10 +288,7 @@ def nombre_de_factures():
 
 @anvil.server.callable
 def anomalies_factures():
-  all_records = app_tables.invoice.search(
-    amount=q.not_(q.not_(None)), 
-    issuer=q.not_(q.not_(None)), 
-    date=q.not_(q.not_(None)))
+  all_records = app_tables.invoice.search(q.any_of(amount=None, issuer=None, date=None))
   dicts = [{'invoice_number': r['invoice_number']}
         for r in all_records]
   df = pd.DataFrame.from_dict(dicts)

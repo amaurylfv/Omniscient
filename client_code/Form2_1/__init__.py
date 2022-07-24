@@ -20,3 +20,8 @@ class Form2_1(Form2_1Template):
   def histogram(self):
     data = anvil.server.call('create_histogram')
     self.plot_1.figure = data
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form2', my_parameter="an_argument") #Retour
+
