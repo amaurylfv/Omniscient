@@ -57,7 +57,10 @@ components:
       name: rich_text_3
       layout_properties: {grid_position: 'PUOURC,OCDGZG'}
     - type: Label
-      properties: {}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_3
       layout_properties: {grid_position: 'MUGMHI,IFQAAJ'}
   - type: ColumnPanel
@@ -120,7 +123,10 @@ components:
       layout_properties: {grid_position: 'HLGZCJ,QTNSKE'}
       components: []
     - type: Label
-      properties: {}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_4
       layout_properties: {grid_position: 'IJBUTG,FBXZGA'}
   - type: RichText
