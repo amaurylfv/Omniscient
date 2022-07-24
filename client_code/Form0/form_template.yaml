@@ -50,3 +50,19 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:home'}
+    name: button_3
+    layout_properties: {}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: "Omniscient \ud83d\udc41\ufe0f", font_size: null, wrap_on: mobile,
+    font: '', col_spacing: medium, spacing_above: small, icon_align: left_edge, col_widths: '',
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: link_2
+  layout_properties: {slot: title}

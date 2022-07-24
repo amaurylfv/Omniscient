@@ -26,23 +26,24 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Attestation de vigilance, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_1
     layout_properties: {grid_position: 'FHNMUX,KKWVPF'}
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Masse salariale, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'IFNETY,TQDSFO'}
-- type: RichText
-  properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-    foreground: '', visible: true, font_size: null, content: "AutoCHD \ud83e\udd16\
-      \ud83e\uddfe", font: '', spacing_above: small, spacing_below: small, data: null,
-    background: '', format: markdown}
-  name: rich_text_1
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: "Omniscient \ud83d\udc41\ufe0f", font_size: null, wrap_on: mobile,
+    font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: link_1
   layout_properties: {slot: title}
