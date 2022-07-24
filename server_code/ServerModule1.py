@@ -8,11 +8,14 @@ import anvil.server
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
+from pandas import json_normalize
 import io
 from datetime import date, timedelta
 from itertools import groupby, accumulate
 import anvil.http
 import urllib.parse
+from urllib.request import urlopen
+import json
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -94,40 +97,47 @@ def map_chart():
 def issuer_map():
   api_key = "UEJNpy9I6ZsI3J8Dwd_SAOeqnYJvMvM0guqwd7sVkgc"
   root_url = "https://geocode.search.hereapi.com/v1/geocode?"
+  show = "parsing"
   rows = {}
   for row in app_tables.invoice.search():
     row = dict(row)
     
+    issuer = row['issuer']
+    
     country = row['country']
-    a = {"country": country}
+    countries = {"country": country}
     
     city = row['city']
-    e = {"city": city}
+    cities = {"city": city}
     
     postalCode = row['postalCode']
-    b = {"postalCode": postalCode}
+    postalCodes = {"postalCode": postalCode}
     
     house_number = row['house_number']
-    c = {"houseNumber": house_number}
+    houses_numbers = {"houseNumber": house_number}
     
     address = row['address']
-    d = {"street": address}
+    addresses = {"street": address}
     
-    encoded_a = urllib.parse.urlencode(a)
-    encoded_b = urllib.parse.urlencode(b)
-    encoded_c = urllib.parse.urlencode(c)
-    encoded_d = urllib.parse.urlencode(d)
-    encoded_e = urllib.parse.urlencode(e)
+    encoded_country = urllib.parse.urlencode(countries)
+    encoded_postalCode = urllib.parse.urlencode(postalCodes)
+    encoded_house_number = urllib.parse.urlencode(houses_numbers)
+    encoded_address = urllib.parse.urlencode(addresses)
+    encoded_city = urllib.parse.urlencode(cities)
     
-    params = str(encoded_a+";"+encoded_b+";"+encoded_c+";"+encoded_d+";"+encoded_e)
+    params = str(encoded_country+";"+encoded_postalCode+";"+encoded_house_number+";"+encoded_address+";"+encoded_city)
     
-    url = f"{root_url}&qq={params}&apiKey={api_key}"
-    print(url)
-    
-    resp = anvil.http.request(url,json=True)
-    print(resp)
-    return resp
-    
+    url = f"{root_url}&qq={params}&show={show}&apiKey={api_key}"
+    response = anvil.http.request(url, json=True)
+    df = json_normalize(response, 'items')
+  
+    fig = px.scatter_mapbox(df, lat="position.lat", lon="position.lng", hover_name='address.city', hover_data=["address.countryName", "address.district"],
+                        color_discrete_sequence=["fuchsia"], zoom=3, height=300)
+    fig1 = fig.update_layout(mapbox_style="open-street-map")
+    fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+
+    return fig2
+
 @anvil.server.callable
 def filled_area():
     all_records = app_tables.sig.search()

@@ -16,6 +16,7 @@ class Form11_1(Form11_1Template):
     self.repeating_panel_1.items = anvil.server.call('get_invoice')
     self.build_structure_graph_1()
     self.build_pie_chart_issuer()
+    self.temp_data = []
     self.issuer_map()
 
     # Any code you write here will run when the form opens.
@@ -69,5 +70,7 @@ class Form11_1(Form11_1Template):
     self.plot_2.layout.title = "Dépendance économique"
     
   def issuer_map(self):
-    anvil.server.call('issuer_map')
+    db = anvil.server.call('issuer_map')
+    self.plot_3.figure = db
+    
     
