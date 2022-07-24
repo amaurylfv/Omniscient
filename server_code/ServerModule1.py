@@ -94,7 +94,7 @@ def map_chart():
   return fig
 
 @anvil.server.callable
-def issuer_map():
+def get_locations():
   api_key = "UEJNpy9I6ZsI3J8Dwd_SAOeqnYJvMvM0guqwd7sVkgc"
   root_url = "https://geocode.search.hereapi.com/v1/geocode?"
   show = "parsing"
@@ -130,14 +130,27 @@ def issuer_map():
     url = f"{root_url}&qq={params}&show={show}&apiKey={api_key}"
     responses = anvil.http.request(url, json=True)
     
-  data = json_normalize(responses, 'items')
-  df = pd.DataFrame(data)
-  print(df)
-  fig = px.scatter_mapbox(df, lat="position.lat", lon="position.lng", hover_name='address.city', hover_data=["address.countryName","address.houseNumber","address.street"],
-                              color_discrete_sequence=["red"], zoom=10, height=200)
-  fig1 = fig.update_layout(mapbox_style="carto-positron")
-  fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    for response in responses :
+      data = json_normalize(responses, 'items')
+      df_flush = data.to_dict(orient="records")
     
+    df = pd.DataFrame(df_flush)
+    for d in df_flush:
+      app_tables.locations.add_row(**d)
+      #df = pd.DataFrame.append(data)
+      #df = pd.read_json(data)
+      #print(df)
+  
+@anvil.server.callable
+def issuer_map():
+  all_records = app_tables.locations.search()
+  dicts = [{'lat': r['position.lat'], 'lon': r['position.lng'], 'address.city': r['address.city'], 'address.countryName': r['address.countryName'], 'address.houseNumber': r['address.houseNumber'], 'address.street': r['address.street']}
+          for r in all_records]
+  df = pd.DataFrame.from_dict(dicts)
+  fig = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name='address.city', hover_data=["address.countryName","address.houseNumber","address.street"],
+                                  color_discrete_sequence=["red"], zoom=10, height=200)
+  fig1 = fig.update_layout(mapbox_style="carto-positron")
+  fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})     
   return fig2
 
 @anvil.server.callable

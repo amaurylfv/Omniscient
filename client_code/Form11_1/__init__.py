@@ -16,8 +16,9 @@ class Form11_1(Form11_1Template):
     self.repeating_panel_1.items = anvil.server.call('get_invoice')
     self.build_structure_graph_1()
     self.build_pie_chart_issuer()
-    self.temp_data = []
+    self.get_locations()
     self.issuer_map()
+    self.typology_charges()
 
     # Any code you write here will run when the form opens.
     
@@ -69,8 +70,21 @@ class Form11_1(Form11_1Template):
     
     self.plot_2.layout.title = "Dépendance économique"
     
+  def get_locations(self):
+    anvil.server.call('get_locations')
+    
   def issuer_map(self):
     db = anvil.server.call('issuer_map')
     self.plot_3.figure = db
     
+  def typology_charges(self):
+    var = anvil.server.call('total_charges_variables')
+    fixe = anvil.server.call('total_charges_fixes')
+    self.plot_4.data = go.Bar(
+      x = [var],
+      y = [fixe],
+      marker=dict(color='#e76f51')
+    )
+    
+  
     
