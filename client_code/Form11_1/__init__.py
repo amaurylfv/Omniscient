@@ -66,6 +66,11 @@ class Form11_1(Form11_1Template):
     max_issuer = sorted(db, key=lambda x: x['amount'], reverse=True)[0]
     self.label_2.text = f"{max_issuer['issuer']:}"
     
+    #Facture en anomalie
+    anomalie_facture = anvil.server.call('anomalies_factures')
+    self.label_4.text = anomalie_facture
+    
+    
   def build_pie_chart_issuer(self):  
     fig = anvil.server.call('create_pie') 
     self.plot_2.figure = fig

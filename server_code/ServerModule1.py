@@ -275,3 +275,26 @@ def number_of_issuer():
   df2 = len(df)
   
   return df2
+
+@anvil.server.callable
+def nombre_de_factures():
+  all_records = app_tables.invoice.search()
+  dicts = [{'invoice_number': r['invoice_number']}
+        for r in all_records]
+  df = pd.DataFrame.from_dict(dicts)
+  df2 = len(df)
+  
+  return df2
+
+@anvil.server.callable
+def anomalies_factures():
+  all_records = app_tables.invoice.search(
+    amount=q.not_(q.not_(None)), 
+    issuer=q.not_(q.not_(None)), 
+    date=q.not_(q.not_(None)))
+  dicts = [{'invoice_number': r['invoice_number']}
+        for r in all_records]
+  df = pd.DataFrame.from_dict(dicts)
+  df2 = len(df)
+
+  return df2

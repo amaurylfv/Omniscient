@@ -73,10 +73,10 @@ components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
         foreground: white, visible: true, font_size: null, content: Fournisseur principal,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        font: '', spacing_above: small, spacing_below: none, data: null, background: '',
         format: markdown}
       name: rich_text_2
-      layout_properties: {grid_position: 'WCLKVE,DYFVZU'}
+      layout_properties: {grid_position: 'WCLKVE,DYFVZU', full_width_row: false}
       components: []
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
@@ -99,14 +99,14 @@ components:
         format: markdown}
       name: rich_text_1
       layout_properties: {grid_position: 'DRLXVO,EYZUPA'}
-      components:
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_1
-        layout_properties: {}
+      components: []
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'KFNTSC,AIPXMR'}
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -115,8 +115,8 @@ components:
     layout_properties: {grid_position: 'DQKADJ,FPPBSE'}
     components:
     - type: RichText
-      properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Taux de conformité des factures,
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: Factures en anomalies,
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_4
