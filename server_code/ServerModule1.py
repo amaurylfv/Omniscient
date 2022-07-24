@@ -128,15 +128,17 @@ def issuer_map():
     params = str(encoded_country+";"+encoded_postalCode+";"+encoded_house_number+";"+encoded_address+";"+encoded_city)
     
     url = f"{root_url}&qq={params}&show={show}&apiKey={api_key}"
-    response = anvil.http.request(url, json=True)
-    df = json_normalize(response, 'items')
-  
-    fig = px.scatter_mapbox(df, lat="position.lat", lon="position.lng", hover_name='address.city', hover_data=["address.countryName", "address.district"],
-                        color_discrete_sequence=["fuchsia"], zoom=3, height=300)
-    fig1 = fig.update_layout(mapbox_style="open-street-map")
-    fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-
-    return fig2
+    responses = anvil.http.request(url, json=True)
+    
+  data = json_normalize(responses, 'items')
+  df = pd.DataFrame(data)
+  print(df)
+  fig = px.scatter_mapbox(df, lat="position.lat", lon="position.lng", hover_name='address.city', hover_data=["address.countryName","address.houseNumber","address.street"],
+                              color_discrete_sequence=["red"], zoom=10, height=200)
+  fig1 = fig.update_layout(mapbox_style="carto-positron")
+  fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+    
+  return fig2
 
 @anvil.server.callable
 def filled_area():
