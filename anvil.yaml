@@ -30,7 +30,7 @@ package_name: Omniscient
 allow_embedding: false
 name: Omniscient
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: Omniscient, logo_img: 'asset:logo omniscient (1).png'}
+metadata: {title: Omniscient, logo_img: 'asset:logo omniscient (1).png', description: automatiser votre saisie comptable pour tirez parti des données}
 startup_form: Form4_6
 native_deps: {head_html: ''}
 db_schema:
