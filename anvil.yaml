@@ -30,7 +30,7 @@ package_name: Omniscient
 allow_embedding: false
 name: Omniscient
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {title: Omniscient, logo_img: 'asset:logo omniscient (1).png', description: automatiser votre saisie comptable pour tirez parti des données}
+metadata: {title: Omniscient, logo_img: 'asset:Background (6).png', description: automatiser votre saisie comptable pour tirez parti des données !}
 startup_form: Form4_6
 native_deps: {head_html: ''}
 db_schema:
@@ -373,6 +373,108 @@ db_schema:
     title: locations
     client: none
     server: full
-    columns: []
+    columns:
+    - name: parsing.city
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: scoring.fieldScore.city
+      admin_ui: {width: 200}
+      type: number
+    - name: scoring.queryScore
+      admin_ui: {width: 200}
+      type: number
+    - name: scoring.fieldScore.houseNumber
+      admin_ui: {width: 200}
+      type: number
+    - name: address.countryCode
+      admin_ui: {width: 200}
+      type: string
+    - name: address.label
+      admin_ui: {width: 200}
+      type: string
+    - name: mapView.west
+      admin_ui: {width: 200}
+      type: number
+    - name: scoring.fieldScore.country
+      admin_ui: {width: 200}
+      type: number
+    - name: scoring.fieldScore.postalCode
+      admin_ui: {width: 200}
+      type: number
+    - name: mapView.south
+      admin_ui: {width: 200}
+      type: number
+    - name: parsing.street
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: resultType
+      admin_ui: {width: 200}
+      type: string
+    - name: parsing.country
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: title
+      admin_ui: {width: 200}
+      type: string
+    - name: address.street
+      admin_ui: {width: 200}
+      type: string
+    - name: position.lng
+      admin_ui: {width: 200}
+      type: number
+    - name: parsing.houseNumber
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: address.stateCode
+      admin_ui: {width: 200}
+      type: string
+    - name: position.lat
+      admin_ui: {width: 200}
+      type: number
+    - name: address.district
+      admin_ui: {width: 200}
+      type: string
+    - name: id
+      admin_ui: {width: 200}
+      type: string
+    - name: mapView.north
+      admin_ui: {width: 200}
+      type: number
+    - name: address.city
+      admin_ui: {width: 200}
+      type: string
+    - name: address.houseNumber
+      admin_ui: {width: 200}
+      type: string
+    - name: access
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: mapView.east
+      admin_ui: {width: 200}
+      type: number
+    - name: scoring.fieldScore.streets
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: address.county
+      admin_ui: {width: 200}
+      type: string
+    - name: address.countryName
+      admin_ui: {width: 200}
+      type: string
+    - name: houseNumberType
+      admin_ui: {width: 200}
+      type: string
+    - name: parsing.postalCode
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: address.state
+      admin_ui: {width: 200}
+      type: string
+    - name: address.postalCode
+      admin_ui: {width: 200}
+      type: string
+    - name: houseNumberFallback
+      admin_ui: {width: 200}
+      type: bool
 uplink_visible: true
 renamed: true
