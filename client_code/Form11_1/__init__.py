@@ -15,7 +15,6 @@ class Form11_1(Form11_1Template):
     self.init_components(**properties)
     self.repeating_panel_1.items = anvil.server.call('get_invoice')
     self.nombre_factures()
-    self.button_2_click()
 
     # Any code you write here will run when the form opens.
     
