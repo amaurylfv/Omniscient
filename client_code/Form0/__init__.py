@@ -35,5 +35,11 @@ class Form0(Form0Template):
     """This method is called when the link is clicked"""
     open_form('Form13', my_parameter="an_argument") #Page d'aide
 
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    media_object = app_files()
+    anvil.media.download(media_object)
+
+
 
 

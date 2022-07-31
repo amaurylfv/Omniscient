@@ -71,6 +71,7 @@ components:
       background: '', bold: false, underline: false, icon: 'fa:book'}
     name: button_3
     layout_properties: {}
+    event_bindings: {click: button_3_click}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: "Omniscient \ud83d\udc41\ufe0f", font_size: null, wrap_on: mobile,
