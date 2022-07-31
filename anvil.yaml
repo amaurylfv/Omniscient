@@ -141,6 +141,9 @@ db_schema:
     - name: desc
       admin_ui: {width: 200}
       type: string
+    - name: account
+      admin_ui: {width: 200}
+      type: number
     - name: lines
       admin_ui: {width: 200}
       type: string

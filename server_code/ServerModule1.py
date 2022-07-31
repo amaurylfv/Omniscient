@@ -295,3 +295,11 @@ def anomalies_factures():
   df2 = len(df)
 
   return df2
+
+@anvil.server.callable
+def data_to_excel():
+  items = app_tables.invoice.search()
+  dicts = [{'Date':items['date'],'Compte':items['account'], 'Libellé':items['desc'], 'TTC':items['amount'], 'HT':items['amount_untaxed'], 'TVA':items['amount_TVA']} for item in items]
+  df = pd.DataFrame.from_dict(dicts)
+  excel = df.to_excel
+  return excel
