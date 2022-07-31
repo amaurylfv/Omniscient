@@ -15,6 +15,7 @@ class Form11_1(Form11_1Template):
     self.init_components(**properties)
     self.repeating_panel_1.items = anvil.server.call('get_invoice')
     self.nombre_factures()
+    self.button_2_click()
 
     # Any code you write here will run when the form opens.
     
@@ -39,8 +40,10 @@ class Form11_1(Form11_1Template):
     db = anvil.server.call('nombre_de_factures')
     self.label_1.text = db
   
-
-  
- 
-  
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    csv_file = anvil.server.call('data_to_csv')
+    media = BlobMedia('text/plain', csv_file.get_bytes(), name='export.csv')
+    download(media)
     
+
