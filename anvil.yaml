@@ -23,8 +23,68 @@ services:
 
           </p><p>This link will expire in ten minutes.</p>'}
 - source: /runtime/services/google.yml
-  client_config: {}
-  server_config: {}
+  client_config:
+    app_files:
+    - capabilities: {canCopy: true, canEdit: true}
+      editable: true
+      copyable: true
+      webContentLink: https://drive.google.com/uc?id=1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7&export=download
+      embedLink: https://drive.google.com/file/d/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/preview?usp=drivesdk
+      fileExtension: pdf
+      copyRequiresWriterPermission: false
+      python_name: guide_utilisateur_pdf
+      explicitlyTrashed: false
+      lastModifyingUser:
+        kind: drive#user
+        displayName: Quelqu' un
+        picture: {url: 'https://lh3.googleusercontent.com/a/default-user=s64'}
+        isAuthenticatedUser: true
+        permissionId: '10177756504419306775'
+        emailAddress: amaurylfvr@gmail.com
+      shared: false
+      createdDate: '2022-07-31T21:20:50.862Z'
+      id: 1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7
+      owners:
+      - kind: drive#user
+        displayName: Quelqu' un
+        picture: {url: 'https://lh3.googleusercontent.com/a/default-user=s64'}
+        isAuthenticatedUser: true
+        permissionId: '10177756504419306775'
+        emailAddress: amaurylfvr@gmail.com
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {kind: drive#parentReference, id: 1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/parents/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0',
+        parentLink: 'https://www.googleapis.com/drive/v2/files/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0',
+        isRoot: false}
+      labels: {starred: false, hidden: false, trashed: false, restricted: false, viewed: true}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/pdf
+      headRevisionId: 0BwztPQECGdPxdjJkZDJTU3cwWXJMVUpoOEd5aGNtWWVtYm1ZPQ
+      permission: roclient
+      selfLink: https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7
+      lastViewedByMeDate: '2022-07-31T21:20:50.862Z'
+      userPermission: {kind: drive#permission, etag: '"vCay33-biPI2m2YUlXusQyPmFFw"',
+        id: me, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/permissions/me',
+        role: owner, type: user, pendingOwner: false}
+      lastModifyingUserName: Quelqu' un
+      etag: '"MTY1OTMwMTIyMTAwMA"'
+      kind: drive#file
+      modifiedByMeDate: '2022-07-31T21:00:21.000Z'
+      title: '[Error loading file 1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7]'
+      version: '3'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '710766'
+      alternateLink: https://drive.google.com/file/d/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/view?usp=drivesdk
+      mimeType: application/pdf
+      modifiedDate: '2022-07-31T21:00:21.000Z'
+      downloadUrl: https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7?alt=media&source=downloadUrl
+      quotaBytesUsed: '710766'
+      md5Checksum: 578caef5cf47651279250f4463918a94
+      originalFilename: Guide utilisateur.pdf
+      thumbnailLink: https://lh4.googleusercontent.com/zy8Knt6urxci_IoEL3xXiIbOGw3PGpeEwz-xFKSAWvVzW4LVbmuDQ72hsLh79g6nwdtCVr-Vr860-BQ=s220
+      ownerNames: [Quelqu' un]
+  server_config: {enc_delegation_refresh_token: iQL9QfQgHDnz9Zm6JI6mPM3yDGa4P+lcgGXZNt5lOVz1ilflvruZX3OMt1/OadpV94kumR3HVQM4s2kVIqed5Aiz16huIxSxQDHWzsgEgQ/wnsgLwiTt4H52TO1U7qk0gpi84TZHJwI1eo8BCf8RdeSiAlQFeGs7XrTaI7Z04l+mhk0W2L83QyKiOe66pdZM4Eij2849zD4Gw/13KGux6ly3Wpcq0M+GNeZnduPI9spuu0SVLoZVfrk+RqKrQWOMi8gzF4XjG3Flx0XIcR4ZgEuVG1ibpIfOHXIZ8bjqQWeL+2Tq6CUYKHqR179n6A==}
 startup: {type: form, module: Form0}
 package_name: Omniscient
 allow_embedding: false

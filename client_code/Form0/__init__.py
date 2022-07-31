@@ -37,7 +37,7 @@ class Form0(Form0Template):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    media_object = app_files()
+    media_object = app_files.guide_utilisateur_pdf
     anvil.media.download(media_object)
 
 
