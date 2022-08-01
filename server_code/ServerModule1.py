@@ -141,7 +141,7 @@ def get_locations():
       #df = pd.DataFrame.append(data)
       #df = pd.read_json(data)
       #print(df)
-  
+"""
 @anvil.server.callable
 def issuer_map():
   all_records = app_tables.locations.search()
@@ -153,7 +153,7 @@ def issuer_map():
   fig1 = fig.update_layout(mapbox_style="carto-positron")
   fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})     
   return fig2
-"""
+
 @anvil.server.callable
 def filled_area():
     all_records = app_tables.sig.search()

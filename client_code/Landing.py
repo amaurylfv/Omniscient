@@ -1,4 +1,4 @@
-from ._anvil_designer import Form0Template
+from ._anvil_designer import LandingTemplate
 from anvil import *
 import anvil.facebook.auth
 import anvil.server
@@ -13,7 +13,7 @@ from itertools import groupby, accumulate
 
 from ..Form11 import Form11
 
-class Form0(Form0Template):
+class Landing(LandingTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -38,6 +38,11 @@ class Form0(Form0Template):
     anvil.media.download(media_object)
 
     
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
 
 
 

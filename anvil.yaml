@@ -3,9 +3,9 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, use_google: true, allow_remember_me: true, remember_me_days: 0.02083,
-    use_facebook: true}
+  client_config: {email_from_address: sign-up@Omniscient.anvil.app, use_email: true,
+    allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
+    remember_me_days: 0.02083, use_google: true, use_facebook: true}
   server_config:
     user_table: users
     email_content:
@@ -332,48 +332,9 @@ db_schema:
     - name: address
       admin_ui: {width: 200}
       type: string
-    - name: scoring.fieldScore.city
-      admin_ui: {width: 200}
-      type: number
     - name: scoring.queryScore
       admin_ui: {width: 200}
       type: number
-    - name: address.label
-      admin_ui: {width: 200}
-      type: string
-    - name: mapView.west
-      admin_ui: {width: 200}
-      type: number
-    - name: scoring.fieldScore.country
-      admin_ui: {width: 200}
-      type: number
-    - name: scoring.fieldScore.postalCode
-      admin_ui: {width: 200}
-      type: number
-    - name: mapView.south
-      admin_ui: {width: 200}
-      type: number
-    - name: parsing.street
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: resultType
-      admin_ui: {width: 200}
-      type: string
-    - name: parsing.country
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: title
-      admin_ui: {width: 200}
-      type: string
-    - name: address.street
-      admin_ui: {width: 200}
-      type: string
-    - name: position.lng
-      admin_ui: {width: 200}
-      type: number
-    - name: parsing.houseNumber
-      admin_ui: {width: 200}
-      type: simpleObject
     - name: address.stateCode
       admin_ui: {width: 200}
       type: string
@@ -401,34 +362,7 @@ db_schema:
     - name: access
       admin_ui: {width: 200}
       type: simpleObject
-    - name: scoring.fieldScore.houseNumber
-      admin_ui: {width: 200}
-      type: number
     - name: address.countryCode
-      admin_ui: {width: 200}
-      type: string
-    - name: mapView.east
-      admin_ui: {width: 200}
-      type: number
-    - name: scoring.fieldScore.streets
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: address.county
-      admin_ui: {width: 200}
-      type: string
-    - name: address.countryName
-      admin_ui: {width: 200}
-      type: string
-    - name: houseNumberType
-      admin_ui: {width: 200}
-      type: string
-    - name: address.state
-      admin_ui: {width: 200}
-      type: string
-    - name: parsing.postalCode
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: address.postalCode
       admin_ui: {width: 200}
       type: string
   locations:
@@ -538,5 +472,23 @@ db_schema:
     - name: houseNumberFallback
       admin_ui: {width: 200}
       type: bool
+    - name: items
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: address
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: parsing
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: position
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: scoring
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: mapView
+      admin_ui: {width: 200}
+      type: simpleObject
 uplink_visible: true
 renamed: true
