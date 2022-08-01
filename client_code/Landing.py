@@ -11,14 +11,11 @@ from anvil.tables import app_tables
 from datetime import date, timedelta
 from itertools import groupby, accumulate
 
-from ..Form11 import Form11
-
 class Landing(LandingTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run when the form opens.
-    anvil.users.login_with_form()
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -41,7 +38,7 @@ class Landing(LandingTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    pass
+    open_form('Form0', my_parameter="an_argument") #Login Page
 
 
 
