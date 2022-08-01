@@ -3,25 +3,21 @@ services:
   client_config: {}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: true, enable_automatically: false, use_email: true,
-    confirm_email: true, use_google: true, allow_remember_me: true, remember_me_days: 365}
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: true, use_google: true, allow_remember_me: true, remember_me_days: 0.02083,
+    use_facebook: true}
   server_config:
     user_table: users
     email_content:
-      confirm_address: {html: "<p>Merci de vous \xeatre enregistr\xe9e sur AutoCHD\
+      confirm_address: {html: "<p>Merci de vous \xeatre enregistr\xe9e sur Omniscient\
           \ ! Veuillez cliquer sur le lien suivant pour confirmer votre identit\xe9\
-          \ :\n\n</p><p>{{confirm_link}}\n\n</p><p>Merci \ud83e\udd16</p>", subject: Confirm your email address}
-      reset_password: {html: '<p>Hi there,
-
-
-          </p><p>You have requested a password reset for your account {{email}}. To
-          reset your password, click the link below:
-
-
-          </p><p>{{reset_link}}
-
-
-          </p><p>This link will expire in ten minutes.</p>'}
+          \ :\n\n</p><p>{{confirm_link}}\n\n</p><p>Merci \ud83d\udc41\ufe0f</p>",
+        subject: Confirmer votre adresse email}
+      reset_password: {html: "<p>Bonjour,\n\n</p><p>Vous avez demand\xe9 une r\xe9\
+          initialisation de votre mot de passe pour votre compte li\xe9 \xe0 l'adresse\
+          \ email suivante : {{email}}. \nVeuillez suivre le lien ci-dessous pour\
+          \ le r\xe9initialiser :\n\n</p><p>{{reset_link}}\n\n</p><p>Ce lien expirera\
+          \ dans 10 minutes.</p>\n\n</p><p>A bient\xf4t sur Omniscient !</p>", subject: Réinitialisation de votre mot de passe}
 - source: /runtime/services/google.yml
   client_config:
     app_files:
@@ -85,6 +81,9 @@ services:
       thumbnailLink: https://lh4.googleusercontent.com/zy8Knt6urxci_IoEL3xXiIbOGw3PGpeEwz-xFKSAWvVzW4LVbmuDQ72hsLh79g6nwdtCVr-Vr860-BQ=s220
       ownerNames: [Quelqu' un]
   server_config: {enc_delegation_refresh_token: iQL9QfQgHDnz9Zm6JI6mPM3yDGa4P+lcgGXZNt5lOVz1ilflvruZX3OMt1/OadpV94kumR3HVQM4s2kVIqed5Aiz16huIxSxQDHWzsgEgQ/wnsgLwiTt4H52TO1U7qk0gpi84TZHJwI1eo8BCf8RdeSiAlQFeGs7XrTaI7Z04l+mhk0W2L83QyKiOe66pdZM4Eij2849zD4Gw/13KGux6ly3Wpcq0M+GNeZnduPI9spuu0SVLoZVfrk+RqKrQWOMi8gzF4XjG3Flx0XIcR4ZgEuVG1ibpIfOHXIZ8bjqQWeL+2Tq6CUYKHqR179n6A==}
+- source: /runtime/services/facebook.yml
+  client_config: {}
+  server_config: {}
 startup: {type: form, module: Form0}
 package_name: Omniscient
 allow_embedding: false

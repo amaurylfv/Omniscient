@@ -1,3 +1,4 @@
+import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
 import anvil.users
@@ -92,7 +93,7 @@ def map_chart():
                     color_continuous_scale=px.colors.cyclical.IceFire, size_max=15, zoom=10,
                     mapbox_style="carto-positron")
   return fig
-
+"""
 @anvil.server.callable
 def get_locations():
   api_key = "UEJNpy9I6ZsI3J8Dwd_SAOeqnYJvMvM0guqwd7sVkgc"
@@ -152,7 +153,7 @@ def issuer_map():
   fig1 = fig.update_layout(mapbox_style="carto-positron")
   fig2 = fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})     
   return fig2
-
+"""
 @anvil.server.callable
 def filled_area():
     all_records = app_tables.sig.search()
