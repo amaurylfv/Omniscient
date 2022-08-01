@@ -133,6 +133,9 @@ db_schema:
     - name: signed_up
       admin_ui: {width: 200}
       type: datetime
+    - name: email_confirmation_key
+      admin_ui: {width: 200}
+      type: string
   revenue:
     title: revenue
     client: none

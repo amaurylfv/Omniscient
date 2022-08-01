@@ -109,7 +109,7 @@ components:
     layout_properties: {grid_position: 'ISMVXF,VNBTZN', full_width_row: false}
   - type: RichText
     properties: {role: null, align: right, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: 30, content: Exploitez et explorez les données de manière intuitive grâce à nos tableau de bords !,
+      foreground: '', visible: true, font_size: 30, content: Exploitez et explorez les données de manière intuitive grâce à nos tableaux de bord interactifs !,
       font: Pridi, spacing_above: small, spacing_below: small, data: null, background: '',
       format: markdown}
     name: rich_text_5
@@ -131,6 +131,20 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - type: Button
+    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Tarifs, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_2
+    layout_properties: {}
+  - type: Button
+    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Contact, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {slot: default}
   - type: Button
     properties: {role: secondary-color, align: center, tooltip: Télécharger la documentation technique,
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
