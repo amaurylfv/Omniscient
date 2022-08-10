@@ -548,7 +548,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 /* Component: Button */
 
 .btn, .btn-default, .file-loader>label {
-  border-radius: 2px;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
   padding: 8px 16px;
