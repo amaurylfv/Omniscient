@@ -42,54 +42,56 @@ components:
         name: repeating_panel_1
         layout_properties: {}
       data_bindings: []
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {grid_position: 'DQKADJ,QQWSPK'}
-  - type: ColumnPanel
-    properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#2d6a4f'}
-    name: card_1
-    layout_properties: {grid_position: 'DQKADJ,NJXELO'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'XPVHDL,GGCKIA'}
     components:
-    - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Exporter au format excel,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-        format: markdown}
-      name: rich_text_1
-      layout_properties: {grid_position: 'JLNCZP,EKNEMX'}
-    - type: Button
-      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-        foreground: white, visible: true, text: EXPORTER, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: button_2
-      layout_properties: {grid_position: 'RRFXIB,KPZOBE'}
-      event_bindings: {click: button_2_click}
-  - type: ColumnPanel
-    properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#e9c46a'}
-    name: card_4
-    layout_properties: {grid_position: 'DQKADJ,FPPBSE'}
-    components:
-    - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Nombre de factures,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-        format: markdown}
-      name: rich_text_4
-      layout_properties: {grid_position: 'HLGZCJ,QTNSKE'}
-      components: []
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_1
-      layout_properties: {grid_position: 'IJBUTG,FBXZGA'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#2d6a4f'}
+      name: card_1
+      layout_properties: {grid_position: 'DQKADJ,NJXELO'}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Exporter au format excel,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_1
+        layout_properties: {grid_position: 'JLNCZP,EKNEMX'}
+      - type: Button
+        properties: {role: primary-color, align: center, tooltip: '', border: '',
+          enabled: true, foreground: white, visible: true, text: EXPORTER, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: button_2
+        layout_properties: {grid_position: 'RRFXIB,KPZOBE'}
+        event_bindings: {click: button_2_click}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#e9c46a'}
+      name: card_4
+      layout_properties: {grid_position: 'DQKADJ,FPPBSE'}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Nombre de factures,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_4
+        layout_properties: {grid_position: 'HLGZCJ,QTNSKE'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'IJBUTG,FBXZGA'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

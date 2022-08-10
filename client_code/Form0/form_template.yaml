@@ -21,35 +21,28 @@ components:
       spacing_below: small, background: '', horizontal_align: center}
     name: image_1
     layout_properties: {grid_position: 'YBEWGI,WOZZDU'}
-  - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_1
-    layout_properties: {grid_position: 'QLRLYJ,CILGVZ'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'HOAOHH,XRCGZR'}
     components:
     - type: Button
-      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: IMPORTER DES FACTURES, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_1
-      layout_properties: {grid_position: 'TUAWVM,XMMPLL'}
+      layout_properties: {grid_position: 'HOAOHH,LRLGQD'}
       event_bindings: {click: button_1_click}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_1
-    layout_properties: {grid_position: 'IUQTLV,UQIATV'}
-  - type: Button
-    properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: TABLEAU DE BORD, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_2
-    layout_properties: {grid_position: 'ZNJZXV,NHRDMT'}
-    event_bindings: {click: button_2_click}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {grid_position: 'BNUHET,XUCVGH'}
+    - type: Button
+      properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: TABLEAU DE BORD, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_2
+      layout_properties: {grid_position: 'PKZOZP,BSTAXH', full_width_row: false}
+      event_bindings: {click: button_2_click}
   - type: Link
     properties: {role: selected, url: '', align: center, tooltip: '', border: '',
       foreground: '', visible: true, text: J'ai un problème, font_size: 14, wrap_on: mobile,

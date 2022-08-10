@@ -629,7 +629,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 
 .anvil-role-card {
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 6px;
   background-color: white;
   padding: 8px 12px;
   /* 2dp */  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -658,7 +658,7 @@ body>div[data-notify="container"].alert-warning>span[data-notify="title"]{
 input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil-datepicker input {
   font-size: 16px;
   line-height: 1.5;
-  border-radius: 0;
+  border-radius: 4;
   background-color: transparent;
   color: rgba(0,0,0,0.87);
   
@@ -684,7 +684,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input {
 textarea.anvil-component {
   padding: 4px 8px;
   border: 1px solid rgba(0,0,0,0.42);
-  border-radius: 2px;
+  border-radius: 6px;
   transition: border 0.2s, padding 0.2s;
   -moz-transition: none; /* Firefox is jumpy, so disable transitions */
 }
