@@ -21,38 +21,44 @@ components:
     layout_properties: {}
     event_bindings: {click: button_1_click}
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: 'theme:Primary 500'}
   name: column_panel_1
   layout_properties: {slot: left-nav}
   components:
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Dépôts d'espèces, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'LMYGSE,WNZJZC'}
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Factures non conformes, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_3
     layout_properties: {grid_position: 'WCLNOQ,ZEVFHV'}
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Charges significatives, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_4
     layout_properties: {grid_position: 'XFLEUU,JZXVGV'}
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Produits signicatifs, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_5
     layout_properties: {grid_position: 'ZXBJTL,KGFUTY'}
+  - type: Spacer
+    properties: {height: 406}
+    name: spacer_1
+    layout_properties: {grid_position: 'EJEWVB,RTDQWR'}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: Omniscient, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
