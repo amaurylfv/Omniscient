@@ -492,5 +492,22 @@ db_schema:
     - name: mapView
       admin_ui: {width: 200}
       type: simpleObject
+  stock:
+    title: stock
+    client: none
+    server: full
+    columns:
+    - name: flux
+      admin_ui: {width: 200}
+      type: string
+    - name: desc
+      admin_ui: {width: 200}
+      type: string
+    - name: quantity
+      admin_ui: {width: 200}
+      type: number
+    - name: unit_cost
+      admin_ui: {width: 200}
+      type: number
 uplink_visible: true
 renamed: true

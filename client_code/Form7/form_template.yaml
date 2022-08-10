@@ -56,7 +56,7 @@ components:
     name: button_5
     layout_properties: {grid_position: 'ZXBJTL,KGFUTY'}
   - type: Spacer
-    properties: {height: 406}
+    properties: {height: 482}
     name: spacer_1
     layout_properties: {grid_position: 'EJEWVB,RTDQWR'}
 - type: Link
