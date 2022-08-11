@@ -11,7 +11,7 @@ components:
   - type: Label
     properties: {role: text, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: "Importer vos factures au format pdf ou png \nNous les\
-        \ convertissons au format csv ou excel !", font_size: null, font: '', spacing_above: small,
+        \ convertissons en un fichier excel !", font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
@@ -78,14 +78,19 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - type: Button
-    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:home'}
-    name: button_2
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
     layout_properties: {}
-    event_bindings: {click: button_2_click}
+    components:
+    - type: Button
+      properties: {role: secondary-color, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:home'}
+      name: button_2
+      layout_properties: {}
+      event_bindings: {click: button_2_click}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',

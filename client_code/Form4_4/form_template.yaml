@@ -29,14 +29,19 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - type: Button
-    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:chevron-left'}
-    name: button_3
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
     layout_properties: {}
-    event_bindings: {click: button_3_click}
+    components:
+    - type: Button
+      properties: {role: secondary-color, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:chevron-left'}
+      name: button_3
+      layout_properties: {}
+      event_bindings: {click: button_3_click}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
