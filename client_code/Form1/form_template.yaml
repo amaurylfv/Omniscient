@@ -15,6 +15,20 @@ components:
     name: card_1
     layout_properties: {grid_position: 'OVJZUN,YVOQQP', full_width_row: false}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Chiffre d'affaires mensuels, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'KJHPVS,GTCZHC'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Produits les plus vendus par quantité, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_5
+      layout_properties: {grid_position: 'KJHPVS,EWFGBS'}
     - type: Plot
       properties: {height: 194}
       name: plot_1
@@ -66,7 +80,10 @@ components:
         layout_properties: {grid_position: 'PZNVMZ,TUXXNW'}
         components:
         - type: Label
-          properties: {}
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: '50', font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
           name: label_3
           layout_properties: {grid_position: 'BJYLPW,CAYVPC'}
     - type: ColumnPanel
@@ -86,7 +103,7 @@ components:
         components:
         - type: Label
           properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            visible: true, text: '5000', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
           name: label_2
@@ -108,7 +125,7 @@ components:
         components:
         - type: Label
           properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            visible: true, text: '1000', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
           name: label_2_copy

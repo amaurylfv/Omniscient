@@ -42,6 +42,7 @@ class Form1(Form1Template):
     self.temp_data = []
     self.build_revenue_graph()
     self.build_charges_graph()
+    self.pie_product()
     
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
   def button_1_click(self, **event_args):
@@ -128,7 +129,9 @@ class Form1(Form1Template):
     self.label_2.text = sum_charges
         
 
-
+  def pie_product(self):
+    db = anvil.server.call('pie_product')
+    self.plot_4.figure = db
 
 
 

@@ -144,9 +144,18 @@ db_schema:
     - name: amount
       admin_ui: {width: 200}
       type: number
+    - name: quantity
+      admin_ui: {width: 200}
+      type: number
     - name: date
       admin_ui: {width: 200}
-      type: date
+      type: string
+    - name: customer
+      admin_ui: {width: 200}
+      type: string
+    - name: desc
+      admin_ui: {width: 200}
+      type: string
   sig:
     title: sig
     client: search
@@ -191,6 +200,9 @@ db_schema:
     server: full
     columns:
     - name: amount
+      admin_ui: {width: 200}
+      type: number
+    - name: quantity
       admin_ui: {width: 200}
       type: number
     - name: partner_name

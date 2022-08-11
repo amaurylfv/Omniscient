@@ -301,3 +301,14 @@ def anomalies_factures():
 def data_to_csv():
   data = app_tables.invoice.search()
   return data.to_csv()
+
+#Diagramme circulaire des produits les plus vendus
+@anvil.server.callable
+def pie_product():
+    all_records = app_tables.revenue.search()
+    dicts = [{'date': r['date'], 'Produits': r['desc'], 'Montants': r['amount'], 'Quantité': r['quantity']}
+          for r in all_records]
+    df = pd.DataFrame.from_dict(dicts)
+    fig = px.pie(df, values='Quantité', names='Produits', color_discrete_sequence=px.colors.sequential.RdBu, hole=.3)
+    fig.update_traces(textposition='inside', textinfo='percent+label')
+    return fig
