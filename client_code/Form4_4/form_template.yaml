@@ -16,14 +16,19 @@ components:
     name: label_1
     layout_properties: {grid_position: 'EPKCKM,COZALP'}
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_2
-    layout_properties: {grid_position: 'QBBXRY,NNTJCL'}
+    properties: {role: card, col_widths: '{}'}
+    name: card_1
+    layout_properties: {grid_position: 'PHCSKG,EXXTBP'}
     components:
     - type: Plot
       properties: {}
       name: plot_1
-      layout_properties: {grid_position: 'ZFGOYP,HBQXTT'}
+      layout_properties: {grid_position: 'XBHSAK,BLQJKX'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'QBBXRY,NNTJCL'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links

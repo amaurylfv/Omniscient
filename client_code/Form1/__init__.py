@@ -112,14 +112,15 @@ class Form1(Form1Template):
     self.label_1.text = f"{max_revenue['Chiffre_affaires']:,}"
     
     # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Bar(
+    self.plot_1.data = go.Scatter(
       x = [x['Year'] for x in db_data],
       y = [x['Chiffre_affaires'] for x in db_data],
-      marker=dict(color='#F7DC6F')
+      fill=None,
+      mode='lines',
+      line_color='indigo',
     )
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_1)
-    self.plot_1.layout.title = "Chiffre d'affaires mensuel"
+    
+    self.style_plot(s)
   
   def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'

@@ -9,22 +9,37 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_1
-    layout_properties: {grid_position: 'TJUENV,ZBMQPM'}
+    properties: {role: card, col_widths: '{}'}
+    name: card_3
+    layout_properties: {grid_position: 'OEJEDJ,SOVGIW'}
     components:
     - type: Plot
       properties: {}
       name: plot_1
-      layout_properties: {grid_position: 'PESURI,URWTFC'}
-    - type: Plot
-      properties: {}
-      name: plot_2
-      layout_properties: {grid_position: 'HCTDJQ,IHKRAW'}
-    - type: Plot
-      properties: {}
-      name: plot_3
-      layout_properties: {grid_position: 'LWKZDS,OEVWQR'}
+      layout_properties: {grid_position: 'AUDMWL,AOFEID'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'TJUENV,ZBMQPM'}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_2
+      layout_properties: {grid_position: 'YWWHBI,HHINSW'}
+      components:
+      - type: Plot
+        properties: {}
+        name: plot_2
+        layout_properties: {grid_position: 'VZFPUR,ATSEIZ'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_4
+      layout_properties: {grid_position: 'QYXTEC,RDRCQE'}
+      components:
+      - type: Plot
+        properties: {}
+        name: plot_3
+        layout_properties: {grid_position: 'RJJWYO,TNVCCF'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -140,7 +155,7 @@ components:
     name: button_13
     layout_properties: {grid_position: 'GEKODB,PHAWOR'}
   - type: Spacer
-    properties: {height: 829}
+    properties: {height: 870}
     name: spacer_1
     layout_properties: {grid_position: 'WIVJEG,SEAUIS'}
 - type: Link

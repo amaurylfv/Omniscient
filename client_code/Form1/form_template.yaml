@@ -59,11 +59,16 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: 'Nombre ', font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
+          foreground: '', visible: true, font_size: null, content: Nombre de nouveaux clients,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_1
         layout_properties: {grid_position: 'PZNVMZ,TUXXNW'}
+        components:
+        - type: Label
+          properties: {}
+          name: label_3
+          layout_properties: {grid_position: 'BJYLPW,CAYVPC'}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -85,6 +90,28 @@ components:
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
           name: label_2
+          layout_properties: {grid_position: 'FCANEB,UMHXBU'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#d62828'}
+      name: card_3_copy
+      layout_properties: {grid_position: 'PRQZUS,MDCBEG ODCMPW,LVSJFT', full_width_row: false}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: white, visible: true, font_size: null, content: TVA à décaisser,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '#d62828',
+          format: markdown}
+        name: rich_text_2_copy
+        layout_properties: {grid_position: 'WCVSSU,UUWZWP'}
+        components:
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_2_copy
           layout_properties: {grid_position: 'FCANEB,UMHXBU'}
 - type: FlowPanel
   properties: {}
