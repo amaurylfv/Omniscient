@@ -50,11 +50,11 @@ components:
         spacing_below: small, background: '#14213d'}
       name: card_2
       layout_properties: {grid_position: 'PRQZUS,DYBEIK MNFOAB,KHBCLI', full_width_row: false,
-        row_background: '', width: 191.203}
+        row_background: '', width: 201.203}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Chiffre d'affaires,
+          foreground: white, visible: true, font_size: null, content: Chiffre d'affaires HT,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '#14213d',
           format: markdown}
         name: rich_text_3
