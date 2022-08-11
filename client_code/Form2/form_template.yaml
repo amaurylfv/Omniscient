@@ -9,25 +9,31 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_1
-    layout_properties: {grid_position: 'LMBBWV,EDRFBC'}
+    properties: {role: card, col_widths: '{}'}
+    name: card_6
+    layout_properties: {grid_position: 'YDULDF,MIVCGS'}
     components:
     - type: Plot
       properties: {}
       name: plot_1
-      layout_properties: {grid_position: 'FRJKJY,YPQOIC'}
+      layout_properties: {grid_position: 'EERPOK,JYZMHZ'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'LMBBWV,EDRFBC'}
+    components: []
   - type: FlowPanel
-    properties: {}
+    properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_2
-    layout_properties: {grid_position: 'LDABPR,BKXBUH'}
+    layout_properties: {grid_position: 'LDABPR,BKXBUH', full_width_row: false}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#e76f51'}
       name: card_2
-      layout_properties: {width: 233.812}
+      layout_properties: {width: 227.812}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -49,7 +55,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#e9c46a'}
       name: card_3
-      layout_properties: {width: 233.812}
+      layout_properties: {width: 228.812}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -71,7 +77,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#2a9d8f'}
       name: card_5
-      layout_properties: {width: 233.406}
+      layout_properties: {width: 229.406}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -93,7 +99,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#f4a261'}
       name: card_4
-      layout_properties: {width: 233.406}
+      layout_properties: {width: 231.406}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -110,10 +116,15 @@ components:
             bold: false, underline: false, icon: ''}
           name: label_2
           layout_properties: {}
-  - type: Plot
-    properties: {}
-    name: plot_2
-    layout_properties: {grid_position: 'IAOPBZ,RYGRPM'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_7
+    layout_properties: {grid_position: 'OWOGCP,EZWMYO'}
+    components:
+    - type: Plot
+      properties: {}
+      name: plot_2
+      layout_properties: {grid_position: 'YPFHEV,PPEFIG'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -175,7 +186,8 @@ components:
   name: link_1
   layout_properties: {slot: title}
 - type: FlowPanel
-  properties: {}
+  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
   name: flow_panel_2_copy
   layout_properties: {grid_position: 'LDABPR,BKXBUH'}
   components:
