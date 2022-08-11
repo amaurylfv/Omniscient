@@ -84,12 +84,12 @@ class Form1(Form1Template):
                                 b=50, #bottom margin
                                 t=50, #top margin
                             ),
-                            font=dict(family='Noto Sans', size=10),
+                            font=dict(family='Source Code Pro', size=10),
                             # Format x-axis
                             xaxis=dict(
                               zeroline=False,
                               tickfont=dict(
-                                  family='Noto Sans',
+                                  family='Source Code Pro',
                                   size=11,
                                   color='#808080'
                               ),
@@ -98,7 +98,7 @@ class Form1(Form1Template):
                             yaxis=dict(
                                 zeroline=False,
                                 tickfont=dict(
-                                    family='Noto Sans',
+                                    family='Source Code Pro',
                                     size=11,
                                     color='#808080'
                                 ),
@@ -120,7 +120,7 @@ class Form1(Form1Template):
       line_color='indigo',
     )
     
-    self.style_plot(s)
+    self.style_plot(self.plot_1)
   
   def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'
