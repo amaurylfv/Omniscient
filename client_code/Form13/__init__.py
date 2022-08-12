@@ -19,7 +19,7 @@ class Form13(Form13Template):
   def file_loader_1_change(self, file, **event_args):
     # Upload the selected file into a Server Module
     c = FileLoader()
-    financial_statement = anvil.server.call('get_financial_statement', file)
+    anvil.server.call('get_financial_statement', file)
     
     c.clear()   
 
