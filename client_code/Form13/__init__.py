@@ -15,3 +15,11 @@ class Form13(Form13Template):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+  def file_loader_1_change(self, file, **event_args):
+    # Upload the selected file into a Server Module
+    c = FileLoader()
+    financial_statement = anvil.server.call('get_financial_statement', file)
+    
+    c.clear()   
+
