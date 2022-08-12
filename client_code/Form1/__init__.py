@@ -68,13 +68,13 @@ class Form1(Form1Template):
     open_form('Form8', my_parameter="an_argument") #Fiscalité
     
   def button_8_click(self, **event_args):
-    open_form('Form9', my_parameter="an_argument") #Social
+    open_form('Form10', my_parameter="an_argument") #Social
     
   def button_9_click(self, **event_args):
     open_form('Form13', my_parameter="an_argument") #Paramètres
     
   def button_10_click(self, **event_args):
-    open_form('Form11', my_parameter="an_argument") #Paramètres IA
+    open_form('Form11', my_parameter="an_argument") #Données
 
     
   def style_plot(self, plot):
