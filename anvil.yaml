@@ -521,5 +521,10 @@ db_schema:
     - name: unit_cost
       admin_ui: {width: 200}
       type: number
+  financial_statement:
+    title: financial_statement
+    client: none
+    server: full
+    columns: []
 uplink_visible: true
 renamed: true

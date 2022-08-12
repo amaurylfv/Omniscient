@@ -29,6 +29,7 @@ from ..Form8 import Form8
 from ..Form9 import Form9
 from ..Form10 import Form10
 from ..Form11 import Form11
+from ..Form13 import Form13
 
 
 class Form1(Form1Template):
@@ -70,7 +71,7 @@ class Form1(Form1Template):
     open_form('Form9', my_parameter="an_argument") #Social
     
   def button_9_click(self, **event_args):
-    open_form('Form10', my_parameter="an_argument") #Données
+    open_form('Form13', my_parameter="an_argument") #Paramètres
     
   def button_10_click(self, **event_args):
     open_form('Form11', my_parameter="an_argument") #Paramètres IA
