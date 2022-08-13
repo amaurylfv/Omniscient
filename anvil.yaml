@@ -136,26 +136,6 @@ db_schema:
     - name: email_confirmation_key
       admin_ui: {width: 200}
       type: string
-  revenue:
-    title: revenue
-    client: none
-    server: full
-    columns:
-    - name: amount
-      admin_ui: {width: 200}
-      type: number
-    - name: quantity
-      admin_ui: {width: 200}
-      type: number
-    - name: date
-      admin_ui: {width: 200}
-      type: string
-    - name: customer
-      admin_ui: {width: 200}
-      type: string
-    - name: desc
-      admin_ui: {width: 200}
-      type: string
   sig:
     title: sig
     client: search
@@ -521,6 +501,26 @@ db_schema:
     - name: unit_cost
       admin_ui: {width: 200}
       type: number
+  revenue:
+    title: revenue
+    client: none
+    server: full
+    columns:
+    - name: amount
+      admin_ui: {width: 200}
+      type: number
+    - name: quantity
+      admin_ui: {width: 200}
+      type: number
+    - name: date
+      admin_ui: {width: 200}
+      type: string
+    - name: customer
+      admin_ui: {width: 200}
+      type: string
+    - name: desc
+      admin_ui: {width: 200}
+      type: string
   financial_statement:
     title: financial_statement
     client: none
