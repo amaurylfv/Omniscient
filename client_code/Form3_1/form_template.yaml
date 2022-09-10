@@ -8,15 +8,88 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_2_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: YAWACY,QXTUNK
+    components:
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#8cb369'}
+      name: card_1_copy
+      layout_properties: {width: 143.406}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Trésorerie, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_1_copy
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#bc4b51'}
+      name: card_2_copy
+      layout_properties: {width: 145.812}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Total Crédit, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_2_copy
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_5
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_3_copy
+      layout_properties: {width: 134.8125}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Solde, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_3_copy
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_4
-    layout_properties: {grid_position: 'WRGGKB,EZOZKJ'}
+    layout_properties: {grid_position: 'WRGGKB,YUVXOU'}
     components:
     - type: Plot
       properties: {}
       name: plot_1
       layout_properties: {grid_position: 'ESYIAD,CXEVZD'}
+      event_bindings: {click: plot_1_click}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}

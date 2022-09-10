@@ -336,5 +336,48 @@ def get_accounting_exercise():
 def delete_siren_and_accounting_exercise():
   app_tables.siren_and_accounting_exercise.delete_all_rows()
 
+@anvil.server.callable
+def display_financial_statement():
+  return app_tables.financial_statement.search()
   
+@anvil.server.callable
+def calculate_treasury():
+  rows = {}
+  for row in app_tables.financial_statement.search():
+    row = dict(row)    
+    date_cloture_exercice= row['date_cloture_exercice']
+    
+    Valeurs_mobilieres_de_placement_m1= row['Valeurs_mobilieres_de_placement_m1']
+    if Valeurs_mobilieres_de_placement_m1 == None:
+      Valeurs_mobilieres_de_placement_m1 = 0
+      
+    Disponibilites_m1= row['Disponibilites_m1']
+    if Disponibilites_m1 == None:
+      Disponibilites_m1 = 0
+      
+    Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1 = row['Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1']
+    if Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1 == None:
+      Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1 = 0
+    
+    treasury = float(Valeurs_mobilieres_de_placement_m1) + float(Disponibilites_m1) - float(Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1)
+    df = treasury.to_dict(orient="records")
+    for d in df:
+      app_tables.financial_statement.add_row(**d)
+    return treasury
+
+@anvil.server.callable
+def visualise_treasury():
+  all_records = app_tables.financial_statement.search()
+  dicts = [{'date_cloture_exercice': r['date_cloture_exercice'],
+            'Valeurs_mobilieres_de_placement_m1': r['Valeurs_mobilieres_de_placement_m1'],
+            'Disponibilites_m1': r['Disponibilites_m1'],
+            'Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1': r['Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1'],
+            'treasury': r['treasury']}
+           for r in all_records]
+  df = pd.DataFrame.from_dict(dicts)
+  fig = px.area(df, x="date_cloture_exercice", y="treasury")
+  return fig
+
+
+    
   

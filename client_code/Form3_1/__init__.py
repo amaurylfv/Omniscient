@@ -14,11 +14,23 @@ class Form3_1(Form3_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.treasury_graph()
 
     # Any code you write here will run when the form opens.
-    
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form3', my_parameter="an_argument") #Retour
+
+  def treasury_graph(self):
+    db_data = anvil.server.call('display_financial_statement')
+    self.plot_1.data = go.Scatter(
+    x = [x['date_cloture_exercice'] for x in db_data],
+    y = [x['Valeurs_mobilieres_de_placement_m1'] for x in db_data],
+    fill=None,
+    mode='lines',
+    line_color='indigo',
+    )
+
+
 
