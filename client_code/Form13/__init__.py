@@ -44,8 +44,9 @@ class Form13(Form13Template):
 				}
     
     anvil.server.call('add_siren_and_accounting_exercise', dict)
-    Notification("Vos états financiers ont été importés !").show()
+    Notification("Requête en cours...").show()
     self.clear_inputs()
     anvil.server.call('get_siren')
     anvil.server.call('get_accounting_exercise')
+    anvil.server.call('find_financial_statement')
 
