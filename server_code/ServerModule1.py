@@ -311,3 +311,7 @@ def pie_product():
     df = pd.DataFrame.from_dict(dicts)
     fig = px.pie(df, values='Quantité', names='Produits', color_discrete_sequence=px.colors.sequential.RdBu, hole=.4)
     return fig
+  
+@anvil.server.callable
+def get_siren(medo):
+  with anvil.Media

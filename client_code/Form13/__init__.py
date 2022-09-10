@@ -8,6 +8,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime 
 
 class Form13(Form13Template):
   def __init__(self, **properties):
@@ -22,4 +23,15 @@ class Form13(Form13Template):
     anvil.server.call('get_financial_statement', file)
     
     c.clear()   
+  def accounting_exercise_picker(self, file, **event_args):
+    c.pick_time = True
+    c.date = datetime.datetime.now()
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    date = self.date_picker_1.date
+    siren = self.text_box_1.text
+    accounting_exercise = int(date.strftime('%Y%m%d'))
+    print(siren)
+    print(accounting_exercise)
 

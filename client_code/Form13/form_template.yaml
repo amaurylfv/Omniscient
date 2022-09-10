@@ -62,23 +62,57 @@ components:
     components:
     - type: ColumnPanel
       properties: {role: card, col_widths: '{}'}
-      name: card_1
+      name: card_4
       layout_properties: {}
       components:
-      - type: RichText
-        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: SIREN, font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        name: rich_text_1
-        layout_properties: {grid_position: 'XIDCHR,DZXXPS'}
-      - type: TextBox
-        properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false}
-        name: text_box_1
-        layout_properties: {grid_position: 'YTZDBX,NLXYZV'}
+      - type: ColumnPanel
+        properties: {role: card, col_widths: '{}'}
+        name: card_1
+        layout_properties: {grid_position: 'BOJGTP,HKIWGO'}
+        components:
+        - type: RichText
+          properties: {role: null, align: center, tooltip: '', enable_slots: true,
+            border: '', foreground: '', visible: true, font_size: null, content: SIREN,
+            font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+            format: markdown}
+          name: rich_text_1
+          layout_properties: {grid_position: 'XIDCHR,DZXXPS'}
+        - type: TextBox
+          properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+            font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+            background: '', bold: false, underline: false}
+          name: text_box_1
+          layout_properties: {grid_position: 'YTZDBX,NLXYZV'}
+          event_bindings: {change: text_box_1_change}
+      - type: ColumnPanel
+        properties: {role: card, col_widths: '{}'}
+        name: card_3
+        layout_properties: {grid_position: 'VPEAKP,WSEZRL'}
+        components:
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: Exercice(s) souhaité(s), font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: false, underline: false, icon: ''}
+          name: label_2
+          layout_properties: {grid_position: 'YQKURC,SOTOYH'}
+        - type: DatePicker
+          properties: {role: null, align: center, max_date: '', pick_time: false,
+            tooltip: '', placeholder: Sélectionner une date, border: '', enabled: true,
+            foreground: '', visible: true, font_size: null, font: '', spacing_above: small,
+            spacing_below: small, italic: false, date: '', min_date: '', background: '',
+            bold: false, underline: false, format: '%Y%m%d'}
+          name: date_picker_1
+          layout_properties: {grid_position: 'JSPDSO,LOIQCJ'}
+      - type: Button
+        properties: {role: primary-color, align: center, tooltip: '', border: '',
+          enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: 'fa:check'}
+        name: button_4
+        layout_properties: {grid_position: 'KIXLUS,ZOLVBI'}
+        event_bindings: {click: button_4_click}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
