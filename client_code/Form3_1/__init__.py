@@ -14,7 +14,9 @@ class Form3_1(Form3_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.treasury_graph()
+    self.vmp_graph()
+    self.disponibilites_graph()
+    self.Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_graph()
 
     # Any code you write here will run when the form opens.
 
@@ -22,15 +24,32 @@ class Form3_1(Form3_1Template):
     """This method is called when the button is clicked"""
     open_form('Form3', my_parameter="an_argument") #Retour
 
-  def treasury_graph(self):
+  def vmp_graph(self):
     db_data = anvil.server.call('display_financial_statement')
     self.plot_1.data = go.Scatter(
     x = [x['date_cloture_exercice'] for x in db_data],
     y = [x['Valeurs_mobilieres_de_placement_m1'] for x in db_data],
     fill=None,
     mode='lines',
-    line_color='indigo',
+    color='green',
     )
-
-
+    
+  def disponibilites_graph(self):
+    db_data = anvil.server.call('display_financial_statement')
+    self.plot_2.data = go.Scatter(
+    x = [x['date_cloture_exercice'] for x in db_data],
+    y = [x['Disponibilites_m1'] for x in db_data],
+    fill=None,
+    mode='lines',
+    color='green',
+    )
+  def Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_graph(self):
+    db_data = anvil.server.call('display_financial_statement')
+    self.plot_3.data = go.Scatter(
+    x = [x['date_cloture_exercice'] for x in db_data],
+    y = [x['Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1'] for x in db_data],
+    fill=None,
+    mode='lines',
+    color='red',
+    )
 
