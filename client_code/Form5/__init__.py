@@ -40,21 +40,21 @@ class Form5(Form5Template):
   
   def build_structure_graph_1(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
+    db = anvil.server.call('display_financial_statement')
       
       # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Scatter(x = [x['Year'] for x in db],
-                                  y = [x['Chiffre_affaires'] for x in db],
+    self.plot_1.data = go.Scatter(x = [x['date_cloture_exercice'] for x in db],
+                                  y = [x['Chiffres_daffaires_nets_m1'] for x in db],
                                   mode='lines+markers',
                                   line=dict(color='#EAE2B7'))
     
   def build_structure_graph_2(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
+    db = anvil.server.call('display_financial_statement')
       
       # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_2.data = go.Scatter(x = [x['Year'] for x in db],
-                                  y = [x['Résultat_exercice'] for x in db],
+    self.plot_2.data = go.Scatter(x = [x['date_cloture_exercice'] for x in db],
+                                  y = [x['Resultat_exercice_m1'] for x in db],
                                   mode='lines+markers',
                                   line=dict(color='#EAE2B7'))
   

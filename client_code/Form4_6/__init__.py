@@ -10,10 +10,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
-
-
-
 class Form4_6(Form4_6Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -33,7 +29,7 @@ class Form4_6(Form4_6Template):
     
   def build_cost_graph_1(self):
       # Get the data from our server function, and store it as 'db_data'
-      db_data_2 = anvil.server.call('get_invoice')
+      db_data_2 = anvil.server.call('display_financial_statement')
       
       # Create a Bar plot with this data, and change the colour of the markers
       self.plot_1.data = go.Bar(
@@ -41,6 +37,17 @@ class Form4_6(Form4_6Template):
         y = [x['amount_untaxed'] for x in db_data_2],
         marker=dict(color='#E35F30')
       )
+  
+  def build_cost_graph_1(self):
+      # Get the data from our server function, and store it as 'db_data'
+      db_data_2 = anvil.server.call('get_invoice')
+      
+      # Create a Bar plot with this data, and change the colour of the markers
+      self.plot_2.data = go.Bar(
+        x = [x['issuer'] for x in db_data_2],
+        y = [x['amount_untaxed'] for x in db_data_2],
+        marker=dict(color='#E35F30')
+      )
       # Style the plot and add a plot title
-      self.plot_1.layout.title = "Typologie des charges"
+      self.plot_2.layout.title = "Typologie des charges"
       
