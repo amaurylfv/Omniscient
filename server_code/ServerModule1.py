@@ -45,7 +45,7 @@ def create_fig():
 
 @anvil.server.callable
 def create_pie():
-    all_records = app_tables.invoice.search()
+    all_records = app_tables.financial_statement.search()
     # For each row, pull out only the data we want to put into pandas
     dicts = [{'date': r['date'], 'fournisseurs': r['issuer'], 'Montants': r['amount']}
           for r in all_records]

@@ -110,13 +110,13 @@ class Form1(Form1Template):
   def build_revenue_graph(self):
     # Get the data from our server function, and store it as 'db_data'
     db_data = anvil.server.call('display_financial_statement')
-    max_revenue = sorted(db_data, key=lambda x: x['Chiffres_daffaires_nets_m1'], reverse=True)[0]
-    self.label_1.text = f"{max_revenue['Chiffres_daffaires_nets_m1']:,}"
+    max_revenue = sorted(db_data, key=lambda x: x['Chiffres_daffaires_nets_m3'], reverse=True)[0]
+    self.label_1.text = f"{max_revenue['Chiffres_daffaires_nets_m3']:,}"
     
     # Create a Bar plot with this data, and change the colour of the markers
     self.plot_1.data = go.Scatter(
       x = [x['date_cloture_exercice'] for x in db_data],
-      y = [x['Chiffres_daffaires_nets_m1'] for x in db_data],
+      y = [x['Chiffres_daffaires_nets_m3'] for x in db_data],
       fill=None,
       mode='lines',
       line_color='indigo',
