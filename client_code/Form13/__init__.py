@@ -27,11 +27,25 @@ class Form13(Form13Template):
     c.pick_time = True
     c.date = datetime.datetime.now()
 
+  def clear_inputs(self):
+    # Clear our three text boxes
+    self.date_picker_1.date = ""
+    self.text_box_1.text = ""
+  
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     date = self.date_picker_1.date
-    siren = self.text_box_1.text
-    accounting_exercise = int(date.strftime('%Y%m%d'))
-    print(siren)
-    print(accounting_exercise)
+    siren_query = self.text_box_1.text
+    accounting_exercise_query = int(date.strftime('%Y%m%d'))
+
+    dict = {	
+			'siren_query' : siren_query ,
+			'accounting_exercise_query' : accounting_exercise_query,
+				}
+    
+    anvil.server.call('add_siren_and_accounting_exercise', dict)
+    Notification("Vos états financiers ont été importés !").show()
+    self.clear_inputs()
+    anvil.server.call('get_siren')
+    anvil.server.call('get_accounting_exercise')
 

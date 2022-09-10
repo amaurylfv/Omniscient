@@ -311,7 +311,30 @@ def pie_product():
     df = pd.DataFrame.from_dict(dicts)
     fig = px.pie(df, values='Quantité', names='Produits', color_discrete_sequence=px.colors.sequential.RdBu, hole=.4)
     return fig
+
+@anvil.server.callable
+def add_siren_and_accounting_exercise(dict):
+  app_tables.siren_and_accounting_exercise.add_row(**dict)
+
+@anvil.server.callable
+def get_siren():
+  rows = {}
+  for row in app_tables.siren_and_accounting_exercise.search(siren_query=q.all_of()):
+      row = dict(row)
+      siren_query = row['siren_query']
+      return siren_query
   
 @anvil.server.callable
-def get_siren(medo):
-  with anvil.Media
+def get_accounting_exercise():
+  rows = {}
+  for row in app_tables.siren_and_accounting_exercise.search(accounting_exercise_query=q.all_of()):
+      row = dict(row)
+      accounting_exercise = row['accounting_exercise_query']
+      return accounting_exercise
+
+@anvil.server.callable
+def delete_siren_and_accounting_exercise():
+  app_tables.siren_and_accounting_exercise.delete_all_rows()
+
+  
+  
