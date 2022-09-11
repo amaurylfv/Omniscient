@@ -377,7 +377,24 @@ def visualise_treasury():
   df = pd.DataFrame.from_dict(dicts)
   fig = px.area(df, x="date_cloture_exercice", y="treasury")
   return fig
-
+  
+#Calcul de la marge commerciale :
+@anvil.server.callable
+def marge_commerciale():
+  rows = {}
+  for row in app_tables.financial_statement.search():
+      row = dict(row)
+    
+      if row['Ventes_de_marchandises_m3'] == None:
+        row['Ventes_de_marchandises_m3'] = 0
+        
+      if row['Marchandises_m3'] == None:
+        row['Marchandises_m3'] = 0
+        
+      row['marge_commerciale'] = row['Ventes_de_marchandises_m3'] - row['Marchandises_m3']    
+      marge_commerciale = row['marge_commerciale']
+      print(marge_commerciale)
+      return marge_commerciale
 
     
   
