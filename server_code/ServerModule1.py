@@ -394,7 +394,6 @@ def marge_commerciale():
       row['marge_commerciale'] = row['Ventes_de_marchandises_m3'] - row['Marchandises_m3']    
       marge_commerciale = row['marge_commerciale']
       print(marge_commerciale)
-      return marge_commerciale
 
     
   
