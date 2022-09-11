@@ -199,9 +199,9 @@ def profitabilité():
 @anvil.server.callable
 def chiffre_affaires():
   rows = {}
-  for row in app_tables.sig.search():
+  for row in app_tables.financial_statement.search():
       row = dict(row)
-      chiffre_affaires = row['Chiffre_affaires']
+      chiffre_affaires = row['Chiffre_affaires_m3']
       
       return chiffre_affaires
 
