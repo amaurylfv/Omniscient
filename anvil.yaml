@@ -1,6 +1,6 @@
 services:
 - source: /runtime/services/tables.yml
-  client_config: {}
+  client_config: {enable_v2: true}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
   client_config: {email_from_address: sign-up@Omniscient.anvil.app, use_email: true,
