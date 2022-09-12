@@ -16,21 +16,28 @@ class Form13(Form13Template):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-
-  def file_loader_1_change(self, file, **event_args):
-    # Upload the selected file into a Server Module
-    c = FileLoader()
-    anvil.server.call('get_financial_statement', file)
-    
-    c.clear()   
-  def accounting_exercise_picker(self, file, **event_args):
-    c.pick_time = True
-    c.date = datetime.datetime.now()
-
   def clear_inputs(self):
     # Clear our three text boxes
     self.date_picker_1.date = ""
     self.text_box_1.text = ""
+    
+  def file_loader_1_change(self, file, **event_args):
+    # Upload the selected file into a Server Module
+    c = FileLoader()
+    alert(content="Êtes-vous-sûr ?",
+               title="Importation",
+               large=True,
+               buttons=[
+                 ("Oui", "YES"),
+                 ("Non", "NO"),
+               ])
+    anvil.server.call('get_financial_statement', file)
+    self.file_loader_1.clear()
+    Notification("Les Etats financiers ont bien été importés !").show()
+       
+  def accounting_exercise_picker(self, file, **event_args):
+    c.pick_time = True
+    c.date = datetime.datetime.now()
   
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""

@@ -126,7 +126,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Importer mes états financiers,
+          foreground: '', visible: true, font_size: null, content: Importer manuellement mes états financiers,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_2
