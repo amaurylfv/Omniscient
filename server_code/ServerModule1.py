@@ -201,7 +201,7 @@ def chiffre_affaires():
   rows = {}
   for row in app_tables.financial_statement.search():
       row = dict(row)
-      chiffre_affaires = row['Chiffre_affaires_m3']
+      chiffre_affaires = row['Chiffres_daffaires_nets_m3']
       
       return chiffre_affaires
 

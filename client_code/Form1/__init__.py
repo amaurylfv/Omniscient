@@ -121,8 +121,8 @@ class Form1(Form1Template):
     self.plot_1.data = go.Scatter(
       x = [x['date_cloture_exercice'] for x in db_data],
       y = [x['Chiffres_daffaires_nets_m3'] for x in db_data],
-      fill=None,
-      mode='lines',
+      fill='tozeroy',
+      mode='none',
       line_color='indigo',
     )
     
