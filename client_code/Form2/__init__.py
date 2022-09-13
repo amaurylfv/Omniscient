@@ -20,18 +20,12 @@ class Form2(Form2Template):
     self.funnel_chart()
 
     # Any code you write here will run when the form opens.
-    
+  
   def button_1_click(self, **event_args):
     open_form('Form1', my_parameter="an_argument") #Accueil
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form2_1', my_parameter="an_argument") #Prévision des ventes
-
   def map_chart(self):
-    fig = anvil.server.call('map_chart')
-    self.plot_1.figure = fig
-    
-  def funnel_chart(self):
-    fig = anvil.server.call('funnel_chart')
-    self.plot_2.figure = fig
+    self.image_1.source = anvil.server.call('map_chart')
