@@ -42,6 +42,7 @@ class Form1(Form1Template):
     # Any code you write here will run when the form opens.
     self.temp_data = []
     self.build_revenue_graph()
+    self.ca_graph()
     self.build_charges_graph()
     self.pie_product()
     self.marge_commerciale()
@@ -127,6 +128,9 @@ class Form1(Form1Template):
     )
     
     self.style_plot(self.plot_1)
+  def ca_graph(self):
+    fig = anvil.server.call('graph_chiffre_affaires')
+    self.image_1.source = fig
   
   def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'
