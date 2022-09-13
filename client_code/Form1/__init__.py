@@ -43,6 +43,7 @@ class Form1(Form1Template):
     #self.temp_data = []
     #self.build_revenue_graph()
     self.ca_graph()
+    self.resultat_exercice_graph()
     #self.build_charges_graph()
     #self.pie_product()
     #self.marge_commerciale()
@@ -132,6 +133,9 @@ class Form1(Form1Template):
     plot = anvil.server.call('graph_chiffre_affaires')
     self.image_1.source = plot
   
+  def resultat_exercice_graph(self):
+    plot = anvil.server.call('graph_resultat_exercice')
+    self.image_2.source = plot
   #def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'
     #sum_charges = anvil.server.call('total_charges')
