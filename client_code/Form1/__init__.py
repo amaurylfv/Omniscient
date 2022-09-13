@@ -14,14 +14,14 @@ from anvil.tables import app_tables
 
 #Import des pages de navigation de la nav-bar
 from ..Form2 import Form2
-from ..Form3 import Form3
+#from ..Form3 import Form3
 from ..Form4 import Form4
 from ..Form4_2 import Form4_2
 from ..Form4_4 import Form4_4
 from ..Form4_6 import Form4_6
-from ..Form5 import Form5
-from ..Form5_1 import Form5_1
-from ..Form5_1_2 import Form5_1_2
+#from ..Form5 import Form5
+#from ..Form5_1 import Form5_1
+#from ..Form5_1_2 import Form5_1_2
 from ..Form5_3 import Form5_3
 from ..Form6 import Form6
 from ..Form7 import Form7
@@ -40,12 +40,12 @@ class Form1(Form1Template):
     self.init_components(**properties)
     
     # Any code you write here will run when the form opens.
-    self.temp_data = []
-    self.build_revenue_graph()
+    #self.temp_data = []
+    #self.build_revenue_graph()
     self.ca_graph()
-    self.build_charges_graph()
-    self.pie_product()
-    self.marge_commerciale()
+    #self.build_charges_graph()
+    #self.pie_product()
+    #self.marge_commerciale()
     
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
   def button_1_click(self, **event_args):
@@ -109,41 +109,41 @@ class Form1(Form1Template):
                             )
                           ) 
   
-  def build_revenue_graph(self):
+  #def build_revenue_graph(self):
     # Get the data from our server function, and store it as 'db_data'
-    db_data = anvil.server.call('display_financial_statement')
-    try :
-      max_revenue = sorted(db_data, key=lambda x: x['Chiffres_daffaires_nets_m3'], reverse=True)[0]
-      self.label_1.text = f"{max_revenue['Chiffres_daffaires_nets_m3']:,}"
-    except :
-      self.label_1.text = f"{0}"
+    #db_data = anvil.server.call('display_financial_statement')
+    #try :
+      #max_revenue = sorted(db_data, key=lambda x: x['Chiffres_daffaires_nets_m3'], reverse=True)[0]
+      #self.label_1.text = f"{max_revenue['Chiffres_daffaires_nets_m3']:,}"
+    #except :
+      #self.label_1.text = f"{0}"
     
     # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Scatter(
-      x = [x['date_cloture_exercice'] for x in db_data],
-      y = [x['Chiffres_daffaires_nets_m3'] for x in db_data],
-      fill='tozeroy',
-      mode='none',
-      line_color='indigo',
-    )
+    #self.plot_1.data = go.Scatter(
+      #x = [x['date_cloture_exercice'] for x in db_data],
+      #y = [x['Chiffres_daffaires_nets_m3'] for x in db_data],
+      #fill='tozeroy',
+      #mode='none',
+      #line_color='indigo',
+    #)
     
-    self.style_plot(self.plot_1)
+    #self.style_plot(self.plot_1)
   def ca_graph(self):
-    fig = anvil.server.call('graph_chiffre_affaires')
-    self.image_1.source = fig
+    plot = anvil.server.call('graph_chiffre_affaires')
+    self.image_1.source = plot
   
-  def build_charges_graph(self):
+  #def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'
-    sum_charges = anvil.server.call('total_charges')
-    self.label_2.text = sum_charges
+    #sum_charges = anvil.server.call('total_charges')
+    #self.label_2.text = sum_charges
         
 
-  def pie_product(self):
-    db = anvil.server.call('pie_product')
-    self.plot_4.figure = db
+  #def pie_product(self):
+    #db = anvil.server.call('pie_product')
+    #self.plot_4.figure = db
 
-  def marge_commerciale(self):
-    db = anvil.server.call('marge_commerciale')
+  #def marge_commerciale(self):
+    #db = anvil.server.call('marge_commerciale')
     
 
 
