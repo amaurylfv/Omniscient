@@ -17,7 +17,7 @@ class Form2(Form2Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.map_chart()
-    self.funnel_chart()
+    #self.funnel_chart()
 
     # Any code you write here will run when the form opens.
   
@@ -28,4 +28,4 @@ class Form2(Form2Template):
     """This method is called when the button is clicked"""
     open_form('Form2_1', my_parameter="an_argument") #Prévision des ventes
   def map_chart(self):
-    self.image_1.source = anvil.server.call('map_chart')
+    self.plot_1.figure = anvil.server.call('map_chart')
