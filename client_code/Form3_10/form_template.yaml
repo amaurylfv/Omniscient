@@ -8,25 +8,104 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Répartition de la valeur ajoutée, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'QVLHXY,GQHEPZ'}
-  - type: Image
-    properties: {height: 316}
-    name: image_1
-    layout_properties: {grid_position: 'TLZPVM,PSTTBC'}
-  - type: Plot
-    properties: {}
-    name: plot_1
-    layout_properties: {grid_position: 'UEMUZC,EBGPPD'}
-  - type: Plot
-    properties: {}
-    name: plot_2
-    layout_properties: {grid_position: 'EDCXUB,NNBBUE'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_4
+    layout_properties: {grid_position: 'WRGGKB,YUVXOU'}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: Compte de résultat,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_4
+      layout_properties: {grid_position: 'CCIEID,FJBXQQ'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_1
+      layout_properties: {grid_position: 'ESYIAD,CXEVZD'}
+      event_bindings: {click: plot_1_click}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_2
+      layout_properties: {grid_position: 'FJFVLD,NWXEWC'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_3
+      layout_properties: {grid_position: 'RVFWVB,XQMRJZ'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_2
+    layout_properties: {grid_position: 'MYNOVC,NHXNOC'}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#8cb369'}
+      name: card_1
+      layout_properties: {width: 143.406}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Total Débit, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_1
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#bc4b51'}
+      name: card_2
+      layout_properties: {width: 145.812}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Total Crédit, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_2
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_3
+      layout_properties: {width: 134.8125}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Solde, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_3
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
