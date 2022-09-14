@@ -43,7 +43,7 @@ class Form1(Form1Template):
     # Any code you write here will run when the form opens.
     #self.temp_data = []
     #self.build_revenue_graph()
-    #self.ca_graph()
+    self.ca_graph()
     #self.resultat_exercice_graph()
     #self.build_charges_graph()
     self.pie_product()
@@ -130,13 +130,16 @@ class Form1(Form1Template):
     #)
     
     #self.style_plot(self.plot_1)
-  def ca_graph(self):
-    plot = anvil.server.call('graph_chiffre_affaires')
-    self.image_1.source = plot
+  #def ca_graph(self):
+    #plot = anvil.server.call('graph_chiffre_affaires')
+    #self.image_1.source = plot
   
-  def resultat_exercice_graph(self):
-    plot = anvil.server.call('graph_resultat_exercice')
-    self.image_2.source = plot
+  def ca_graph(self):
+    data = anvil.server.call('graph_chiffre_affaires')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
+    
   #def build_charges_graph(self):
     # Get the data from our server function, and store it as 'db_data'
     #sum_charges = anvil.server.call('total_charges')
