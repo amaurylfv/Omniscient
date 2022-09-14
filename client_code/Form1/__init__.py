@@ -11,17 +11,18 @@ import anvil.tables as tables
 import anvil.tables.query as q
 import anvil.google.auth
 from anvil.tables import app_tables
+import json
 
 #Import des pages de navigation de la nav-bar
 from ..Form2 import Form2
-#from ..Form3 import Form3
+from ..Form3 import Form3
 from ..Form4 import Form4
 from ..Form4_2 import Form4_2
 from ..Form4_4 import Form4_4
 from ..Form4_6 import Form4_6
-#from ..Form5 import Form5
-#from ..Form5_1 import Form5_1
-#from ..Form5_1_2 import Form5_1_2
+from ..Form5 import Form5
+from ..Form5_1 import Form5_1
+from ..Form5_1_2 import Form5_1_2
 from ..Form5_3 import Form5_3
 from ..Form6 import Form6
 from ..Form7 import Form7
@@ -143,9 +144,10 @@ class Form1(Form1Template):
         
 
   def pie_product(self):
-    plot = anvil.server.call('make_plot')
-    self.i_frame_1.url = plot.get_url(True)
-    #self.plot_4.figure = db
+    data = anvil.server.call('pie_product')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
 
   #def marge_commerciale(self):
     #db = anvil.server.call('marge_commerciale')

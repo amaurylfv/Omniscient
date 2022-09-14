@@ -18,6 +18,10 @@ def create_line():
     return fig
 
 @anvil.server.callable
+def show_pie_product():
+   json.loads(resp)[‘data’]
+
+@anvil.server.callable
 def create_pie():
     all_records = app_tables.invoice.search()
     # For each row, pull out only the data we want to put into pandas
