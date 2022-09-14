@@ -8,11 +8,6 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: form:S7OZ7KGGO3OM4QWE:IFrame
-    properties: {url: '', height: ''}
-    name: i_frame_1
-    layout_properties: {grid_position: 'OIRCOH,NBQZZJ'}
-    data_bindings: []
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -29,15 +24,15 @@ components:
       layout_properties: {grid_position: 'KJHPVS,GTCZHC'}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Produits les plus vendus par quantité, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
+        visible: true, text: Dépenses mensuelles, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_5
       layout_properties: {grid_position: 'KJHPVS,EWFGBS'}
     - type: Plot
       properties: {height: 294}
-      name: plot_1
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK', full_width_row: true, row_background: ''}
+      name: plot_2
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK'}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '295', visible: true,
         tooltip: '', interactive: true}
@@ -136,6 +131,57 @@ components:
             bold: false, underline: false, icon: ''}
           name: label_2_copy
           layout_properties: {grid_position: 'FCANEB,UMHXBU'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_5
+    layout_properties: {grid_position: 'EKAGYO,HZRHGH'}
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Chiffre d'affaires des exercices antérieurs, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_6
+      layout_properties: {grid_position: 'BWOCTX,QTJUVZ UMEFGK,XFNAQP'}
+    - type: Plot
+      properties: {}
+      name: plot_1
+      layout_properties: {grid_position: 'BWOCTX,QTJUVZ WPNBQK,MFLJZJ'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Charges des exercices antérieurs, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_7
+      layout_properties: {grid_position: 'BWOCTX,HQKCTM QNALWL,ZYAWXS'}
+    - type: Plot
+      properties: {}
+      name: plot_3
+      layout_properties: {grid_position: 'BWOCTX,HQKCTM PGTJCC,QUCOMG'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_6
+    layout_properties: {grid_position: 'QJOJXE,STSHCT'}
+    components:
+    - type: Label
+      properties: {}
+      name: label_8
+      layout_properties: {grid_position: 'ZRGCTG,DNLUSP'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Produits les plus vendus par quantité, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_9
+      layout_properties: {grid_position: 'ZRGCTG,PPBJCS'}
+    - type: Plot
+      properties: {}
+      name: plot_5
+      layout_properties: {grid_position: 'GQBSEF,WIPQJU'}
+    - type: Plot
+      properties: {}
+      name: plot_6
+      layout_properties: {grid_position: 'GQBSEF,DXHCFK'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
