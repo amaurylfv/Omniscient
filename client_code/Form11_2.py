@@ -9,12 +9,13 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 class Form11_2(Form11_2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.build_structure_graph_1()
+    self.invoice_chart()
     self.build_pie_chart_issuer()
     self.get_locations()
     self.issuer_map()
@@ -43,28 +44,24 @@ class Form11_2(Form11_2Template):
   
 
   
-  def build_structure_graph_1(self):
+  def invoice_chart(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_invoice')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Bar(
-      x = [x['date'] for x in db],
-      y = [x['amount'] for x in db],
-      marker=dict(color='#f4a261')
-    )
-
+    data = anvil.server.call('invoice_graph')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
+    
     #Nombre de fournisseurs
     number_issuer = anvil.server.call('number_of_issuer')
     self.label_3.text = number_issuer
  
     #Charge la plus élevée
-    max_invoice = sorted(db, key=lambda x: x['amount'], reverse=True)[0]
-    self.label_1.text = f"{max_invoice['amount']:}"    
+    max_invoice = anvil.server.call('main_supplier_label')
+    self.label_1.text = max_invoice   
     
     #Fournisseur principal
-    max_issuer = sorted(db, key=lambda x: x['amount'], reverse=True)[0]
-    self.label_2.text = f"{max_issuer['issuer']:}"
+    main_supplier = anvil.server.call('max_invoice_label')
+    self.label_2.text = main_supplier
     
     #Facture en anomalie
     anomalie_facture = anvil.server.call('anomalies_factures')
@@ -80,8 +77,10 @@ class Form11_2(Form11_2Template):
     anvil.server.call('get_locations')
     
   def issuer_map(self):
-    db = anvil.server.call('issuer_map')
-    self.plot_3.figure = db
+    data = anvil.server.call('issuer_map')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
     
   def total_charges_fixes(self):
     fixe = anvil.server.call('total_charges_fixes')
