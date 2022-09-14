@@ -19,8 +19,8 @@ class Form11_2(Form11_2Template):
     self.build_pie_chart_issuer()
     self.get_locations()
     self.issuer_map()
-    self.total_charges_fixes()
-    self.total_charges_variables()
+    self.fixed_costs_chart()
+    self.variable_costs_chart()
 
     # Any code you write here will run when the form opens.
     
@@ -82,20 +82,14 @@ class Form11_2(Form11_2Template):
     self.plot_3.data = fig['data']
     self.plot_3.layout = fig['layout']
     
-  def total_charges_fixes(self):
-    fixe = anvil.server.call('total_charges_fixes')
-    self.plot_4.data = go.Bar(
-      x = [fixe],
-      y = [fixe],
-      marker=dict(color='#e76f51')
-    )
+  def fixed_costs_chart(self):
+    data = anvil.server.call('fixed_costs_graph')
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
     
-  def total_charges_variables(self):
-    var = anvil.server.call('total_charges_variables')
-    self.plot_5.data = go.Bar(
-      x = [var],
-      y = [var],
-      marker=dict(color='#adc178')
-    )
+  def variable_costs_chart(self):
+    var = anvil.server.call('variable_costs_graph')
+    self.plot_5.data = fig['data']
+    self.plot_5.layout = fig['layout']
   
     
