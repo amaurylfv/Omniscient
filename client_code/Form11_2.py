@@ -69,8 +69,10 @@ class Form11_2(Form11_2Template):
     
     
   def build_pie_chart_issuer(self):  
-    fig = anvil.server.call('create_pie') 
-    self.plot_2.figure = fig
+    data = anvil.server.call('supplier_diagramm')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
 
     
   def get_locations(self):
@@ -84,11 +86,13 @@ class Form11_2(Form11_2Template):
     
   def fixed_costs_chart(self):
     data = anvil.server.call('fixed_costs_graph')
+    fig = json.loads(data)
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
     
   def variable_costs_chart(self):
-    var = anvil.server.call('variable_costs_graph')
+    data = anvil.server.call('variable_costs_graph')
+    fig = json.loads(data)
     self.plot_5.data = fig['data']
     self.plot_5.layout = fig['layout']
   
