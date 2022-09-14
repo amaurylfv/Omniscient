@@ -23,6 +23,8 @@ class Form3_1(Form3_1Template):
     open_form('Form3', my_parameter="an_argument") #Retour
 
   def graph_treasury(self):
-    plot = anvil.server.call('treasury_graph')
-    self.image_1.source = plot
+    data = anvil.server.call('treasury_graph')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
 
