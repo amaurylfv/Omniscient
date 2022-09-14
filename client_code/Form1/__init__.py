@@ -45,7 +45,7 @@ class Form1(Form1Template):
     #self.ca_graph()
     #self.resultat_exercice_graph()
     #self.build_charges_graph()
-    #self.pie_product()
+    self.pie_product()
     #self.marge_commerciale()
     
 #boutons qui permettent la navigation entre les rubriques (Marketing, Finance, etc.)
@@ -144,11 +144,13 @@ class Form1(Form1Template):
 
   def pie_product(self):
     plot = anvil.server.call('pie_product')
-    self.i_frame_1 = plot.get_url(True)
+    self.i_frame_1.url = plot.get_url(False)
     #self.plot_4.figure = db
 
   #def marge_commerciale(self):
     #db = anvil.server.call('marge_commerciale')
+
+
     
 
 

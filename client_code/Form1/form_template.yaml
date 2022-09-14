@@ -8,6 +8,11 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - type: form:S7OZ7KGGO3OM4QWE:IFrame
+    properties: {url: '', height: ''}
+    name: i_frame_1
+    layout_properties: {grid_position: 'OIRCOH,NBQZZJ'}
+    data_bindings: []
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -29,10 +34,6 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: label_5
       layout_properties: {grid_position: 'KJHPVS,EWFGBS'}
-    - type: form:S7OZ7KGGO3OM4QWE:IFrame
-      properties: {}
-      name: i_frame_1
-      layout_properties: {grid_position: 'AFMCKP,YZSCXQ'}
     - type: Plot
       properties: {height: 294}
       name: plot_1
@@ -239,3 +240,4 @@ components:
   name: link_1
   layout_properties: {slot: title}
   components: []
+item_type: {table_id: null}
