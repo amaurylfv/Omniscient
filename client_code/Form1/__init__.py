@@ -143,8 +143,8 @@ class Form1(Form1Template):
         
 
   def pie_product(self):
-    plot = anvil.server.call('pie_product')
-    self.i_frame_1.url = plot.get_url(False)
+    plot = anvil.server.call('make_plot')
+    self.i_frame_1.url = plot.get_url(True)
     #self.plot_4.figure = db
 
   #def marge_commerciale(self):
