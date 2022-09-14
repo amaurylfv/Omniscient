@@ -29,19 +29,14 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: label_5
       layout_properties: {grid_position: 'KJHPVS,EWFGBS'}
-    - type: Image
+    - type: form:S7OZ7KGGO3OM4QWE:IFrame
       properties: {}
-      name: image_1
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK JMUOZS,FUSOSU'}
-    - type: Image
-      properties: {}
-      name: image_2
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK WBTKAA,SLNXWZ'}
+      name: i_frame_1
+      layout_properties: {grid_position: 'AFMCKP,YZSCXQ'}
     - type: Plot
       properties: {height: 294}
       name: plot_1
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK FQKXHY,TYIKMA', full_width_row: true,
-        row_background: ''}
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK', full_width_row: true, row_background: ''}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '295', visible: true,
         tooltip: '', interactive: true}

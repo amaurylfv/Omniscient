@@ -42,8 +42,8 @@ class Form1(Form1Template):
     # Any code you write here will run when the form opens.
     #self.temp_data = []
     #self.build_revenue_graph()
-    self.ca_graph()
-    self.resultat_exercice_graph()
+    #self.ca_graph()
+    #self.resultat_exercice_graph()
     #self.build_charges_graph()
     #self.pie_product()
     #self.marge_commerciale()
@@ -142,8 +142,9 @@ class Form1(Form1Template):
     #self.label_2.text = sum_charges
         
 
-  #def pie_product(self):
-    #db = anvil.server.call('pie_product')
+  def pie_product(self):
+    plot = anvil.server.call('pie_product')
+    self.i_frame_1 = plot.get_url(True)
     #self.plot_4.figure = db
 
   #def marge_commerciale(self):
