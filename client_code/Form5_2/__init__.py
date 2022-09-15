@@ -15,7 +15,15 @@ class Form5_2(Form5_2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.line_chart_1()
+    self.financial_structure_chart()
+    self.horizontal_intermediate_operating_totals_chart()
+    self.radar_chart()
+    self.trade_receivables()
+    self.trade_payables()
+    self.bullet_account_payables()
+    self.bullet_account_receivables()
+    self.financial_equilibrium_treemap_1()
+    self.financial_equilibrium_treemap_2()
 
     # Any code you write here will run when the form opens.
 
@@ -26,9 +34,56 @@ class Form5_2(Form5_2Template):
   def button_1_click(self, **event_args):
     open_form('Form5_1', my_parameter="an_argument") #Retour
 
-
-  def line_chart_1(self):
-    data = anvil.server.call('radar_financial_structure')
+  def horizontal_intermediate_operating_totals_chart(self):
+    data = anvil.server.call('horizontal_intermediate_operating_totals')
     fig = json.loads(data)
     self.plot_1.data = fig['data']
-    self.plot_1.layout = fig['layout']
+    self.plot_1.layout = fig['layout'] 
+  
+  def financial_structure_chart(self):
+    data = anvil.server.call('histogramm_financial_structure')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
+   
+  def radar_chart(self):
+    data = anvil.server.call('radar_financial_structure')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
+
+  def trade_receivables(self):
+    data = anvil.server.call('gauge_trade_receivables')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
+  
+  def trade_payables(self):
+    data = anvil.server.call('gauge_trade_payables')
+    fig = json.loads(data)
+    self.plot_5.data = fig['data']
+    self.plot_5.layout = fig['layout']
+
+  def bullet_account_payables(self):
+    data = anvil.server.call('bullet_trade_payables')
+    fig = json.loads(data)
+    self.plot_6.data = fig['data']
+    self.plot_6.layout = fig['layout']
+
+  def bullet_account_receivables(self):
+    data = anvil.server.call('bullet_trade_receivables')
+    fig = json.loads(data)
+    self.plot_16.data = fig['data']
+    self.plot_16.layout = fig['layout']
+
+  def financial_equilibrium_treemap_1(self):
+    data = anvil.server.call('treemap_financial_equilibrium_1')
+    fig = json.loads(data)
+    self.plot_7.data = fig['data']
+    self.plot_7.layout = fig['layout']
+
+  def financial_equilibrium_treemap_2(self):
+    data = anvil.server.call('treemap_financial_equilibrium_2')
+    fig = json.loads(data)
+    self.plot_8.data = fig['data']
+    self.plot_8.layout = fig['layout']

@@ -4,19 +4,171 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"IUVPIQ":30}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: column_panel_1
-    layout_properties: {grid_position: 'OAJIUE,IUVPIQ'}
+    layout_properties: {grid_position: 'OAJIUE,IUVPIQ', full_width_row: true}
+    components:
+    - type: FlowPanel
+      properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+        foreground: '', visible: true, spacing_above: small, spacing_below: small,
+        background: ''}
+      name: flow_panel_3
+      layout_properties: {grid_position: 'YRVJVX,XRFFQP', full_width_row: true}
+      components:
+      - type: ColumnPanel
+        properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+          wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"VTOTMM":25,"DJIZIB":35}',
+          spacing_below: small, background: ''}
+        name: card_1
+        layout_properties: {grid_position: 'AXDEAQ,QWVIKI', expand: true, width: null}
+        components:
+        - type: Plot
+          properties: {spacing_above: small, spacing_below: small, height: '300',
+            visible: true, tooltip: '', interactive: true}
+          name: plot_1
+          layout_properties: {grid_position: 'LSSMHI,VTOTMM'}
+        - type: Plot
+          properties: {spacing_above: small, spacing_below: small, height: '300',
+            visible: true, tooltip: '', interactive: true}
+          name: plot_2
+          layout_properties: {grid_position: 'LSSMHI,DJIZIB'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_2
+    layout_properties: {grid_position: 'PKCWVL,LLEKGE', full_width_row: true}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: card_3
+      layout_properties: {grid_position: 'KGXXXD,KLAATT', width: null, expand: true}
+      components:
+      - type: Plot
+        properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
+          tooltip: '', interactive: true}
+        name: plot_3
+        layout_properties: {grid_position: 'FCIJAY,KLBHDI'}
+      - type: Plot
+        properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
+          tooltip: '', interactive: true}
+        name: plot_4
+        layout_properties: {grid_position: 'FCIJAY,CNEWBB'}
+      - type: Plot
+        properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
+          tooltip: '', interactive: true}
+        name: plot_5
+        layout_properties: {grid_position: 'FCIJAY,SMTLIM'}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KLBHDI":20,"CNEWBB":20,"SMTLIM":20}',
+      spacing_below: small, background: ''}
+    name: card_4
+    layout_properties:
+      col_widths: {}
+      grid_position: HLCNTQ,XGUGEE
+      full_width_row: true
+    components:
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '146', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_6
+      layout_properties: {grid_position: 'FCIJAY,KLBHDI OGLZAR,BSCTNZ'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '146', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_16
+      layout_properties: {grid_position: 'FCIJAY,KLBHDI MWMSFN,RSDRGZ'}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_7
+      layout_properties: {grid_position: 'FCIJAY,CNEWBB'}
+      event_bindings: {click: plot_7_click}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_8
+      layout_properties: {grid_position: 'FCIJAY,SMTLIM'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'YURSJW,BOPKZG WAHEDH,TROPOF'}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_5
+      layout_properties:
+        col_widths: {}
+        grid_position: SNODBQ,PUNYPP
+      components:
+      - type: Plot
+        properties: {height: 692}
+        name: plot_9
+        layout_properties: {grid_position: 'FCIJAY,KLBHDI'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_6
+    layout_properties: {grid_position: 'YURSJW,BOPKZG NWNVNF,UZUAYX'}
+    components:
+    - type: Plot
+      properties: {height: 715}
+      name: plot_10
+      layout_properties: {grid_position: 'DAQODN,ZSAMRH'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_8
+    layout_properties: {grid_position: 'YURSJW,BOPKZG NPFGDY,MLDKDK'}
+    components:
+    - type: Plot
+      properties: {height: 668}
+      name: plot_11
+      layout_properties: {grid_position: 'HJJPQU,KPGNLR'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_9
+    layout_properties: {grid_position: 'YURSJW,ICJZRE IWPTCM,ARDRED'}
+    components:
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '450', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_13
+      layout_properties: {grid_position: 'VKJSDX,SEHLYK'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_7
+    layout_properties: {grid_position: 'YURSJW,ICJZRE CPHUDT,GKTPLN'}
+    components:
+    - type: Plot
+      properties: {height: 560}
+      name: plot_12
+      layout_properties: {grid_position: 'ADQKUU,QYWMMX'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_10
+    layout_properties: {grid_position: 'YURSJW,ICJZRE LJPRAO,FFECXB'}
     components:
     - type: Plot
       properties: {}
-      name: plot_1
-      layout_properties: {grid_position: 'KWRSZF,CXUTAA'}
+      name: plot_14
+      layout_properties: {grid_position: 'BQNPEP,VUQQTB'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_11
+    layout_properties: {grid_position: 'YURSJW,ICJZRE KYLHHR,JOMCON'}
+    components:
+    - type: Plot
+      properties: {}
+      name: plot_15
+      layout_properties: {grid_position: 'VKIQIY,VRPNNR'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
