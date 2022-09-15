@@ -9,14 +9,20 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 class Form3_10_2(Form3_10_2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.vmp_graph()
-    self.disponibilites_graph()
-    self.Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_graph()
+    self.vente_de_marchandises_ant_graph()
+    self.production_vendue_biens_ant_graph()
+    self.production_vendue_services_ant_graph()
+    self.chiffre_affaires_nets_ant_graph()
+    self.vente_de_marchandises_act_graph()
+    self.production_vendue_biens_act_graph()
+    self.production_vendue_services_act_graph()
+    self.chiffre_affaires_nets_act_graph()
 
     # Any code you write here will run when the form opens.
 
@@ -24,31 +30,50 @@ class Form3_10_2(Form3_10_2Template):
     """This method is called when the button is clicked"""
     open_form('Form3', my_parameter="an_argument") #Retour
 
-  def vmp_graph(self):
-    db_data = anvil.server.call('display_financial_statement')
-    self.plot_1.data = go.Scatter(
-    x = [x['date_cloture_exercice'] for x in db_data],
-    y = [x['Valeurs_mobilieres_de_placement_m1'] for x in db_data],
-    fill=None,
-    mode='lines',
-    color='green',
-    )
+  def vente_de_marchandises_act_graph(self):
+    data = anvil.server.call('vente_de_marchandises_actuel')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
+    
+  def vente_de_marchandises_ant_graph(self):
+    data = anvil.server.call('vente_de_marchandises_anterieurs')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
+    
+  def production_vendue_biens_act_graph(self):
+    data = anvil.server.call('production_vendue_de_biens_actuel')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
+  
+  def production_vendue_biens_ant_graph(self):
+    data = anvil.server.call('production_vendue_de_biens_anterieurs')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
 
-  def disponibilites_graph(self):
-    db_data = anvil.server.call('display_financial_statement')
-    self.plot_2.data = go.Scatter(
-    x = [x['date_cloture_exercice'] for x in db_data],
-    y = [x['Disponibilites_m1'] for x in db_data],
-    fill=None,
-    mode='lines',
-    color='green',
-    )
-  def Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_graph(self):
-    db_data = anvil.server.call('display_financial_statement')
-    self.plot_3.data = go.Scatter(
-    x = [x['date_cloture_exercice'] for x in db_data],
-    y = [x['Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_m1'] for x in db_data],
-    fill=None,
-    mode='lines',
-    color='red',
-    )
+  def production_vendue_services_act_graph(self):
+    data = anvil.server.call('production_vendue_de_services_actuel')
+    fig = json.loads(data)
+    self.plot_5.data = fig['data']
+    self.plot_5.layout = fig['layout']
+  
+  def production_vendue_services_ant_graph(self):
+    data = anvil.server.call('production_vendue_de_services_anterieurs')
+    fig = json.loads(data)
+    self.plot_6.data = fig['data']
+    self.plot_6.layout = fig['layout']
+
+  def chiffre_affaires_nets_act_graph(self):
+    data = anvil.server.call('chiffre_affaires_nets_actuel')
+    fig = json.loads(data)
+    self.plot_7.data = fig['data']
+    self.plot_7.layout = fig['layout']  
+  
+  def chiffre_affaires_nets_ant_graph(self):
+    data = anvil.server.call('chiffre_affaires_nets_anterieurs')
+    fig = json.loads(data)
+    self.plot_8.data = fig['data']
+    self.plot_8.layout = fig['layout']

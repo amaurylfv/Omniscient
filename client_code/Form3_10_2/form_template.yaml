@@ -13,70 +13,114 @@ components:
     name: card_4
     layout_properties: {grid_position: 'WRGGKB,YUVXOU'}
     components:
-    - type: Label
-      properties: {}
-      name: label_4
-      layout_properties: {grid_position: 'MZNTMS,QPTVDR'}
-    - type: Label
-      properties: {}
-      name: label_5
-      layout_properties: {grid_position: 'MZNTMS,LFYHMO'}
-    - type: Plot
-      properties: {}
-      name: plot_1
-      layout_properties: {grid_position: 'UQEQNG,IGBRGI'}
-    - type: Plot
-      properties: {}
-      name: plot_2
-      layout_properties: {grid_position: 'UQEQNG,NFGOBS'}
-    - type: Label
-      properties: {}
-      name: label_6
-      layout_properties: {grid_position: 'JAKGZB,HONOME'}
-    - type: Label
-      properties: {}
-      name: label_7
-      layout_properties: {grid_position: 'JAKGZB,UFXRZA'}
-    - type: Plot
-      properties: {}
-      name: plot_3
-      layout_properties: {grid_position: 'WVVZTB,XUZDXC'}
-    - type: Plot
-      properties: {}
-      name: plot_4
-      layout_properties: {grid_position: 'WVVZTB,OZGZXB'}
-    - type: Label
-      properties: {}
-      name: label_8
-      layout_properties: {grid_position: 'VQXLSC,ISAKRR'}
-    - type: Label
-      properties: {}
-      name: label_9
-      layout_properties: {grid_position: 'VQXLSC,IYITYG'}
-    - type: Plot
-      properties: {}
-      name: plot_5
-      layout_properties: {grid_position: 'KMGARN,QSQZAR'}
-    - type: Plot
-      properties: {}
-      name: plot_6
-      layout_properties: {grid_position: 'KMGARN,JGCAVC'}
-    - type: Label
-      properties: {}
-      name: label_10
-      layout_properties: {grid_position: 'KJSOVA,JYEFNT'}
-    - type: Label
-      properties: {}
-      name: label_11
-      layout_properties: {grid_position: 'KJSOVA,SXCYTP'}
-    - type: Plot
-      properties: {}
-      name: plot_7
-      layout_properties: {grid_position: 'ZCJYRR,LXLQBC'}
-    - type: Plot
-      properties: {}
-      name: plot_8
-      layout_properties: {grid_position: 'ZCJYRR,XDXYBF'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_5
+      layout_properties: {grid_position: 'VTSDJO,ANPTGD'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Vente de marchandises actuelles, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'MZBKTD,HJNHUH RQDAFH,LBPLHX'}
+      - type: Plot
+        properties: {}
+        name: plot_1
+        layout_properties: {grid_position: 'MZBKTD,HJNHUH DEJHOZ,JXZJTY'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Vente de marchandises antérieures, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_5
+        layout_properties: {grid_position: 'MZBKTD,LMLDRF RDCFQH,HALVZQ'}
+      - type: Plot
+        properties: {}
+        name: plot_2
+        layout_properties: {grid_position: 'MZBKTD,LMLDRF SHDJGD,SOZUCK'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_6
+      layout_properties: {grid_position: 'KCASYR,EYTXHJ'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Production vendue de biens actuelles, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'CAZEMT,LJXDGV AYZKEZ,TMPJFI'}
+      - type: Plot
+        properties: {}
+        name: plot_3
+        layout_properties: {grid_position: 'CAZEMT,LJXDGV VVTUFF,OLLLEI'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Production vendue de biens antérieurs, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_7
+        layout_properties: {grid_position: 'CAZEMT,TDALTO SFODGU,JPWNSD'}
+      - type: Plot
+        properties: {}
+        name: plot_4
+        layout_properties: {grid_position: 'CAZEMT,TDALTO CVAYUV,GSSJFQ'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_7
+      layout_properties: {grid_position: 'RBGFEH,EPBAKN'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Production vendue de services actuelles, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_8
+        layout_properties: {grid_position: 'TGXJBN,BGQZEM KLKZJQ,FBYJAP'}
+      - type: Plot
+        properties: {}
+        name: plot_5
+        layout_properties: {grid_position: 'TGXJBN,BGQZEM SXSSPC,TWSCXH'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Production vendue de services actuelles, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_9
+        layout_properties: {grid_position: 'TGXJBN,YGHNVI STWATZ,OZORQI'}
+      - type: Plot
+        properties: {}
+        name: plot_6
+        layout_properties: {grid_position: 'TGXJBN,YGHNVI QHLAIE,TKZRZJ'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_8
+      layout_properties: {grid_position: 'HAOMQK,HTLXYO'}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: chiffre d'affaires actuel, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_10
+        layout_properties: {grid_position: 'SEJDMD,DNJJVO CGXTGG,EFPALN'}
+      - type: Plot
+        properties: {}
+        name: plot_7
+        layout_properties: {grid_position: 'SEJDMD,DNJJVO HMGLCK,KEPSXB'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: chiffre d'affaires antérieurs, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_11
+        layout_properties: {grid_position: 'SEJDMD,WVDPBA KUSLHQ,CUPTGF'}
+      - type: Plot
+        properties: {}
+        name: plot_8
+        layout_properties: {grid_position: 'SEJDMD,WVDPBA QTFMAQ,QZVBLF'}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
