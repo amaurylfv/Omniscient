@@ -13,7 +13,7 @@ components:
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     name: card_1
-    layout_properties: {grid_position: 'OVJZUN,YVOQQP', full_width_row: false}
+    layout_properties: {grid_position: 'OVJZUN,YVOQQP', full_width_row: true}
     components:
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
@@ -30,9 +30,10 @@ components:
       name: label_5
       layout_properties: {grid_position: 'KJHPVS,EWFGBS'}
     - type: Plot
-      properties: {height: 294}
+      properties: {spacing_above: small, spacing_below: small, height: 294, visible: true,
+        tooltip: '', interactive: true}
       name: plot_2
-      layout_properties: {grid_position: 'PRQZUS,DYBEIK'}
+      layout_properties: {grid_position: 'PRQZUS,DYBEIK', full_width_row: true}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '295', visible: true,
         tooltip: '', interactive: true}
@@ -132,9 +133,11 @@ components:
           name: label_2_copy
           layout_properties: {grid_position: 'FCANEB,UMHXBU'}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: card_5
-    layout_properties: {grid_position: 'EKAGYO,HZRHGH'}
+    layout_properties: {grid_position: 'EKAGYO,HZRHGH', full_width_row: true}
     components:
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
@@ -142,26 +145,29 @@ components:
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: label_6
-      layout_properties: {grid_position: 'BWOCTX,QTJUVZ UMEFGK,XFNAQP'}
+      layout_properties: {grid_position: 'BWOCTX,QTJUVZ UMEFGK,XFNAQP', full_width_row: true}
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'BWOCTX,QTJUVZ WPNBQK,MFLJZJ'}
+      layout_properties: {grid_position: 'BWOCTX,QTJUVZ WPNBQK,MFLJZJ', full_width_row: true}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Charges des exercices antérieurs, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: label_7
-      layout_properties: {grid_position: 'BWOCTX,HQKCTM QNALWL,ZYAWXS'}
+      layout_properties: {grid_position: 'BWOCTX,HQKCTM QNALWL,ZYAWXS', full_width_row: true}
     - type: Plot
       properties: {}
       name: plot_3
-      layout_properties: {grid_position: 'BWOCTX,HQKCTM PGTJCC,QUCOMG'}
+      layout_properties: {grid_position: 'BWOCTX,HQKCTM PGTJCC,QUCOMG', full_width_row: true}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: card_6
-    layout_properties: {grid_position: 'QJOJXE,STSHCT'}
+    layout_properties: {grid_position: 'QJOJXE,STSHCT', full_width_row: true}
     components:
     - type: Label
       properties: {}
@@ -177,11 +183,12 @@ components:
     - type: Plot
       properties: {}
       name: plot_5
-      layout_properties: {grid_position: 'GQBSEF,WIPQJU'}
+      layout_properties: {grid_position: 'GQBSEF,WIPQJU', full_width_row: true}
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
       name: plot_6
-      layout_properties: {grid_position: 'GQBSEF,DXHCFK'}
+      layout_properties: {grid_position: 'GQBSEF,DXHCFK', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links

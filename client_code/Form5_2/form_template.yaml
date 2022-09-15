@@ -33,12 +33,12 @@ components:
           properties: {spacing_above: small, spacing_below: small, height: '300',
             visible: true, tooltip: '', interactive: true}
           name: plot_1
-          layout_properties: {grid_position: 'LSSMHI,VTOTMM'}
+          layout_properties: {grid_position: 'LSSMHI,VTOTMM', full_width_row: true}
         - type: Plot
           properties: {spacing_above: small, spacing_below: small, height: '300',
             visible: true, tooltip: '', interactive: true}
           name: plot_2
-          layout_properties: {grid_position: 'LSSMHI,DJIZIB'}
+          layout_properties: {grid_position: 'LSSMHI,DJIZIB', full_width_row: true}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
@@ -81,23 +81,23 @@ components:
       properties: {spacing_above: small, spacing_below: small, height: '146', visible: true,
         tooltip: '', interactive: true}
       name: plot_6
-      layout_properties: {grid_position: 'FCIJAY,KLBHDI OGLZAR,BSCTNZ'}
+      layout_properties: {grid_position: 'FCIJAY,KLBHDI OGLZAR,BSCTNZ', full_width_row: true}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '146', visible: true,
         tooltip: '', interactive: true}
       name: plot_16
-      layout_properties: {grid_position: 'FCIJAY,KLBHDI MWMSFN,RSDRGZ'}
+      layout_properties: {grid_position: 'FCIJAY,KLBHDI MWMSFN,RSDRGZ', full_width_row: true}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
         tooltip: '', interactive: true}
       name: plot_7
-      layout_properties: {grid_position: 'FCIJAY,CNEWBB'}
+      layout_properties: {grid_position: 'FCIJAY,CNEWBB', full_width_row: true}
       event_bindings: {click: plot_7_click}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '300', visible: true,
         tooltip: '', interactive: true}
       name: plot_8
-      layout_properties: {grid_position: 'FCIJAY,SMTLIM'}
+      layout_properties: {grid_position: 'FCIJAY,SMTLIM', full_width_row: true}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_2
