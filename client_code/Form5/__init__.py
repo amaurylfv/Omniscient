@@ -73,7 +73,7 @@ class Form5(Form5Template):
     self.label_6.text = anvil.server.call('total_charges_variables')
     
   def taux_de_marges_sur_cv(self):
-    self.label_7.text = anvil.server.call('taux_de_marge_sur_coûts_variables')
+    self.label_7.text = anvil.server.call('taux_de_marge_sur_coûts_variables_label')
   
   def seuil_de_rentabilite(self):
     self.label_3.text = anvil.server.call('seuil_de_rentabilité')

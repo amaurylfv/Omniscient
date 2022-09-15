@@ -9,6 +9,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 class Form5_2(Form5_2Template):
   def __init__(self, **properties):
@@ -27,5 +28,7 @@ class Form5_2(Form5_2Template):
 
 
   def line_chart_1(self):
-    fig = anvil.server.call('ploty_test')
-    self.image_1.source = fig
+    data = anvil.server.call('radar_financial_structure')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
