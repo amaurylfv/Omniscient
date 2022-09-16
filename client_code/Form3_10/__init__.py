@@ -15,6 +15,7 @@ class Form3_10(Form3_10Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+ 
     #self.vmp_graph()
     #self.disponibilites_graph()
     #self.Concours_bancaires_courants_et_soldes_crediteurs_de_banques_et_C_C_P_graph()
