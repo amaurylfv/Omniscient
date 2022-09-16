@@ -33,7 +33,7 @@ components:
       - type: Spacer
         properties: {height: 32}
         name: spacer_2
-        layout_properties: {width: 304}
+        layout_properties: {width: 402}
       - type: Button
         properties: {role: secondary-color, align: right, tooltip: '', border: '',
           enabled: true, foreground: '', visible: true, text: graph, font_size: null,
@@ -42,22 +42,35 @@ components:
         name: button_2
         layout_properties: {}
         event_bindings: {click: button_2_click}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
-        tooltip: '', interactive: true}
-      name: plot_1
-      layout_properties: {grid_position: 'ESYIAD,CXEVZD'}
-      event_bindings: {click: plot_1_click}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
-        tooltip: '', interactive: true}
-      name: plot_2
-      layout_properties: {grid_position: 'FJFVLD,NWXEWC'}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: '200', visible: true,
-        tooltip: '', interactive: true}
-      name: plot_3
-      layout_properties: {grid_position: 'RVFWVB,XQMRJZ'}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: AZKVNY, title: '', data_key: column_1, $$hashKey: 'object:121780'}
+        - {id: FMTNVP, title: N, data_key: column_2, $$hashKey: 'object:121781', expand: true}
+        - {id: VDHLLF, title: N - 1, data_key: column_3, $$hashKey: 'object:121782',
+          expand: true}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: data_grid_1
+      layout_properties: {grid_position: 'BUCKBM,MZRSTX', full_width_row: true}
+      components:
+      - type: RepeatingPanel
+        properties: {role: card, tooltip: '', border: '', foreground: '', items: null,
+          visible: true, spacing_above: none, spacing_below: none, item_template: Form3_10.RowTemplate7,
+          background: ''}
+        name: repeating_panel_1
+        layout_properties: {pinned: true}
+        data_bindings: []
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}

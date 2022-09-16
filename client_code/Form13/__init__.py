@@ -57,3 +57,8 @@ class Form13(Form13Template):
     anvil.server.call('get_accounting_exercise')
     anvil.server.call('find_financial_statement')
 
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form1', my_parameter="an_argument") #Accueil
+
+
