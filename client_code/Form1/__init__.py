@@ -84,11 +84,14 @@ class Form1(Form1Template):
     open_form('Form11', my_parameter="an_argument") #Données
     
   def ca_graph(self):
-    data = anvil.server.call('graph_chiffre_affaires_anterieurs')
-    fig = json.loads(data)
-    self.plot_1.data = fig['data']
-    self.plot_1.layout = fig['layout']
-
+    try : 
+      data = anvil.server.call('graph_chiffre_affaires_anterieurs')
+      fig = json.loads(data)
+      self.plot_1.data = fig['data']
+      self.plot_1.layout = fig['layout']
+    except :
+      print("en attente d'importation des états financiers")
+      
   def monthly_revenue_card(self):
     data = anvil.server.call('monthly_revenue_label')
     self.label_1.text = data
@@ -104,11 +107,14 @@ class Form1(Form1Template):
     self.label_2.text = data
     
   def expenses_chart(self):
-    data = anvil.server.call('graph_charges_anterieurs')
-    fig = json.loads(data)
-    self.plot_3.data = fig['data']
-    self.plot_3.layout = fig['layout']
-    
+    try :
+      data = anvil.server.call('graph_charges_anterieurs')
+      fig = json.loads(data)
+      self.plot_3.data = fig['data']
+      self.plot_3.layout = fig['layout']
+    except :
+      print("en attente d'importation des états financiers")
+  
   def monthly_expenses_chart(self):
     data = anvil.server.call('monthly_expenses_graph')
     fig = json.loads(data)
