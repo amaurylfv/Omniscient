@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
   name: content_panel
@@ -42,28 +42,29 @@ components:
       name: plot_2
       layout_properties: {grid_position: 'GMDLFX,OXXIKQ', full_width_row: true}
   - type: FlowPanel
-    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+    properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'TOKOPH,QAHMRX'}
+    layout_properties: {grid_position: 'TOKOPH,QAHMRX', full_width_row: true}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#03071e'}
       name: card_1
-      layout_properties: {grid_position: 'NNLNST,LQUKSY', width: 293}
+      layout_properties: {grid_position: 'NNLNST,LQUKSY', width: null, expand: true}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Taux de profitabilité,
+          foreground: white, visible: true, font_size: 11, content: Taux de profitabilité,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_3
         layout_properties: {grid_position: 'SZKZKG,GTQCSL'}
+        components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-          visible: true, text: '', font_size: null, font: Roboto, spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_2
@@ -74,40 +75,40 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#370617'}
       name: card_5
-      layout_properties: {grid_position: 'NNLNST,VQXPTX', width: 288}
+      layout_properties: {grid_position: 'NNLNST,VQXPTX', width: null, expand: true}
       components:
       - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Taux de marge sur coût variable,
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: 11, content: Taux de MCV(1), font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_6
         layout_properties: {grid_position: 'APYQPP,BRTUDV'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
-          name: label_7
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_7
+        layout_properties: {grid_position: 'KMIAXB,WLGKEK'}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#6a040f'}
       name: card_2
-      layout_properties: {grid_position: 'NNLNST,MDXIJQ', width: 293}
+      layout_properties: {grid_position: 'NNLNST,MDXIJQ', width: null, expand: true}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Seuil de rentabilité,
+          foreground: white, visible: true, font_size: 11, content: Seuil de rentabilité,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_2
         layout_properties: {grid_position: 'WHREMI,USUBIK'}
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_3
@@ -117,45 +118,45 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#9d0208'}
       name: card_3
-      layout_properties: {grid_position: 'NNLNST,JCOVSC', width: 294}
+      layout_properties: {grid_position: 'NNLNST,JCOVSC', width: null, expand: true}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Total des charges fixes,
+          foreground: '', visible: true, font_size: 11, content: Total des charges fixes,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_4
         layout_properties: {grid_position: 'IQQZQI,HIRUOE'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
-          name: label_5
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_5
+        layout_properties: {grid_position: 'NAICYF,ROESHY'}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#d00000'}
       name: card_4
-      layout_properties: {grid_position: 'NNLNST,VLHWZQ', width: 296}
+      layout_properties: {grid_position: 'NNLNST,VLHWZQ', width: null, expand: true}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Total des charges variables,
+          foreground: '', visible: true, font_size: 11, content: Total des charges variables,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_5
         layout_properties: {grid_position: 'PLZMPY,GHICCC'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
-          name: label_6
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'OHDXJZ,GIJMOS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
