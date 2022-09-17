@@ -74,8 +74,8 @@ class Form5(Form5Template):
   def profitability_line_chart(self):
     data = anvil.server.call('lines_graph_profitability')
     fig = json.loads(data)
-    self.plot_1.data = fig['data']
-    self.plot_1.layout = fig['layout']
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
     
   def profitabilité(self):
     self.label_2.text = anvil.server.call('profitabilité')
