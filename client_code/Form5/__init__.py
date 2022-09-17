@@ -9,6 +9,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 from ..Form5_1 import Form5_1
 from ..Form5_2 import Form5_2
@@ -18,7 +19,8 @@ class Form5(Form5Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.build_structure_graph_1()
+    #self.build_structure_graph_1()
+    self.profitability_horizontal_bar_chart()
     self.build_structure_graph_2()
     self.profitabilité()
     self.total_charges_fixes()
@@ -43,15 +45,21 @@ class Form5(Form5Template):
     """This method is called when the button is clicked"""
     open_form('Form5_3', my_parameter="an_argument") #Rentabilité
   
-  def build_structure_graph_1(self):
+  #def build_structure_graph_1(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('display_financial_statement')
+    #db = anvil.server.call('display_financial_statement')
       
       # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Scatter(x = [x['date_cloture_exercice'] for x in db],
-                                  y = [x['Chiffres_daffaires_nets_m1'] for x in db],
-                                  mode='lines+markers',
-                                  line=dict(color='#EAE2B7'))
+    #self.plot_1.data = go.Scatter(x = [x['date_cloture_exercice'] for x in db],
+                                  #y = [x['Chiffres_daffaires_nets_m1'] for x in db],
+                                  #mode='lines+markers',
+                                  #line=dict(color='#EAE2B7'))
+    
+  def profitability_horizontal_bar_chart(self):
+    data = anvil.server.call('horizontal_bar_graph_profitability')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
     
   def build_structure_graph_2(self):
     # Get the data from our server function, and store it as 'db_data'
