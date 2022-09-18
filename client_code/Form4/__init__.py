@@ -9,6 +9,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 from ..Form4_2 import Form4_2
 from ..Form4_4 import Form4_4
@@ -39,15 +40,21 @@ class Form4(Form4Template):
     open_form('Form4_6', my_parameter="an_argument") #Analyse des risques
 
   def filled_area_chart(self):
-    fig = anvil.server.call('filled_area')
-    self.plot_1.figure = fig
+    data = anvil.server.call('filled_area')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
 
   def bar_chart(self):
-    fig = anvil.server.call('bar_chart')
-    self.plot_2.figure = fig
+    data = anvil.server.call('bar_chart')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
     
   def time_series_chart(self):
-    fig = anvil.server.call('time_series_chart')
-    self.plot_3.figure = fig
+    data = anvil.server.call('time_series_chart')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
 
 

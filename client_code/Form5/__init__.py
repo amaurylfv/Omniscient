@@ -22,6 +22,8 @@ class Form5(Form5Template):
     #self.build_structure_graph_1()
     self.profitability_horizontal_bar_chart()
     self.profitability_line_chart()
+    self.rentability_horizontal_bar_chart()
+    self.rentability_line_chart()
     #self.build_structure_graph_2()
     self.profitabilité()
     self.total_charges_fixes()
@@ -71,11 +73,24 @@ class Form5(Form5Template):
                                   #y = [x['Resultat_exercice_m1'] for x in db],
                                   #mode='lines+markers',
                                   #line=dict(color='#EAE2B7'))
+
   def profitability_line_chart(self):
     data = anvil.server.call('lines_graph_profitability')
     fig = json.loads(data)
     self.plot_2.data = fig['data']
     self.plot_2.layout = fig['layout']
+
+  def rentability_horizontal_bar_chart(self):
+    data = anvil.server.call('horizontal_bar_graph_rentability')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
+  
+  def rentability_line_chart(self):
+    data = anvil.server.call('lines_graph_rentability')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
     
   def profitabilité(self):
     self.label_2.text = anvil.server.call('profitabilité')
