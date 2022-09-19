@@ -18,7 +18,7 @@ class Form5_1(Form5_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.build_structure_graph_1()
+    self.intermediate_operating_filled_area_chart()
     self.build_structure_graph_2()
     self.build_structure_graph_3()
     self.build_structure_graph_4()
@@ -67,24 +67,16 @@ class Form5_1(Form5_1Template):
                             )
                           ) 
     
-  def build_structure_graph_1(self):
+  def intermediate_operating_filled_area_chart(self):
     # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_1.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x['Marge commerciale'] for x in db],
-      marker=dict(color='#FCBF49')
-    )
+    data = anvil.server.call('intermediate_operating_filled_area_graph')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
     
-    max_marge = sorted(db, key=lambda x: x['Marge commerciale'], reverse=True)[0]
-    self.label_1.text = f"{max_marge['Marge commerciale']:,}"
+    #max_marge = sorted(db, key=lambda x: x['Marge commerciale'], reverse=True)[0]
+    #self.label_1.text = f"{max_marge['Marge commerciale']:,}"
     
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_1)
-    self.plot_1.layout.title = "Evolution de la Marge commerciale"
-
   def build_structure_graph_2(self):
     # Get the data from our server function, and store it as 'db_data'
     db = anvil.server.call('get_sig')
