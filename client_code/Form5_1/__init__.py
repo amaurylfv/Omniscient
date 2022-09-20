@@ -18,10 +18,10 @@ class Form5_1(Form5_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.intermediate_operating_filled_area_chart()
-    self.build_structure_graph_2()
+    self.actual_intermediate_operating_filled_area_chart()
+    self.previous_intermediate_operating_filled_area_chart()
     self.build_structure_graph_3()
-    self.build_structure_graph_4()
+    self.previous_profitability_ridgeline_chart()
     self.build_structure_graph_5()
     self.build_structure_graph_6()
 
@@ -66,34 +66,27 @@ class Form5_1(Form5_1Template):
                                 ),
                             )
                           ) 
-    
-  def intermediate_operating_filled_area_chart(self):
+  def actual_intermediate_operating_filled_area_chart(self):
     # Get the data from our server function, and store it as 'db_data'
-    data = anvil.server.call('intermediate_operating_filled_area_graph')
+    data = anvil.server.call('actual_intermediate_operating_filled_area_graph')
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
     
+  def previous_intermediate_operating_filled_area_chart(self):
+    # Get the data from our server function, and store it as 'db_data'
+    data = anvil.server.call('previous_intermediate_operating_filled_area_graph')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
+    
     #max_marge = sorted(db, key=lambda x: x['Marge commerciale'], reverse=True)[0]
     #self.label_1.text = f"{max_marge['Marge commerciale']:,}"
     
-  def build_structure_graph_2(self):
-    # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_2.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x["Production_exercice"] for x in db],
-      marker=dict(color='#219EBC')
-    )
     
-    max_production = sorted(db, key=lambda x: x["Production_exercice"], reverse=True)[0]
-    self.label_2.text = f"{max_production['Production_exercice']:,}"
+    #max_production = sorted(db, key=lambda x: x["Production_exercice"], reverse=True)[0]
+    #self.label_2.text = f"{max_production['Production_exercice']:,}"
     
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_2)
-    self.plot_2.layout.title = "Evolution de la Production de l'exercice"
 
   def build_structure_graph_3(self):
     # Get the data from our server function, and store it as 'db_data'
@@ -113,24 +106,15 @@ class Form5_1(Form5_1Template):
     self.style_plot(self.plot_3)
     self.plot_3.layout.title = "Evolution de la Production de l'exercice"
 
-  def build_structure_graph_4(self):
-    # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_4.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x["Valeur ajoutée"] for x in db],
-      marker=dict(color='#003049')
-    )
+  def previous_profitability_ridgeline_chart(self):
+    data = anvil.server.call('previous_profitability_ridgeline_graph')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
     
-    max_EBE = sorted(db, key=lambda x: x['EBE'], reverse=True)[0]
-    self.label_4.text = f"{max_EBE['EBE']:,}"    
-    
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_4)
-    self.plot_4.layout.title = "Evolution de la valeur ajoutée"
-    
+    #max_EBE = sorted(db, key=lambda x: x['EBE'], reverse=True)[0]
+    #self.label_4.text = f"{max_EBE['EBE']:,}"    
+
   def build_structure_graph_5(self):
     # Get the data from our server function, and store it as 'db_data'
     db = anvil.server.call('get_sig')

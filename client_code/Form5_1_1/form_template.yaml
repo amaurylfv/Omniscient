@@ -25,17 +25,16 @@ components:
   properties:
     role: null
     columns:
-    - {id: WPRJYP, title: Year, data_key: Year}
-    - {id: CZMWGZ, title: Marge Commerciale, data_key: Marge commerciale}
-    - {id: XCRMSE, title: Production De L'exercice, data_key: Production_exercice}
-    - {id: KXNEUI, title: Valeur Ajoutée, data_key: Valeur ajoutée}
-    - {id: BBNWUF, title: EBE, data_key: EBE}
-    - {id: TGRSPV, title: Résultat D'exploitation, data_key: Résultat d'exploitation}
-    - {id: OSFWUK, title: Résultat Courant Avant Impôt, data_key: Résultat courant avant impôt}
-    - {id: CZXSIN, title: Résultat Exceptionnel, data_key: Résultat exceptionnel}
-    - {id: SXKTXK, title: Résultat De L'exercice, data_key: Résultat de l'exercice}
-    - {id: VITCXQ, title: Plus-value Et Moins-value Sur Cessions D'éléments D'actif,
-      data_key: Plus-value et Moins-value sur cessions d'éléments d'actif}
+    - {id: YBLOXL, title: Date d'exercice, data_key: date_cloture_exercice, $$hashKey: 'object:842',
+      expand: true}
+    - {id: PHGJPP, title: Marge commerciale, data_key: marge_commerciale_n, $$hashKey: 'object:827',
+      expand: true}
+    - {id: EEYFNJ, title: Production exercice, data_key: production_exercice_n, $$hashKey: 'object:845',
+      expand: true}
+    - {id: GLRTET, title: Valeur ajoutée, data_key: valeur_ajoutee_n, $$hashKey: 'object:871',
+      expand: true}
+    - {id: BOYRXT, title: EBE, data_key: ebe_n, $$hashKey: 'object:866', expand: true}
+    - {id: SRCULD, title: CAF, data_key: Caf_n, $$hashKey: 'object:841', expand: true}
     auto_header: true
     tooltip: ''
     border: ''
