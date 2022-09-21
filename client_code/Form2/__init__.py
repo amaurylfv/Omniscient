@@ -9,6 +9,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import json
 
 from ..Form2_1 import Form2_1
 
@@ -16,7 +17,8 @@ class Form2(Form2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.map_chart()
+    self.get_locations()
+    self.customer_map()
     #self.funnel_chart()
 
     # Any code you write here will run when the form opens.
@@ -27,5 +29,12 @@ class Form2(Form2Template):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form2_1', my_parameter="an_argument") #Prévision des ventes
-  def map_chart(self):
-    self.plot_1.figure = anvil.server.call('map_chart')
+  
+  def get_locations(self):
+    anvil.server.call('get_customer_locations')
+    
+  def customer_map(self):
+    data = anvil.server.call('customer_map')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
