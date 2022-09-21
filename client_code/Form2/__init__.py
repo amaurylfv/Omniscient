@@ -36,5 +36,5 @@ class Form2(Form2Template):
   def customer_map(self):
     data = anvil.server.call('customer_map')
     fig = json.loads(data)
-    self.plot_3.data = fig['data']
-    self.plot_3.layout = fig['layout']
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
