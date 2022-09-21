@@ -23,7 +23,7 @@ class Form5_1(Form5_1Template):
     self.build_structure_graph_3()
     self.previous_profitability_ridgeline_chart()
     self.build_structure_graph_5()
-    self.build_structure_graph_6()
+    self.previous_grouped_bar_profitability_chart()
 
     # Any code you write here will run when the form opens.
 
@@ -36,6 +36,10 @@ class Form5_1(Form5_1Template):
 
   def button_1_click(self, **event_args):
     open_form('Form5_1_1', my_parameter="an_argument") #SIG
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form5_1_2', my_parameter="an_argument") #
 
   def style_plot(self, plot):
     plot.layout = go.Layout(
@@ -133,30 +137,23 @@ class Form5_1(Form5_1Template):
     self.style_plot(self.plot_5)
     self.plot_5.layout.title = "Evolution de l'EBE"
     
-  def build_structure_graph_6(self):
-    # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_6.data = go.Scatter(x = [x['Year'] for x in db],
-                                  y = [x["Résultat_exploitation"] for x in db],
-                                  mode='lines+markers',
-                                  line=dict(color='#EAE2B7'))
+  def previous_grouped_bar_profitability_chart(self):
+    data = anvil.server.call('previous_grouped_bar_profitability_graph')
+    fig = json.loads(data)
+    self.plot_6.data = fig['data']
+    self.plot_6.layout = fig['layout']
     
-    max_RCAI = sorted(db, key=lambda x: x['Résultat courant avant impôt'], reverse=True)[0]
-    self.label_6.text = f"{max_RCAI['Résultat courant avant impôt']:,}"  
+    #max_RCAI = sorted(db, key=lambda x: x['Résultat courant avant impôt'], reverse=True)[0]
+    #self.label_6.text = f"{max_RCAI['Résultat courant avant impôt']:,}"  
     
     # Style the plot and add a plot title
-    self.style_plot(self.plot_6)
-    self.plot_6.layout.title = "Evolution du Résultat d'exploitation"
-    
-    max_Résultat_exceptionnel = sorted(db, key=lambda x: x['Résultat exceptionnel'], reverse=True)[0]
-    self.label_7.text = f"{max_Résultat_exceptionnel['Résultat exceptionnel']:,}"  
 
-    max_Résultat_exercice = sorted(db, key=lambda x: x['Résultat_exercice'], reverse=True)[0]
-    self.label_8.text = f"{max_Résultat_exercice['Résultat_exercice']:,}"      
     
-  def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form5_1_2', my_parameter="an_argument")
+    #max_Résultat_exceptionnel = sorted(db, key=lambda x: x['Résultat exceptionnel'], reverse=True)[0]
+    #self.label_7.text = f"{max_Résultat_exceptionnel['Résultat exceptionnel']:,}"  
+
+    #max_Résultat_exercice = sorted(db, key=lambda x: x['Résultat_exercice'], reverse=True)[0]
+    #self.label_8.text = f"{max_Résultat_exercice['Résultat_exercice']:,}"      
+    
+
 
