@@ -16,7 +16,7 @@ class Form11_2(Form11_2Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.invoice_chart()
-    self.build_pie_chart_issuer()
+    self.pie_chart_issuer()
     self.get_locations()
     self.issuer_map()
     self.fixed_costs_chart()
@@ -68,7 +68,7 @@ class Form11_2(Form11_2Template):
     self.label_4.text = anomalie_facture
     
     
-  def build_pie_chart_issuer(self):  
+  def pie_chart_issuer(self):  
     data = anvil.server.call('supplier_diagramm')
     fig = json.loads(data)
     self.plot_2.data = fig['data']
@@ -76,7 +76,7 @@ class Form11_2(Form11_2Template):
 
     
   def get_locations(self):
-    anvil.server.call('get_locations')
+    anvil.server.call('get_issuer_locations')
     
   def issuer_map(self):
     data = anvil.server.call('issuer_map')
