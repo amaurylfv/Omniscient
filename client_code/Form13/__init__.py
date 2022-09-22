@@ -61,4 +61,17 @@ class Form13(Form13Template):
     """This method is called when the button is clicked"""
     open_form('Form1', my_parameter="an_argument") #Accueil
 
+  def button_6_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    alert(content="Êtes-vous-sûr ?",
+               title="Réinitialisation",
+               large=True,
+               buttons=[
+                 ("Oui", "YES"),
+                 ("Non", "NO"),
+               ])
+    anvil.server.call('delete_all_financials_statements')
+    Notification("Tous les états financiers présents dans la base de données ont été supprimés.").show()
+
+
 

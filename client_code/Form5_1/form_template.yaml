@@ -138,30 +138,34 @@ components:
               name: label_4
               layout_properties: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: card_11
-    layout_properties: {grid_position: 'NFQLWM,IKMCLG'}
+    layout_properties: {grid_position: 'NFQLWM,IKMCLG', full_width_row: true}
     components:
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
       name: plot_3
-      layout_properties: {grid_position: 'DPAGCC,NJTVZB'}
+      layout_properties: {grid_position: 'DPAGCC,NJTVZB', full_width_row: true}
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
       name: plot_4
-      layout_properties: {grid_position: 'DPAGCC,UYQZLT'}
+      layout_properties: {grid_position: 'DPAGCC,UYQZLT', full_width_row: true}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_2
-    layout_properties: {grid_position: 'WBQHBU,AMRULI'}
+    layout_properties: {grid_position: 'WBQHBU,AMRULI', full_width_row: true}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: 'theme:White',
         visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
         col_widths: '{}', spacing_below: small, background: '#e09f3e'}
       name: card_6
-      layout_properties: {grid_position: 'MIURHQ,VMABXE'}
+      layout_properties: {grid_position: 'MIURHQ,VMABXE', expand: true, width: null}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -183,7 +187,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#9e2a2b'}
       name: card_7
-      layout_properties: {grid_position: 'MIURHQ,RZGFVU'}
+      layout_properties: {grid_position: 'MIURHQ,RZGFVU', expand: true, width: null}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -205,7 +209,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#335c67'}
       name: card_8
-      layout_properties: {grid_position: 'MIURHQ,OQWUPE'}
+      layout_properties: {grid_position: 'MIURHQ,OQWUPE', expand: true, width: null}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -227,7 +231,7 @@ components:
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#fff3b0'}
       name: card_9
-      layout_properties: {grid_position: 'MIURHQ,CVZUEQ'}
+      layout_properties: {grid_position: 'MIURHQ,CVZUEQ', expand: true, width: null}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -245,18 +249,22 @@ components:
           name: label_8
           layout_properties: {}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: card_12
-    layout_properties: {grid_position: 'CTAJET,BOMSVC'}
+    layout_properties: {grid_position: 'CTAJET,BOMSVC', full_width_row: true}
     components:
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
       name: plot_5
-      layout_properties: {grid_position: 'DWJHGX,CQDULX'}
+      layout_properties: {grid_position: 'DWJHGX,CQDULX', full_width_row: true}
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
       name: plot_6
-      layout_properties: {grid_position: 'DWJHGX,YRJYVZ'}
+      layout_properties: {grid_position: 'DWJHGX,YRJYVZ', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links

@@ -181,6 +181,7 @@ components:
       background: '#d62828', bold: false, underline: false, icon: 'fa:trash'}
     name: button_6
     layout_properties: {grid_position: 'TNTNNS,NBDMLK', full_width_row: false}
+    event_bindings: {click: button_6_click}
 - type: FlowPanel
   properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
     foreground: '', visible: true, spacing_above: medium, spacing_below: none, background: ''}
