@@ -30,12 +30,12 @@ components:
         layout_properties: {grid_position: 'AXDEAQ,QWVIKI', expand: true, width: null}
         components:
         - type: Plot
-          properties: {spacing_above: small, spacing_below: small, height: '300',
+          properties: {spacing_above: small, spacing_below: small, height: '250',
             visible: true, tooltip: '', interactive: true}
           name: plot_1
           layout_properties: {grid_position: 'LSSMHI,VTOTMM', full_width_row: true}
         - type: Plot
-          properties: {spacing_above: small, spacing_below: small, height: '300',
+          properties: {spacing_above: small, spacing_below: small, height: '250',
             visible: true, tooltip: '', interactive: true}
           name: plot_2
           layout_properties: {grid_position: 'LSSMHI,DJIZIB', full_width_row: true}

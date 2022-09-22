@@ -15,8 +15,9 @@ class Form5_2(Form5_2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.financial_structure_chart()
-    self.horizontal_intermediate_operating_totals_chart()
+    #self.financial_structure_chart()
+    self.actual_coverages_ratios_financial_equilibrium_lines_chart()
+    self.previous_coverages_ratios_financial_equilibrium_lines_chart()
     self.radar_chart()
     self.trade_receivables()
     self.trade_payables()
@@ -34,17 +35,23 @@ class Form5_2(Form5_2Template):
   def button_1_click(self, **event_args):
     open_form('Form5_1', my_parameter="an_argument") #Retour
 
-  def horizontal_intermediate_operating_totals_chart(self):
-    data = anvil.server.call('horizontal_intermediate_operating_totals')
+  def actual_coverages_ratios_financial_equilibrium_lines_chart(self):
+    data = anvil.server.call('previous_coverages_ratios_financial_equilibrium_lines_graph')
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout'] 
-  
-  def financial_structure_chart(self):
-    data = anvil.server.call('histogramm_financial_structure')
+
+  def previous_coverages_ratios_financial_equilibrium_lines_chart(self):
+    data = anvil.server.call('previous_coverages_ratios_financial_equilibrium_lines_graph')
     fig = json.loads(data)
     self.plot_2.data = fig['data']
-    self.plot_2.layout = fig['layout']
+    self.plot_2.layout = fig['layout'] 
+    
+  #def financial_structure_chart(self):
+    #data = anvil.server.call('histogramm_financial_structure')
+    #fig = json.loads(data)
+    #self.plot_2.data = fig['data']
+    #self.plot_2.layout = fig['layout']
    
   def radar_chart(self):
     data = anvil.server.call('radar_financial_structure')
