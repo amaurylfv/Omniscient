@@ -24,7 +24,7 @@ components:
       components:
       - type: ColumnPanel
         properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-          wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"VTOTMM":25,"DJIZIB":35}',
+          wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"VTOTMM":30,"DJIZIB":30}',
           spacing_below: small, background: ''}
         name: card_1
         layout_properties: {grid_position: 'AXDEAQ,QWVIKI', expand: true, width: null}
