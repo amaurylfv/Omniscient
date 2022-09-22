@@ -21,7 +21,7 @@ class Form5_1(Form5_1Template):
     self.actual_intermediate_operating_filled_area_chart()
     self.previous_intermediate_operating_filled_area_chart()
     self.build_structure_graph_3()
-    self.previous_profitability_ridgeline_chart()
+    self.previous_growhth_profitability_lines_chart()
     self.build_structure_graph_5()
     self.previous_grouped_bar_profitability_chart()
 
@@ -110,8 +110,8 @@ class Form5_1(Form5_1Template):
     self.style_plot(self.plot_3)
     self.plot_3.layout.title = "Evolution de la Production de l'exercice"
 
-  def previous_profitability_ridgeline_chart(self):
-    data = anvil.server.call('previous_profitability_ridgeline_graph')
+  def previous_growhth_profitability_lines_chart(self):
+    data = anvil.server.call('previous_growhth_profitability_lines_graph')
     fig = json.loads(data)
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
