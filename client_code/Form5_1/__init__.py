@@ -24,6 +24,8 @@ class Form5_1(Form5_1Template):
     self.previous_growhth_profitability_lines_chart()
     self.build_structure_graph_5()
     self.previous_grouped_bar_profitability_chart()
+    #
+    self.previous_growhth_incomes_and_costs_profitability_lines_chart()
 
     # Any code you write here will run when the form opens.
 
@@ -111,7 +113,7 @@ class Form5_1(Form5_1Template):
     self.plot_3.layout.title = "Evolution de la Production de l'exercice"
 
   def previous_growhth_profitability_lines_chart(self):
-    data = anvil.server.call('previous_growhth_profitability_lines_graph')
+    data = anvil.server.call('previous_growhth_intermediate_operating_profitability_lines_graph')
     fig = json.loads(data)
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
@@ -154,6 +156,10 @@ class Form5_1(Form5_1Template):
 
     #max_Résultat_exercice = sorted(db, key=lambda x: x['Résultat_exercice'], reverse=True)[0]
     #self.label_8.text = f"{max_Résultat_exercice['Résultat_exercice']:,}"      
-    
+  def previous_growhth_incomes_and_costs_profitability_lines_chart(self):
+    data = anvil.server.call('previous_growhth_incomes_and_costs_profitability_lines_graph')
+    fig = json.loads(data)
+    self.plot_8.data = fig['data']
+    self.plot_8.layout = fig['layout']
 
 
