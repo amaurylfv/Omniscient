@@ -24,21 +24,35 @@ components:
       components:
       - type: ColumnPanel
         properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-          wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"VTOTMM":30,"DJIZIB":30}',
+          wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"VTOTMM":30,"DJIZIB":30,"CNJXDN":20}',
           spacing_below: small, background: ''}
         name: card_1
         layout_properties: {grid_position: 'AXDEAQ,QWVIKI', expand: true, width: null}
         components:
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: créances clients, font_size: 9, font: '', spacing_above: none,
+            icon_align: left, spacing_below: none, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_1
+          layout_properties: {grid_position: 'LSSMHI,CNJXDN POGERS,LAAMYN', full_width_row: true}
         - type: Plot
-          properties: {spacing_above: small, spacing_below: none, height: '125', visible: true,
+          properties: {spacing_above: small, spacing_below: none, height: '96', visible: true,
             tooltip: '', interactive: true}
           name: plot_4
           layout_properties: {grid_position: 'LSSMHI,CNJXDN ZUHFIZ,UKRPBG', full_width_row: true}
+        - type: Label
+          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+            visible: true, text: dettes fournisseurs, font_size: 9, font: '', spacing_above: none,
+            icon_align: left, spacing_below: none, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_2
+          layout_properties: {grid_position: 'LSSMHI,CNJXDN FOSARH,OUOUYT', full_width_row: true}
         - type: Plot
-          properties: {spacing_above: none, spacing_below: small, height: '125', visible: true,
+          properties: {spacing_above: none, spacing_below: small, height: '96', visible: true,
             tooltip: '', interactive: true}
           name: plot_5
-          layout_properties: {grid_position: 'LSSMHI,CNJXDN LCIVBO,VYHLNY'}
+          layout_properties: {grid_position: 'LSSMHI,CNJXDN LCIVBO,VYHLNY', full_width_row: true}
         - type: Plot
           properties: {spacing_above: small, spacing_below: small, height: '250',
             visible: true, tooltip: '', interactive: true}
@@ -49,6 +63,23 @@ components:
             visible: true, tooltip: '', interactive: true}
           name: plot_2
           layout_properties: {grid_position: 'LSSMHI,DJIZIB', full_width_row: true}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_2
+    layout_properties: {grid_position: 'MQLMVE,VEGPDP', full_width_row: true}
+    components:
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_9
+      layout_properties: {grid_position: 'QIIUTC,XBTEQZ', full_width_row: true}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_10
+      layout_properties: {grid_position: 'QIIUTC,ORTLCC', full_width_row: true}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
@@ -109,20 +140,12 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: SNODBQ,PUNYPP
-      components:
-      - type: Plot
-        properties: {height: 692}
-        name: plot_9
-        layout_properties: {grid_position: 'FCIJAY,KLBHDI'}
+      components: []
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_6
     layout_properties: {grid_position: 'YURSJW,BOPKZG NWNVNF,UZUAYX'}
-    components:
-    - type: Plot
-      properties: {height: 715}
-      name: plot_10
-      layout_properties: {grid_position: 'DAQODN,ZSAMRH'}
+    components: []
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_8

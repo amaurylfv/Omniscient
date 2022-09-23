@@ -25,6 +25,8 @@ class Form5_2(Form5_2Template):
     self.bullet_account_receivables()
     self.financial_equilibrium_treemap_1()
     self.financial_equilibrium_treemap_2()
+    self.actual_flow_times_lines_chart()
+    self.previous_flow_times_lines_chart()
 
     # Any code you write here will run when the form opens.
 
@@ -94,3 +96,15 @@ class Form5_2(Form5_2Template):
     fig = json.loads(data)
     self.plot_8.data = fig['data']
     self.plot_8.layout = fig['layout']
+
+  def actual_flow_times_lines_chart(self):
+    data = anvil.server.call('previous_flow_times_lines_graph')
+    fig = json.loads(data)
+    self.plot_9.data = fig['data']
+    self.plot_9.layout = fig['layout']
+  
+  def previous_flow_times_lines_chart(self):
+    data = anvil.server.call('previous_flow_times_lines_graph')
+    fig = json.loads(data)
+    self.plot_10.data = fig['data']
+    self.plot_10.layout = fig['layout']
