@@ -4,17 +4,90 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"REENGM":15,"OBSVMR":15,"ZWVIHS":30}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: OGPDUV, title: Centre d'analyse/activité, data_key: column_1, $$hashKey: 'object:19242'}
+      - {id: YTTJMT, title: '', data_key: column_2, $$hashKey: 'object:19243'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 10
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'YUBTKH,RAJSSK'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate9}
+      name: repeating_panel_1
+      layout_properties: {}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_2
+    layout_properties: {grid_position: 'DOGPRK,OVZNHV'}
+    components:
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Ajouter un centre, font_size: 10, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:plus'}
+      name: button_4
+      layout_properties: {}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'FOHVZX,REENGM'}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {grid_position: 'FOHVZX,OBSVMR HRJCPJ,MIHSYT'}
+  - type: TextBox
+    properties: {}
+    name: text_box_1
+    layout_properties: {grid_position: 'FOHVZX,OBSVMR ICTPTU,SXLZEQ'}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'EPKCKM,COZALP'}
+      visible: true, text: Centre(s) Aux., font_size: 10, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'FOHVZX,ZWVIHS VDTLAS,RPVMGM'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Centre(s) Princ., font_size: 10, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'FOHVZX,ZWVIHS VDTLAS,OFTKIU'}
+  - type: TextBox
+    properties: {}
+    name: text_box_2
+    layout_properties: {grid_position: 'FOHVZX,ZWVIHS SIRVTU,HSLXFX'}
+  - type: TextBox
+    properties: {}
+    name: text_box_3
+    layout_properties: {grid_position: 'FOHVZX,ZWVIHS SIRVTU,PFEQGW'}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {grid_position: 'XGXCMI,LSFSAX'}
+  - type: DataRowPanel
+    properties: {}
+    name: data_row_panel_1
+    layout_properties: {grid_position: 'XGXCMI,HAWSWC'}
+    data_bindings: []
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_1
