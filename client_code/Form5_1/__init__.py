@@ -20,12 +20,12 @@ class Form5_1(Form5_1Template):
     self.init_components(**properties)
     self.actual_intermediate_operating_filled_area_chart()
     self.previous_intermediate_operating_filled_area_chart()
-    self.build_structure_graph_3()
-    self.previous_growhth_profitability_lines_chart()
-    self.build_structure_graph_5()
+    self.actual_growth_profitability_lines_chart()
+    self.previous_growth_profitability_lines_chart()
+    self.actual_grouped_bar_profitability_chart()
     self.previous_grouped_bar_profitability_chart()
-    #
-    self.previous_growhth_incomes_and_costs_profitability_lines_chart()
+    self.actual_growth_incomes_and_costs_profitability_lines_chart()
+    self.previous_growth_incomes_and_costs_profitability_lines_chart()
 
     # Any code you write here will run when the form opens.
 
@@ -94,26 +94,17 @@ class Form5_1(Form5_1Template):
     #self.label_2.text = f"{max_production['Production_exercice']:,}"
     
 
-  def build_structure_graph_3(self):
-    # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_3.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x['Marge commerciale'] for x in db],
-      marker=dict(color='#D62828')
-    )
+  def actual_growth_profitability_lines_chart(self):
+    data = anvil.server.call('actual_growth_intermediate_operating_profitability_lines_graph')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
     
-    max_VA = sorted(db, key=lambda x: x['Valeur ajoutée'], reverse=True)[0]
-    self.label_3.text = f"{max_VA['Valeur ajoutée']:,}"
-    
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_3)
-    self.plot_3.layout.title = "Evolution de la Production de l'exercice"
+    #max_VA = sorted(db, key=lambda x: x['Valeur ajoutée'], reverse=True)[0]
+    #self.label_3.text = f"{max_VA['Valeur ajoutée']:,}"
 
-  def previous_growhth_profitability_lines_chart(self):
-    data = anvil.server.call('previous_growhth_intermediate_operating_profitability_lines_graph')
+  def previous_growth_profitability_lines_chart(self):
+    data = anvil.server.call('previous_growth_intermediate_operating_profitability_lines_graph')
     fig = json.loads(data)
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
@@ -121,23 +112,15 @@ class Form5_1(Form5_1Template):
     #max_EBE = sorted(db, key=lambda x: x['EBE'], reverse=True)[0]
     #self.label_4.text = f"{max_EBE['EBE']:,}"    
 
-  def build_structure_graph_5(self):
-    # Get the data from our server function, and store it as 'db_data'
-    db = anvil.server.call('get_sig')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-    self.plot_5.data = go.Bar(
-      x = [x['Year'] for x in db],
-      y = [x["EBE"] for x in db],
-      marker=dict(color='#F77F00')
-    )
+  def actual_grouped_bar_profitability_chart(self):
+    data = anvil.server.call('actual_grouped_bar_profitability_graph')
+    fig = json.loads(data)
+    self.plot_5.data = fig['data']
+    self.plot_5.layout = fig['layout']
     
-    max_Résultat_exploitation = sorted(db, key=lambda x: x["Résultat_exploitation"], reverse=True)[0]
-    self.label_5.text = f"{max_Résultat_exploitation['Résultat_exploitation']:,}"      
-    
-    # Style the plot and add a plot title
-    self.style_plot(self.plot_5)
-    self.plot_5.layout.title = "Evolution de l'EBE"
+    #max_Résultat_exploitation = sorted(db, key=lambda x: x["Résultat_exploitation"], reverse=True)[0]
+    #self.label_5.text = f"{max_Résultat_exploitation['Résultat_exploitation']:,}"      
+
     
   def previous_grouped_bar_profitability_chart(self):
     data = anvil.server.call('previous_grouped_bar_profitability_graph')
@@ -156,8 +139,14 @@ class Form5_1(Form5_1Template):
 
     #max_Résultat_exercice = sorted(db, key=lambda x: x['Résultat_exercice'], reverse=True)[0]
     #self.label_8.text = f"{max_Résultat_exercice['Résultat_exercice']:,}"      
-  def previous_growhth_incomes_and_costs_profitability_lines_chart(self):
-    data = anvil.server.call('previous_growhth_incomes_and_costs_profitability_lines_graph')
+  def actual_growth_incomes_and_costs_profitability_lines_chart(self):
+    data = anvil.server.call('actual_growth_incomes_and_costs_profitability_lines_graph')
+    fig = json.loads(data)
+    self.plot_7.data = fig['data']
+    self.plot_7.layout = fig['layout']
+  
+  def previous_growth_incomes_and_costs_profitability_lines_chart(self):
+    data = anvil.server.call('previous_growth_incomes_and_costs_profitability_lines_graph')
     fig = json.loads(data)
     self.plot_8.data = fig['data']
     self.plot_8.layout = fig['layout']
