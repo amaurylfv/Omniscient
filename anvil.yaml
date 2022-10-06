@@ -3,6 +3,8 @@ dependencies:
   version: {dev: false}
 - app_id: NY5R4OOXCZDSUAV7
   version: {dev: false}
+- app_id: YMXVABUHAQZT6QP2
+  version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
   client_config: {enable_v2: true}
