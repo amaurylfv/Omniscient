@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"REENGM":15,"OBSVMR":15,"ZWVIHS":30}'}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -13,7 +13,6 @@ components:
       role: null
       columns:
       - {id: OGPDUV, title: Centre auxiliaire, data_key: column_1, $$hashKey: 'object:19242'}
-      - {id: YTTJMT, title: '', data_key: column_2, $$hashKey: 'object:19243'}
       auto_header: true
       tooltip: ''
       border: ''
@@ -28,9 +27,107 @@ components:
     name: data_grid_1
     layout_properties: {grid_position: 'YUBTKH,RAJSSK'}
     components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate9}
-      name: repeating_panel_1
+    - type: TextBox
+      properties: {}
+      name: text_box_1
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_2
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_3
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_4
+      layout_properties: {}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: DTSVXU, title: Centre principaux, data_key: column_1, $$hashKey: 'object:22231'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_2
+    layout_properties: {grid_position: 'YUBTKH,WKIXGX'}
+    components:
+    - type: TextBox
+      properties: {}
+      name: text_box_5
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_6
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_7
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_8
+      layout_properties: {}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: text_box_9
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_10
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_11
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_12
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_13
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_14
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_15
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_16
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_17
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_18
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_19
+      layout_properties: {}
+    - type: TextBox
+      properties: {}
+      name: text_box_20
       layout_properties: {}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
@@ -45,29 +142,18 @@ components:
         background: '', bold: false, underline: false, icon: 'fa:plus'}
       name: button_4
       layout_properties: {}
-  - type: DataGrid
-    properties:
-      role: null
-      columns:
-      - {id: DTSVXU, title: Centre principaux, data_key: column_1, $$hashKey: 'object:22231'}
-      - {id: WBYMFK, title: '', data_key: column_2, $$hashKey: 'object:22232'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: data_grid_2
-    layout_properties: {grid_position: 'ULMAUW,QOEYLJ'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_3
+    layout_properties: {grid_position: 'DOGPRK,XUSIZB'}
     components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate10}
-      name: repeating_panel_2
+    - type: Button
+      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Ajouter un centre, font_size: 10, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: 'fa:plus'}
+      name: button_5
       layout_properties: {}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -76,53 +162,44 @@ components:
       underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'YUAJQV,YDHFUB'}
-  - type: RepeatingPanel
-    properties: {item_template: Form4_4.ItemTemplate3}
-    name: repeating_panel_3
-    layout_properties: {grid_position: 'SOLRWY,CGPUOY'}
-  - type: Label
-    properties: {}
-    name: label_2
-    layout_properties: {grid_position: 'FOHVZX,REENGM'}
-  - type: Label
-    properties: {}
-    name: label_3
-    layout_properties: {grid_position: 'FOHVZX,OBSVMR HRJCPJ,MIHSYT'}
-  - type: TextBox
-    properties: {}
-    name: text_box_1
-    layout_properties: {grid_position: 'FOHVZX,OBSVMR ICTPTU,SXLZEQ'}
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Centre(s) Aux., font_size: 10, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_4
-    layout_properties: {grid_position: 'FOHVZX,ZWVIHS VDTLAS,RPVMGM'}
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Centre(s) Princ., font_size: 10, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_5
-    layout_properties: {grid_position: 'FOHVZX,ZWVIHS VDTLAS,OFTKIU'}
-  - type: TextBox
-    properties: {}
-    name: text_box_2
-    layout_properties: {grid_position: 'FOHVZX,ZWVIHS SIRVTU,HSLXFX'}
-  - type: TextBox
-    properties: {}
-    name: text_box_3
-    layout_properties: {grid_position: 'FOHVZX,ZWVIHS SIRVTU,PFEQGW'}
-  - type: Label
-    properties: {}
-    name: label_6
-    layout_properties: {grid_position: 'XGXCMI,LSFSAX'}
-  - type: DataRowPanel
-    properties: {}
-    name: data_row_panel_1
-    layout_properties: {grid_position: 'XGXCMI,HAWSWC'}
     data_bindings: []
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: UOKHPC, title: Fourn., data_key: issuer, $$hashKey: 'object:34406', expand: true}
+      - {id: HSVKGD, title: Desc, data_key: desc, $$hashKey: 'object:34398', expand: true}
+      - {id: MIFFAX, title: Montant HT, data_key: amount_untaxed, $$hashKey: 'object:34404',
+        expand: true}
+      - {id: DLPNMA, title: Cpte, data_key: account, $$hashKey: 'object:34399', expand: true}
+      - {id: IDBEGS, title: Libellé, data_key: account_label, $$hashKey: 'object:34454',
+        expand: true}
+      - {id: OPSDCB, title: Product°, data_key: production_distribution_key, $$hashKey: 'object:34440',
+        expand: true}
+      - {id: NAMWXU, title: Administra°, data_key: administration_distribution_key,
+        $$hashKey: 'object:34443', expand: true}
+      - {id: TLTWRZ, title: Distribu°, data_key: distribution_distribution_key, $$hashKey: 'object:34447',
+        expand: true}
+      - {id: GSJYNS, title: Approv., data_key: approvisionnement_distribution_key,
+        $$hashKey: 'object:34449', expand: true}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 10
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_3
+    layout_properties: {grid_position: 'QUCJEN,KYZGUC', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate11}
+      name: repeating_panel_3
+      layout_properties: {}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_1

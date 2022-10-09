@@ -16,7 +16,9 @@ class Form4_4(Form4_4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.repeating_panel_3.items = app_tables.invoice.search()
     self.build_invoice_graph()
+    
 
     # Any code you write here will run when the form opens.
     
