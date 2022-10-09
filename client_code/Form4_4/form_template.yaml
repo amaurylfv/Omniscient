@@ -70,6 +70,17 @@ components:
       name: repeating_panel_2
       layout_properties: {}
   - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Clés de répartition, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'YUAJQV,YDHFUB'}
+  - type: RepeatingPanel
+    properties: {item_template: Form4_4.ItemTemplate3}
+    name: repeating_panel_3
+    layout_properties: {grid_position: 'SOLRWY,CGPUOY'}
+  - type: Label
     properties: {}
     name: label_2
     layout_properties: {grid_position: 'FOHVZX,REENGM'}
