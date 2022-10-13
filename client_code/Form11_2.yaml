@@ -5,32 +5,32 @@ components:
   layout_properties: {slot: default}
   components:
   - type: FlowPanel
-    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: none, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'IPMGAI,DSXEJW'}
+    layout_properties: {grid_position: 'IPMGAI,DSXEJW', full_width_row: true}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#2a9d8f'}
       name: card_3
-      layout_properties: {grid_position: 'DQKADJ,CDAXFH'}
+      layout_properties: {grid_position: 'DQKADJ,CDAXFH', expand: false, width: null}
       components:
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Nombre de fournisseurs,
+          foreground: '', visible: true, font_size: 11, content: Nombre de fournisseurs,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_3
         layout_properties: {grid_position: 'PUOURC,OCDGZG'}
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+          visible: true, text: '', font_size: 10, font: '', spacing_above: none, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: ''}
         name: label_3
-        layout_properties: {grid_position: 'MUGMHI,IFQAAJ'}
+        layout_properties: {grid_position: 'MUGMHI,IFQAAJ', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -40,7 +40,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Fournisseur principal,
+          foreground: white, visible: true, font_size: 11, content: Fournisseur principal,
           font: '', spacing_above: small, spacing_below: none, data: null, background: '',
           format: markdown}
         name: rich_text_2
@@ -48,11 +48,11 @@ components:
         components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: label_2
-        layout_properties: {grid_position: 'AWSBVO,YBPPLK'}
+        layout_properties: {grid_position: 'AWSBVO,YBPPLK', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -62,7 +62,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Charge la plus significative,
+          foreground: white, visible: true, font_size: 11, content: Charge la plus significative,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_1
@@ -70,11 +70,11 @@ components:
         components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: label_1
-        layout_properties: {grid_position: 'KFNTSC,AIPXMR'}
+        layout_properties: {grid_position: 'KFNTSC,AIPXMR', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -84,7 +84,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Factures en anomalies,
+          foreground: '', visible: true, font_size: 11, content: Factures en anomalies,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_4
@@ -92,15 +92,17 @@ components:
         components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '#ef233c',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: label_4
-        layout_properties: {grid_position: 'IJBUTG,FBXZGA'}
+        layout_properties: {grid_position: 'IJBUTG,FBXZGA', full_width_row: true}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: card_5
-    layout_properties: {grid_position: 'KNXXGQ,OCMPRS'}
+    layout_properties: {grid_position: 'KNXXGQ,OCMPRS', full_width_row: true}
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -108,36 +110,17 @@ components:
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_9
-      layout_properties: {grid_position: 'QWZOOE,DXWKKV'}
+      layout_properties: {grid_position: 'QWZOOE,DXWKKV', full_width_row: true}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
         tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'EKEUOM,NUXCUK'}
+      layout_properties: {grid_position: 'EKEUOM,NUXCUK', full_width_row: true}
       event_bindings: {click: plot_1_click}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
-    name: card_6
-    layout_properties: {grid_position: 'SMBXLD,LUAMOT'}
-    components:
-    - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Représentation des fournisseurs dans la part des charges,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-        format: markdown}
-      name: rich_text_8
-      layout_properties: {grid_position: 'KQUZEA,XOMXKT'}
-      components: []
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: '450', visible: true,
-        tooltip: '', interactive: true}
-      name: plot_2
-      layout_properties: {grid_position: 'YUBCXR,LOSHWP'}
-      event_bindings: {click: plot_2_click}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
     name: card_7
-    layout_properties: {grid_position: 'VETTQT,ZVHIAF'}
+    layout_properties: {grid_position: 'SMBXLD,UFBUVN', full_width_row: true}
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
@@ -145,13 +128,34 @@ components:
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_5
-      layout_properties: {grid_position: 'LMHUYV,UWFZYF'}
+      layout_properties: {grid_position: 'LMHUYV,UWFZYF', full_width_row: true}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
         tooltip: '', interactive: true}
       name: plot_3
-      layout_properties: {grid_position: 'ZVGLTD,GOHQXO'}
+      layout_properties: {grid_position: 'ZVGLTD,GOHQXO', full_width_row: true}
       event_bindings: {click: plot_3_click}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_6
+    layout_properties: {grid_position: 'SMBXLD,LUAMOT', full_width_row: true}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: Représentation des fournisseurs dans la part des charges,
+        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+        format: markdown}
+      name: rich_text_8
+      layout_properties: {grid_position: 'KQUZEA,XOMXKT', full_width_row: true}
+      components: []
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_2
+      layout_properties: {grid_position: 'YUBCXR,LOSHWP', full_width_row: true}
+      event_bindings: {click: plot_2_click}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_8

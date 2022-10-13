@@ -115,7 +115,7 @@ components:
     layout_properties: {grid_position: 'KMPBQA,BCULTH'}
     event_bindings: {click: button_3_click}
   - type: Spacer
-    properties: {height: 372}
+    properties: {height: 431}
     name: spacer_2
     layout_properties: {grid_position: 'RVNVEA,MAICJJ'}
 - type: Link
