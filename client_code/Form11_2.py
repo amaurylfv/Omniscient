@@ -19,8 +19,8 @@ class Form11_2(Form11_2Template):
     self.pie_chart_issuer()
     self.get_locations()
     self.issuer_map()
-    self.fixed_costs_chart()
-    self.variable_costs_chart()
+    self.costs_chart()
+    self.vat_chart()
 
     # Any code you write here will run when the form opens.
     
@@ -84,16 +84,14 @@ class Form11_2(Form11_2Template):
     self.plot_3.data = fig['data']
     self.plot_3.layout = fig['layout']
     
-  def fixed_costs_chart(self):
-    data = anvil.server.call('fixed_costs_graph')
+  def costs_chart(self):
+    data = anvil.server.call('type_costs_graph')
     fig = json.loads(data)
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
     
-  def variable_costs_chart(self):
-    data = anvil.server.call('variable_costs_graph')
+  def vat_chart(self):
+    data = anvil.server.call('vat_graph')
     fig = json.loads(data)
     self.plot_5.data = fig['data']
     self.plot_5.layout = fig['layout']
-  
-    
