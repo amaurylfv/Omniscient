@@ -197,18 +197,21 @@ components:
     layout_properties: {grid_position: 'QUCJEN,KYZGUC', full_width_row: true}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate11}
+      properties: {role: card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Form4_4.RowTemplate11,
+        background: ''}
       name: repeating_panel_3
-      layout_properties: {}
+      layout_properties: {pinned: false}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_1
     layout_properties: {grid_position: 'PHCSKG,EXXTBP'}
     components:
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'XBHSAK,BLQJKX'}
+      layout_properties: {grid_position: 'XBHSAK,BLQJKX', full_width_row: true}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_2
