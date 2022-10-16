@@ -27,6 +27,23 @@ class Form3_10(Form3_10Template):
     """This method is called when the button is clicked"""
     open_form('Form3', my_parameter="an_argument") #Retour
 
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form3_10_2', my_parameter="an_argument") #Graph
+
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    csv_file = anvil.server.call('financial_statement_data_to_csv')
+    media = BlobMedia('text/plain', csv_file.get_bytes(), name='export.csv')
+    download(media)
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    xlsx_file = anvil.server.call('financial_statement_data_to_xlsx')
+    media = BlobMedia('text/plain', xlsx_file.get_bytes(), name='export.xlsx')
+    download(media)
+  
   def income_statement_board(self):
     data = anvil.server.call('income_statement_table')
     fig = json.loads(data)
@@ -62,7 +79,7 @@ class Form3_10(Form3_10Template):
     color='red',
     )
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form3_10_2', my_parameter="an_argument") #Graph
+
+
+
 

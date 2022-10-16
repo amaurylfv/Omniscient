@@ -42,7 +42,7 @@ class Form11_1(Form11_1Template):
   
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    csv_file = anvil.server.call('data_to_csv')
+    csv_file = anvil.server.call('invoice_data_to_csv')
     media = BlobMedia('text/plain', csv_file.get_bytes(), name='export.csv')
     download(media)
     
