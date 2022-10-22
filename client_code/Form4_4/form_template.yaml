@@ -203,20 +203,21 @@ components:
       name: repeating_panel_3
       layout_properties: {pinned: false}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
-    name: card_1
-    layout_properties: {grid_position: 'PHCSKG,EXXTBP'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: column_panel_2
+    layout_properties: {grid_position: 'QBBXRY,NNTJCL', full_width_row: true}
     components:
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
         tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'XBHSAK,BLQJKX', full_width_row: true}
-  - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_2
-    layout_properties: {grid_position: 'QBBXRY,NNTJCL'}
-    components: []
+      layout_properties: {grid_position: 'PMNALH,QXQJLC', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_2
+      layout_properties: {grid_position: 'PMNALH,HUUKUC', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links

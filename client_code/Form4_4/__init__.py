@@ -19,6 +19,7 @@ class Form4_4(Form4_4Template):
     self.init_components(**properties)
     self.repeating_panel_3.items = app_tables.invoice.search()
     self.activity_cost_chart()
+    self.total_activity_cost_chart()
     
 
     # Any code you write here will run when the form opens.
@@ -28,6 +29,12 @@ class Form4_4(Form4_4Template):
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
+
+  def total_activity_cost_chart(self):
+    data = anvil.server.call('total_activity_cost_graph')
+    fig = json.loads(data)
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
