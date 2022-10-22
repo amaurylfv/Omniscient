@@ -41,7 +41,7 @@ class Form3_10(Form3_10Template):
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     xlsx_file = anvil.server.call('financial_statement_data_to_xlsx')
-    media = BlobMedia('application/vnd.ms-excel', xlsx_file.get_bytes(), name='export.xlsx')
+    media = BlobMedia('text/plain', csv_file.get_bytes(), name='export.csv')
     download(media)
   
   def income_statement_board(self):
