@@ -20,6 +20,7 @@ class Form4_4(Form4_4Template):
     self.repeating_panel_3.items = app_tables.invoice.search()
     self.activity_cost_chart()
     self.total_activity_cost_chart()
+    self.variable_costs_versus_fixed_costs_daily_lines_chart()
     
 
     # Any code you write here will run when the form opens.
@@ -35,6 +36,12 @@ class Form4_4(Form4_4Template):
     fig = json.loads(data)
     self.plot_2.data = fig['data']
     self.plot_2.layout = fig['layout']
+
+  def variable_costs_versus_fixed_costs_daily_lines_chart(self):
+    data = anvil.server.call('variable_costs_versus_fixed_costs_daily_lines_graph')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

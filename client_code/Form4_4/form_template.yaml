@@ -26,23 +26,7 @@ components:
       background: ''
     name: data_grid_1
     layout_properties: {grid_position: 'YUBTKH,RAJSSK'}
-    components:
-    - type: TextBox
-      properties: {}
-      name: text_box_1
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_2
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_3
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_4
-      layout_properties: {}
+    components: []
   - type: DataGrid
     properties:
       role: null
@@ -61,74 +45,7 @@ components:
       background: ''
     name: data_grid_2
     layout_properties: {grid_position: 'YUBTKH,WKIXGX'}
-    components:
-    - type: TextBox
-      properties: {}
-      name: text_box_5
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_6
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_7
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_8
-      layout_properties: {}
-    - type: TextBox
-      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
-      name: text_box_9
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_10
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_11
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_12
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_13
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_14
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_15
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_16
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_17
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_18
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_19
-      layout_properties: {}
-    - type: TextBox
-      properties: {}
-      name: text_box_20
-      layout_properties: {}
+    components: []
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
@@ -219,6 +136,17 @@ components:
         tooltip: '', interactive: true}
       name: plot_2
       layout_properties: {grid_position: 'PMNALH,HUUKUC', full_width_row: true}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_4
+    layout_properties: {grid_position: 'XJAAEZ,NAHNUK', full_width_row: true}
+    components:
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
+      name: plot_3
+      layout_properties: {width: null, expand: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links
