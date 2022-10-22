@@ -10,6 +10,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import plotly.graph_objects as go
+import json
 
 
 class Form4_4(Form4_4Template):
@@ -17,23 +18,16 @@ class Form4_4(Form4_4Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.repeating_panel_3.items = app_tables.invoice.search()
-    self.build_invoice_graph()
+    self.activity_cost_graph()
     
 
     # Any code you write here will run when the form opens.
     
-  def build_invoice_graph(self):
-      # Get the data from our server function, and store it as 'db_data'
-      db_data_2 = anvil.server.call('get_invoice')
-      
-      # Create a Bar plot with this data, and change the colour of the markers
-      self.plot_1.data = go.Bar(
-        x = [x['date'] for x in db_data_2],
-        y = [x['amount'] for x in db_data_2],
-        marker=dict(color='#F7DC6F')
-      )
-      # Style the plot and add a plot title
-      self.plot_1.layout.title = "Détail des charges"
+  def activity_cost_chart(self):
+    data = anvil.server.call('activity_cost_graph')
+    fig = json.loads(data)
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
