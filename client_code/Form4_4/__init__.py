@@ -21,10 +21,20 @@ class Form4_4(Form4_4Template):
     self.activity_cost_chart()
     self.total_activity_cost_chart()
     self.variable_costs_versus_fixed_costs_daily_lines_chart()
+    self.incomes_versus_fixed_costs_daily_lines_chart()
     
 
     # Any code you write here will run when the form opens.
     
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form4', my_parameter="an_argument")
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Form1', my_parameter="an_argument") 
+  
   def activity_cost_chart(self):
     data = anvil.server.call('activity_cost_graph')
     fig = json.loads(data)
@@ -43,12 +53,11 @@ class Form4_4(Form4_4Template):
     self.plot_3.data = fig['data']
     self.plot_3.layout = fig['layout']
 
-  def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form4', my_parameter="an_argument")
+  def incomes_versus_fixed_costs_daily_lines_chart(self):
+    data = anvil.server.call('incomes_versus_fixed_costs_daily_lines_graph')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('Form1', my_parameter="an_argument")
 
 

@@ -4,7 +4,9 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -137,7 +139,7 @@ components:
       name: plot_2
       layout_properties: {grid_position: 'PMNALH,HUUKUC', full_width_row: true}
   - type: FlowPanel
-    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+    properties: {role: null, spacing: tiny, align: left, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_4
     layout_properties: {grid_position: 'XJAAEZ,NAHNUK', full_width_row: true}
@@ -147,6 +149,12 @@ components:
         tooltip: '', interactive: true}
       name: plot_3
       layout_properties: {width: null, expand: true}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
+      name: plot_4
+      layout_properties: {grid_position: 'XJAAEZ,CJYCDK', full_width_row: true, width: null,
+        expand: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links
