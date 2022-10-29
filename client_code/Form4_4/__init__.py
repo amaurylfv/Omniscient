@@ -22,6 +22,7 @@ class Form4_4(Form4_4Template):
     self.total_activity_cost_chart()
     self.variable_costs_versus_fixed_costs_daily_lines_chart()
     self.incomes_versus_fixed_costs_daily_lines_chart()
+    self.correlation_coefficient_activity_cost_chart()
     
 
     # Any code you write here will run when the form opens.
@@ -59,5 +60,9 @@ class Form4_4(Form4_4Template):
     self.plot_4.data = fig['data']
     self.plot_4.layout = fig['layout']
 
-
+  def correlation_coefficient_activity_cost_chart(self):
+    data = anvil.server.call('correlation_coefficient_activity_cost')
+    fig = json.loads(data)
+    self.plot_5.data = fig['data']
+    self.plot_5.layout = fig['layout']
 
