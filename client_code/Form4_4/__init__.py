@@ -23,6 +23,7 @@ class Form4_4(Form4_4Template):
     self.variable_costs_versus_fixed_costs_daily_lines_chart()
     self.incomes_versus_fixed_costs_daily_lines_chart()
     self.correlation_coefficient_activity_cost_chart()
+    self.marginal_cost_versus_marginal_income_chart()
     
 
     # Any code you write here will run when the form opens.
@@ -66,3 +67,8 @@ class Form4_4(Form4_4Template):
     self.plot_5.data = fig['data']
     self.plot_5.layout = fig['layout']
 
+  def marginal_cost_versus_marginal_income_chart(self):
+    data = anvil.server.call('marginal_cost_versus_marginal_income_graph')
+    fig = json.loads(data)
+    self.plot_6.data = fig['data']
+    self.plot_6.layout = fig['layout']
