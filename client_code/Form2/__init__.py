@@ -57,5 +57,5 @@ class Form2(Form2Template):
     self.label_3.text = average_basket
 
   def customer_lifetime_value_label(self):
-    average_basket = anvil.server.call("customer_lifetime_value")
-    self.label_4.text = average_basket
+    customer_lifetime = anvil.server.call("customer_lifetime_value")
+    self.label_4.text = customer_lifetime
