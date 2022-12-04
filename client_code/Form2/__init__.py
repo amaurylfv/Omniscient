@@ -22,7 +22,10 @@ class Form2(Form2Template):
     self.number_of_customers_label()
     self.main_customer_label()
     self.average_basket_label()
+    self.average_profit_per_customers()
     self.customer_lifetime_value_label()
+    self.purchase_frequency_label()
+    self.churn_rate_label()
     
     #self.funnel_chart()
 
@@ -56,6 +59,18 @@ class Form2(Form2Template):
     average_basket = anvil.server.call("average_basket")
     self.label_3.text = average_basket
 
+  def average_profit_per_customers(self):
+    average_benefits = anvil.server.call("average_profits_per_customer")
+    self.label_4.text = average_benefits
+
   def customer_lifetime_value_label(self):
     customer_lifetime = anvil.server.call("customer_lifetime_value")
-    self.label_4.text = customer_lifetime
+    self.label_5.text = customer_lifetime
+
+  def purchase_frequency_label(self):
+    purchase_frequency_value = anvil.server.call("purchase_frequency")
+    self.label_7.text = purchase_frequency_value
+
+  def churn_rate_label(self):
+    churn_rate_value = anvil.server.call("churn_rate")
+    self.label_8.text = churn_rate_value

@@ -211,7 +211,7 @@ components:
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_3_copy
+        name: label_5
         layout_properties: {}
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
@@ -233,7 +233,7 @@ components:
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_2_copy
+        name: label_6
         layout_properties: {}
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
@@ -255,7 +255,7 @@ components:
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_1_copy
+        name: label_7
         layout_properties: {}
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
@@ -277,5 +277,5 @@ components:
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_4_copy
+        name: label_8
         layout_properties: {}
