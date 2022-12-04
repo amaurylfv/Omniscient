@@ -19,6 +19,9 @@ class Form2(Form2Template):
     self.init_components(**properties)
     self.get_locations()
     self.customer_map()
+    self.number_of_customers_label()
+    self.average_basket_label()
+    
     #self.funnel_chart()
 
     # Any code you write here will run when the form opens.
@@ -38,3 +41,11 @@ class Form2(Form2Template):
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
+
+  def number_of_customers_label(self):
+    number_of_customers = anvil.server.call("number_of_customer")
+    self.label_1.text = number_of_customers
+
+  def average_basket_label(self):
+    average_basket = anvil.server.call("average_basket")
+    self.label_3.text = average_basket
