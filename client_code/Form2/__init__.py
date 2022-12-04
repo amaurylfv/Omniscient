@@ -20,7 +20,9 @@ class Form2(Form2Template):
     self.get_locations()
     self.customer_map()
     self.number_of_customers_label()
+    self.main_customer_label()
     self.average_basket_label()
+    self.customer_lifetime_value_label()
     
     #self.funnel_chart()
 
@@ -46,6 +48,14 @@ class Form2(Form2Template):
     number_of_customers = anvil.server.call("number_of_customer")
     self.label_1.text = number_of_customers
 
+  def main_customer_label(self):
+    main_customer = anvil.server.call('main_customer_label')
+    self.label_2.text = main_customer  
+
   def average_basket_label(self):
     average_basket = anvil.server.call("average_basket")
     self.label_3.text = average_basket
+
+  def customer_lifetime_value_label(self):
+    average_basket = anvil.server.call("customer_lifetime_value")
+    self.label_4.text = average_basket
