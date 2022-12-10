@@ -27,6 +27,7 @@ class Form2(Form2Template):
     self.purchase_frequency_label()
     self.churn_rate_label()
     self.sales_channels_bar_graph()
+    self.monthly_revenue_chart()
     
     
     #self.funnel_chart()
@@ -82,3 +83,9 @@ class Form2(Form2Template):
   def churn_rate_label(self):
     churn_rate_value = anvil.server.call("churn_rate")
     self.label_8.text = churn_rate_value
+
+  def monthly_revenue_chart(self):
+    data = anvil.server.call('monthly_revenue_graph')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
