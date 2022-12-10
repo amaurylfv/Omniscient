@@ -28,6 +28,7 @@ class Form2(Form2Template):
     self.churn_rate_label()
     self.sales_channels_bar_graph()
     self.monthly_revenue_chart()
+    self.pie_product()
     
     
     #self.funnel_chart()
@@ -43,12 +44,18 @@ class Form2(Form2Template):
   
   def get_locations(self):
     anvil.server.call('get_customer_locations')
+
+  def pie_product(self):
+    data = anvil.server.call('pie_product')
+    fig = json.loads(data)
+    self.plot_4.data = fig['data']
+    self.plot_4.layout = fig['layout']
     
   def customer_map(self):
     data = anvil.server.call('customer_map')
     fig = json.loads(data)
-    self.plot_1.data = fig['data']
-    self.plot_1.layout = fig['layout']
+    self.plot_2.data = fig['data']
+    self.plot_2.layout = fig['layout']
     
   def sales_channels_bar_graph(self):
     data = anvil.server.call('sales_channels_bar_chart')
@@ -87,5 +94,5 @@ class Form2(Form2Template):
   def monthly_revenue_chart(self):
     data = anvil.server.call('monthly_revenue_graph')
     fig = json.loads(data)
-    self.plot_4.data = fig['data']
-    self.plot_4.layout = fig['layout']
+    self.plot_1.data = fig['data']
+    self.plot_1.layout = fig['layout']
