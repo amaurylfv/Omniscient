@@ -26,6 +26,8 @@ class Form2(Form2Template):
     self.customer_lifetime_value_label()
     self.purchase_frequency_label()
     self.churn_rate_label()
+    self.sales_channels_bar_graph()
+    
     
     #self.funnel_chart()
 
@@ -46,7 +48,13 @@ class Form2(Form2Template):
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
-
+    
+  def sales_channels_bar_graph(self):
+    data = anvil.server.call('sales_channels_bar_chart')
+    fig = json.loads(data)
+    self.plot_3.data = fig['data']
+    self.plot_3.layout = fig['layout']
+    
   def number_of_customers_label(self):
     number_of_customers = anvil.server.call("number_of_customer")
     self.label_1.text = number_of_customers

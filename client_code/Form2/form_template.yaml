@@ -14,42 +14,48 @@ components:
     layout_properties: {grid_position: 'YDULDF,MIVCGS'}
     components:
     - type: Plot
-      properties: {}
+      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+        tooltip: '', interactive: true}
+      name: plot_3
+      layout_properties: {grid_position: 'DVCZOK,POSMFD', full_width_row: true}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'EERPOK,JYZMHZ'}
+      layout_properties: {grid_position: 'EERPOK,JYZMHZ', full_width_row: true}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_1
     layout_properties: {grid_position: 'LMBBWV,EDRFBC'}
     components: []
   - type: FlowPanel
-    properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+    properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_2
-    layout_properties: {grid_position: 'LDABPR,BKXBUH', full_width_row: false}
+    layout_properties: {grid_position: 'LDABPR,BKXBUH', full_width_row: true}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#e76f51'}
       name: card_2
-      layout_properties: {width: 227.812}
+      layout_properties: {width: null, expand: false}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Nombre de clients,
+          foreground: '', visible: true, font_size: 11, content: Nombre de clients,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_1
-        layout_properties: {grid_position: 'ATXINE,FMWADX'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_1
-          layout_properties: {}
+        layout_properties: {grid_position: 'ATXINE,FMWADX', full_width_row: true}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'ATXINE,QMZUYX', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -59,19 +65,19 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Panier moyen, font: '',
+          foreground: '', visible: true, font_size: 11, content: Panier moyen, font: '',
           spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_2
         layout_properties: {grid_position: 'ATXINE,FMWADX'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_3
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {grid_position: 'ATXINE,FCYYSV'}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -81,19 +87,19 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Profit moyen par client,
+          foreground: '', visible: true, font_size: 11, content: Profit moyen par client,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_4
         layout_properties: {grid_position: 'ATXINE,FMWADX'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_4
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'CTSZPN,CQGXNU', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -103,19 +109,19 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Client principal,
+          foreground: '', visible: true, font_size: 11, content: Client principal,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_3
         layout_properties: {grid_position: 'ATXINE,FMWADX'}
-        components:
-        - type: Label
-          properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_2
-          layout_properties: {}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'XMJAZI,KABWYT', full_width_row: true}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_7
@@ -186,7 +192,7 @@ components:
   name: link_1
   layout_properties: {slot: title}
 - type: FlowPanel
-  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+  properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
     foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
   name: flow_panel_2_copy
   layout_properties: {grid_position: 'LDABPR,BKXBUH'}
@@ -200,7 +206,7 @@ components:
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Valeur vie client,
+        foreground: '', visible: true, font_size: 11, content: Valeur vie client,
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_2_copy
@@ -222,7 +228,7 @@ components:
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Coût d'acquisition client,
+        foreground: '', visible: true, font_size: 11, content: Coût d'acquisition client,
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_3_copy
@@ -244,7 +250,7 @@ components:
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: black, visible: true, font_size: null, content: Taux de réachat,
+        foreground: black, visible: true, font_size: 11, content: Taux de réachat,
         font: '', spacing_above: small, spacing_below: small, data: null, background: '',
         format: markdown}
       name: rich_text_1_copy
@@ -266,9 +272,8 @@ components:
     components:
     - type: RichText
       properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: Taux d'attrition,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-        format: markdown}
+        foreground: '', visible: true, font_size: 11, content: Taux d'attrition, font: '',
+        spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
       name: rich_text_4_copy
       layout_properties: {grid_position: 'ATXINE,FMWADX'}
       components:
