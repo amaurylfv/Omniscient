@@ -20,7 +20,7 @@ class Form4(Form4Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.filled_area_chart()
-    self.bar_chart()
+    #self.bar_chart()
     self.time_series_chart()
 
     # Any code you write here will run when the form opens.
@@ -45,11 +45,11 @@ class Form4(Form4Template):
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
 
-  def bar_chart(self):
-    data = anvil.server.call('bar_chart')
-    fig = json.loads(data)
-    self.plot_2.data = fig['data']
-    self.plot_2.layout = fig['layout']
+  #def bar_chart(self):
+    #data = anvil.server.call('bar_chart')
+    #fig = json.loads(data)
+    #self.plot_2.data = fig['data']
+    #self.plot_2.layout = fig['layout']
     
   def time_series_chart(self):
     data = anvil.server.call('time_series_chart')
