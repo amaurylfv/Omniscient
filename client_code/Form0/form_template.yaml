@@ -29,7 +29,7 @@ components:
     components:
     - type: Button
       properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: IMPORTER DES FACTURES, font_size: null,
+        foreground: '', visible: true, text: IMPORTER DES DONNéES, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_1

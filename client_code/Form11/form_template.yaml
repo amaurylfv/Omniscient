@@ -11,9 +11,10 @@ components:
   - type: Label
     properties: {role: text, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: "Importer vos factures au format pdf ou png \nNous les\
-        \ convertissons en un fichier excel !", font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+        \ convertissons en un fichier excel !\n\nVous pouvez \xe9galement importer\
+        \ vos fichiers excel ou OFX pour importer vos achats, vos ventes ou vos banques.",
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'CTMRWP,BJHVJW'}
   - type: Label
@@ -57,7 +58,7 @@ components:
       files: []
       foreground: ''
       visible: true
-      text: Importer
+      text: Importer des factures d'achat
       font_size: null
       font: ''
       spacing_above: small
@@ -66,13 +67,148 @@ components:
       italic: false
       file: null
       background: ''
-      bold: true
+      bold: false
       underline: false
       multiple: true
       icon: fa:upload
     name: file_loader_1
     layout_properties: {grid_position: 'PAFUOV,PNMDDY'}
     event_bindings: {change: file_loader_1_change}
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: white
+      visible: true
+      text: Importer un fichier d'achat
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: '#2f3e46'
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_6
+    layout_properties: {grid_position: 'PAFUOV,OZUJEE'}
+  - type: FileLoader
+    properties:
+      role: secondary-color
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: ''
+      visible: true
+      text: Importer des factures de vente
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: ''
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_2
+    layout_properties: {grid_position: 'CUKWPR,UNWOJI'}
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: white
+      visible: true
+      text: Importer un fichier de vente
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: '#f6bd60'
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_4
+    layout_properties: {grid_position: 'CUKWPR,LUPZPD'}
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: white
+      visible: true
+      text: Importer des relevés bancaires
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: theme:Primary 700
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_3
+    layout_properties: {grid_position: 'JDDDPG,ANOEJD'}
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: white
+      visible: true
+      text: Importer un fichier de banque
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: '#52b69a'
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_5
+    layout_properties: {grid_position: 'JDDDPG,OMLAKP'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
