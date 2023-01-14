@@ -61,6 +61,17 @@ class Form11(Form11Template):
     text = anvil.server.call('load_excel_file_sales',self.file_loader_4.text)
     self.data_row_panel_4.text = text
 
+  def file_loader_3_change(self, file, **event_args):
+    # Upload the selected file into a Server Module
+    c = FileLoader()
+    bank_data = anvil.server.call('bank_statement_data_to_csv', file)
+    
+    c.clear()    
+
+    text = anvil.server.call('bank_statement_data_to_csv',self.file_loader_3.text)
+    self.data_row_panel_3.text = text
+
+
 
     
 
