@@ -9,126 +9,138 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
+      spacing_below: none, background: ''}
     name: card_4
-    layout_properties: {grid_position: 'USMMBX,HPWPMD'}
+    layout_properties: {grid_position: 'WRGGKB,YUVXOU', full_width_row: true}
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Evolution de la masse salariale, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: label_2
-      layout_properties: {grid_position: 'MFSWYF,VSGZDV'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Evolution du coût du travail, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: label_3
-      layout_properties: {grid_position: 'MFSWYF,DVLWPH'}
+        visible: true, text: Immobilisations, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'TKKGWF,NNRNZK'}
     - type: DatePicker
-      properties: {}
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+        placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: none, spacing_below: none, italic: false,
+        date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
       name: date_picker_1
-      layout_properties: {grid_position: 'MFFMKO,MOOQPC'}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_5
-      layout_properties: {grid_position: 'MFFMKO,UJLJPI'}
+      layout_properties: {grid_position: 'MXRXCX,MVEXOK', full_width_row: false}
     - type: Spacer
       properties: {height: 32}
       name: spacer_4
-      layout_properties: {grid_position: 'MFFMKO,EIIYVQ'}
+      layout_properties: {grid_position: 'MXRXCX,QOBNVI', full_width_row: false}
     - type: Spacer
       properties: {height: 32}
       name: spacer_3
-      layout_properties: {grid_position: 'MFFMKO,QRZGUD'}
+      layout_properties: {grid_position: 'MXRXCX,ACBGVS', full_width_row: false}
     - type: Spacer
       properties: {height: 32}
       name: spacer_2
-      layout_properties: {grid_position: 'MFFMKO,CKNDPO'}
+      layout_properties: {grid_position: 'MXRXCX,VEFXOF', full_width_row: false}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1
+      layout_properties: {grid_position: 'MXRXCX,VBADAZ', full_width_row: false}
     - type: Plot
       properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
         tooltip: '', interactive: true}
       name: plot_1
-      layout_properties: {grid_position: 'UPDZIK,KFBYXO'}
+      layout_properties: {grid_position: 'ESYIAD,CXEVZD', full_width_row: true}
+      event_bindings: {click: plot_1_click}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Valeur des immobilisations, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_8
+      layout_properties: {grid_position: 'NSTDEK,HJNPPF'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Amortissements prévisionnels, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_9
+      layout_properties: {grid_position: 'NSTDEK,WKWUPQ'}
     - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: '250', visible: true,
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
         tooltip: '', interactive: true}
-      name: plot_2
-      layout_properties: {grid_position: 'UPDZIK,THZTSZ'}
-  - type: ColumnPanel
-    properties: {role: card}
-    name: card_3
-    layout_properties: {grid_position: 'OELMWR,DAYTPF'}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_2
-    layout_properties: {grid_position: 'LOBGHA,WCERWL'}
-    components:
+      name: plot_5
+      layout_properties: {grid_position: 'UZNELQ,XJHMAB', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_6
+      layout_properties: {grid_position: 'UZNELQ,AJQLFD', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#a491d3'}
-      name: card_2
-      layout_properties: {}
+        wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#498c8a'}
+      name: card_1
+      layout_properties: {width: 143.406, grid_position: 'MDPCGM,APYXPM', full_width_row: true}
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Productivité du travail,
-          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
+          foreground: white, visible: true, font_size: 11, content: 'Amortissement
+
+            moyen', font: '', spacing_above: small, spacing_below: small, data: null,
+          background: '', format: markdown}
         name: rich_text_1
-        layout_properties: {grid_position: 'KHNSFI,AALNBU'}
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+          visible: true, text: '', font_size: 9, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: ''}
         name: label_1
-        layout_properties: {grid_position: 'OVZMXB,KLFBOO'}
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#818aa3'}
-      name: card_5
-      layout_properties: {}
+        spacing_below: small, background: '#4B6858'}
+      name: card_3
+      layout_properties: {width: 134.8125, grid_position: 'MDPCGM,BLSCVV', full_width_row: true}
       components:
       - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: null, content: Taux de rotation,
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: white, visible: true, font_size: 11, content: Taux moyen d'amortissement,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_3
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG', full_width_row: true}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#4D4730'}
+      name: card_2
+      layout_properties: {width: 145.812, grid_position: 'MDPCGM,CAIGAO', full_width_row: true}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: white, visible: true, font_size: 11, content: Durée moyenne d'amortissement,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_2
-        layout_properties: {grid_position: 'FDPVIP,XURDGZ'}
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
       - type: Label
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_4
-        layout_properties: {grid_position: 'DDSOWT,MHPRNN'}
-  - type: ColumnPanel
-    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#c5dca0'}
-    name: card_6
-    layout_properties: {grid_position: 'LOBGHA,UYSGYT'}
-    components:
-    - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: white, visible: true, font_size: null, content: Taux de rétention,
-        font: '', spacing_above: small, spacing_below: small, data: null, background: '',
-        format: markdown}
-      name: rich_text_3
-      layout_properties: {grid_position: 'LUNFVK,KSSHNJ'}
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_5
-      layout_properties: {grid_position: 'NERHIM,YBLQYO'}
+        name: label_2
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -143,35 +155,10 @@ components:
       properties: {role: secondary-color, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: 'fa:home'}
-      name: button_3
+        background: '', bold: false, underline: false, icon: 'fa:chevron-left'}
+      name: button_1
       layout_properties: {}
-      event_bindings: {click: button_3_click}
-- type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-    spacing_below: small, background: 'theme:Primary 500'}
-  name: card_1
-  layout_properties: {slot: left-nav}
-  components:
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Attestation de vigilance, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {grid_position: 'FHNMUX,KKWVPF'}
-  - type: Button
-    properties: {role: secondary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Masse salariale, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_2
-    layout_properties: {grid_position: 'IFNETY,TQDSFO'}
-  - type: Spacer
-    properties: {height: 358}
-    name: spacer_1
-    layout_properties: {grid_position: 'GOCTOD,FASSBG'}
+      event_bindings: {click: button_1_click}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: Omniscient, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,

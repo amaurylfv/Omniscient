@@ -10,11 +10,12 @@ components:
   components:
   - type: Label
     properties: {role: text, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: "Importer vos factures au format pdf ou png \nNous les\
+      visible: true, text: "Importer vos factures au format PDF ou PNG \nNous les\
         \ convertissons en un fichier excel !\n\nVous pouvez \xe9galement importer\
-        \ vos fichiers excel ou OFX pour importer vos achats, vos ventes ou vos banques.",
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false, icon: ''}
+        \ vos fichiers XLSX, CSV (excel) ou OFX pour importer vos achats, vos ventes\
+        \ ou vos banques.", font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
     name: label_1
     layout_properties: {grid_position: 'CTMRWP,BJHVJW'}
   - type: Label
