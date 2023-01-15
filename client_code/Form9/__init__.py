@@ -1,5 +1,6 @@
 from ._anvil_designer import Form9Template
 from anvil import *
+import plotly.graph_objects as go
 import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
