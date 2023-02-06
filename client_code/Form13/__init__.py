@@ -87,5 +87,18 @@ class Form13(Form13Template):
     anvil.server.call('delete_all_financials_statements')
     Notification("Tous les états financiers présents dans la base de données ont été supprimés.").show()
 
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    alert(content="Êtes-vous-sûr ?",
+               title="Réinitialisation",
+               large=True,
+               buttons=[
+                 ("Oui", "YES"),
+                 ("Non", "NO"),
+               ])
+    anvil.server.call('delete_all_fec_loaded')
+    Notification("Tous les entrées du journal ont été supprimés.").show()
+
+
 
 
