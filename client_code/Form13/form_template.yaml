@@ -192,13 +192,34 @@ components:
         underline: false, icon: ''}
       name: label_3
       layout_properties: {grid_position: 'DOBXJP,BQMZNC'}
-    - type: Button
-      properties: {role: primary-color, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Importer, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: 'fa:upload'}
-      name: button_9
+    - type: FileLoader
+      properties:
+        role: primary-color
+        show_state: true
+        align: center
+        tooltip: ''
+        border: ''
+        file_types: .txt
+        enabled: true
+        files: []
+        foreground: ''
+        visible: true
+        text: Importer
+        font_size: null
+        font: ''
+        spacing_above: small
+        icon_align: left
+        spacing_below: small
+        italic: false
+        file: null
+        background: ''
+        bold: false
+        underline: false
+        multiple: false
+        icon: fa:upload
+      name: file_loader_2
       layout_properties: {grid_position: 'BZKSBX,FLCNTJ'}
+      event_bindings: {change: file_loader_2_change}
     - type: Button
       properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
         foreground: white, visible: true, text: '', font_size: null, font: '', spacing_above: small,

@@ -21,6 +21,20 @@ class Form13(Form13Template):
     self.date_picker_1.date = ""
     self.text_box_1.text = ""
     
+  def file_loader_2_change(self, file, **event_args):
+    # Upload the selected file into a Server Module
+    c = FileLoader()
+    alert(content="Êtes-vous-sûr ?",
+               title="Importation",
+               large=True,
+               buttons=[
+                 ("Oui", "YES"),
+                 ("Non", "NO"),
+               ])
+    anvil.server.call('load_fec_file', file)
+    self.file_loader_2.clear()
+    Notification("Le FEC a bien été importé !").show()
+
   def file_loader_1_change(self, file, **event_args):
     # Upload the selected file into a Server Module
     c = FileLoader()
