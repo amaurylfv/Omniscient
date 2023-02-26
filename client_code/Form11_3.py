@@ -20,8 +20,8 @@ class Form11_3(Form11_3Template):
     #self.pie_chart_issuer()
     #self.get_locations()
     #self.issuer_map()
-    #self.costs_chart()
-    #self.vat_chart()
+    self.from_fec_collected_vat_chart()
+    self.from_fec_deductible_vat_chart()
 
     # Any code you write here will run when the form opens.
 
@@ -89,17 +89,17 @@ class Form11_3(Form11_3Template):
     self.plot_3.data = fig['data']
     self.plot_3.layout = fig['layout']
 
-  def costs_chart(self):
-    data = anvil.server.call('type_costs_graph')
-    fig = json.loads(data)
-    self.plot_4.data = fig['data']
-    self.plot_4.layout = fig['layout']
-
-  def vat_chart(self):
-    data = anvil.server.call('vat_graph')
+  def from_fec_collected_vat_chart(self):
+    data = anvil.server.call('from_fec_collected_vat_graph')
     fig = json.loads(data)
     self.plot_5.data = fig['data']
     self.plot_5.layout = fig['layout']
+
+  def from_fec_deductible_vat_chart(self):
+    data = anvil.server.call('from_fec_deductible_vat_graph')
+    fig = json.loads(data)
+    self.plot_6.data = fig['data']
+    self.plot_6.layout = fig['layout']
 
 
 
