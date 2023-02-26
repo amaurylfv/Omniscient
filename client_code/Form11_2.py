@@ -18,7 +18,6 @@ class Form11_2(Form11_2Template):
     self.invoice_chart()
     self.pie_chart_issuer()
     self.get_locations()
-    self.issuer_map()
     self.costs_chart()
     self.vat_chart()
 
@@ -78,11 +77,6 @@ class Form11_2(Form11_2Template):
   def get_locations(self):
     anvil.server.call('get_issuer_locations')
     
-  def issuer_map(self):
-    data = anvil.server.call('issuer_map')
-    fig = json.loads(data)
-    self.plot_3.data = fig['data']
-    self.plot_3.layout = fig['layout']
     
   def costs_chart(self):
     data = anvil.server.call('type_costs_graph')
