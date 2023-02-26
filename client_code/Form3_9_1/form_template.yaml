@@ -8,109 +8,160 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: DatePicker
-    properties: {}
-    name: date_picker_1
-    layout_properties: {grid_position: 'NHRNXY,BIXAQA', full_width_row: false}
-  - type: RichText
-    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: 'source : FEC', font: '',
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_4
-    layout_properties: {grid_position: 'NHRNXY,OMKLDE', full_width_row: false}
-    components: []
-  - type: Button
-    properties: {role: secondary-color, align: right, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: graph, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: button_2
-    layout_properties: {grid_position: 'NHRNXY,DEMEGG', full_width_row: false}
-    event_bindings: {click: button_2_click}
   - type: ColumnPanel
     properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
-    name: card_3
-    layout_properties: {grid_position: 'SPOKDX,GJUEHV', full_width_row: true}
+    name: card_4
+    layout_properties: {grid_position: 'WRGGKB,YUVXOU', full_width_row: true}
     components:
-    - type: DataGrid
-      properties:
-        role: null
-        columns:
-        - {id: HNIENA, title: Compte, data_key: Compte, $$hashKey: 'object:229396'}
-        - {id: TGXKON, title: Libelle, data_key: Libelle, $$hashKey: 'object:229397'}
-        - {id: VYTGEK, title: Debit, data_key: Debit, $$hashKey: 'object:229398'}
-        - {id: WQSMQK, title: Credit, data_key: Credit, $$hashKey: 'object:229399'}
-        - {id: MODVAP, title: Solde, data_key: Solde, $$hashKey: 'object:229400'}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      name: data_grid_1
-      layout_properties: {grid_position: 'BYYVOO,QMPVFB', full_width_row: true}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: card_5
+      layout_properties: {grid_position: 'VTSDJO,ANPTGD', full_width_row: true}
       components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: Form3_9.RowTemplate13}
-        name: repeating_panel_1
-        layout_properties: {}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Diagramme de Pareto des fournisseurs, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'RQDAFH,LBPLHX', full_width_row: true}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Dépendances économiques, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_5
+        layout_properties: {grid_position: 'RQDAFH,ZHMJJQ', full_width_row: true}
+      - type: Plot
+        properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+          tooltip: '', interactive: true}
+        name: plot_1
+        layout_properties: {grid_position: 'DEJHOZ,JXZJTY', full_width_row: true}
+      - type: Plot
+        properties: {}
+        name: plot_2
+        layout_properties: {grid_position: 'DEJHOZ,ZKSQCH', full_width_row: true}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: ''}
+      name: card_6
+      layout_properties: {grid_position: 'KCASYR,EYTXHJ', full_width_row: true}
+      components:
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Distribution des fournisseurs, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'CAZEMT,LJXDGV YSVJFN,THXYWW', full_width_row: true}
+      - type: Plot
+        properties: {}
+        name: plot_4
+        layout_properties: {grid_position: 'CAZEMT,LJXDGV MTCDSG,FWMEZO', full_width_row: true}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: Top fournisseurs, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_7
+        layout_properties: {grid_position: 'CAZEMT,TDALTO VLYLEP,RUDEGT', full_width_row: true}
+      - type: DataGrid
+        properties:
+          role: null
+          columns: []
+          auto_header: true
+          tooltip: ''
+          border: ''
+          foreground: ''
+          rows_per_page: 20
+          visible: true
+          wrap_on: never
+          show_page_controls: true
+          spacing_above: small
+          spacing_below: small
+          background: ''
+        name: data_grid_1
+        layout_properties: {grid_position: 'CAZEMT,TDALTO JFDBJN,QCHCXE'}
+        components:
+        - type: RepeatingPanel
+          properties: {spacing_above: none, spacing_below: none, item_template: Form3_9_1.RowTemplate14}
+          name: repeating_panel_1
+          layout_properties: {}
   - type: FlowPanel
     properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_2
-    layout_properties: {grid_position: 'ZHHSQH,PNBPZX'}
+    layout_properties: {grid_position: 'MYNOVC,NHXNOC', full_width_row: true}
     components:
-    - type: ColumnPanel
-      properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#2d6a4f'}
-      name: card_1
-      layout_properties: {}
-      components:
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Télécharger au format CSV, font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        name: label_1
-        layout_properties: {grid_position: 'ZQMXNH,MDKMTG'}
-      - type: Button
-        properties: {role: primary-color, align: center, tooltip: '', border: '',
-          enabled: true, foreground: '', visible: true, text: exporter, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: ''}
-        name: button_3
-        layout_properties: {grid_position: 'NUSYMH,KBYCVC'}
-        event_bindings: {click: button_3_click}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#40916c'}
-      name: card_2
-      layout_properties: {}
+        spacing_below: small, background: '#8cb369'}
+      name: card_1
+      layout_properties: {width: 143.406}
       components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Total Débit, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_1
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-          visible: true, text: Télécharger au format XLSX, font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#bc4b51'}
+      name: card_2
+      layout_properties: {width: 145.812}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Total Crédit, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_2
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
         name: label_2
-        layout_properties: {grid_position: 'BFOQNJ,WHHPND'}
-      - type: Button
-        properties: {role: primary-color, align: center, tooltip: '', border: '',
-          enabled: true, foreground: '', visible: true, text: Exporter, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: ''}
-        name: button_4
-        layout_properties: {grid_position: 'KOPWYL,YRWNXM'}
-        event_bindings: {click: button_4_click}
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_3
+      layout_properties: {width: 134.8125}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: null, content: Solde, font: '',
+          spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_3
+        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
+        components: []
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -136,31 +187,3 @@ components:
     italic: false, background: '', bold: false, underline: false, icon: 'data:image/png;base64,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'}
   name: link_1
   layout_properties: {slot: title}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {slot: left-nav}
-  components:
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: BALANCE GENERALE, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_7
-    layout_properties: {grid_position: 'NAFKHZ,HIZZXL'}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Balances auxilaires, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_5
-    layout_properties: {grid_position: 'KIAWDS,QKLEOU'}
-    event_bindings: {click: button_5_click}
-  - type: Button
-    properties: {role: primary-color, align: full, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: BALANCES AGEES, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: button_6
-    layout_properties: {grid_position: 'LCDTFL,YYUAXS'}
-    event_bindings: {click: button_6_click}

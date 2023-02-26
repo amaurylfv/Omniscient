@@ -1,4 +1,4 @@
-from ._anvil_designer import Form3_9Template
+from ._anvil_designer import Form3_9_2Template
 from anvil import *
 import anvil.facebook.auth
 import plotly.graph_objects as go
@@ -11,7 +11,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import json
 
-class Form3_9(Form3_9Template):
+class Form3_9_2(Form3_9_2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -29,7 +29,7 @@ class Form3_9(Form3_9Template):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Form3_9_1', my_parameter="an_argument") #Graph
+    open_form('Form3_10_2', my_parameter="an_argument") #Graph
 
 
   def button_3_click(self, **event_args):
@@ -78,13 +78,3 @@ class Form3_9(Form3_9Template):
     mode='lines',
     color='red',
     )
-
-  def button_5_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form3_9_2', my_parameter="an_argument") #Balance Auxiliaire
-
-  def button_6_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Form3_9_3', my_parameter="an_argument") #Balance Agée
-
-
