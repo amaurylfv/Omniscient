@@ -15,14 +15,15 @@ class Form3_9_1(Form3_9_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.vente_de_marchandises_ant_graph()
-    self.production_vendue_biens_ant_graph()
-    self.production_vendue_services_ant_graph()
-    self.chiffre_affaires_nets_ant_graph()
-    self.vente_de_marchandises_act_graph()
-    self.production_vendue_biens_act_graph()
-    self.production_vendue_services_act_graph()
-    self.chiffre_affaires_nets_act_graph()
+    #self.vente_de_marchandises_ant_graph()
+    self.from_fec_supplier_pie()
+    #self.production_vendue_services_ant_graph()
+    #self.chiffre_affaires_nets_ant_graph()
+    #self.vente_de_marchandises_act_graph()
+    #self.production_vendue_biens_act_graph()
+    #self.production_vendue_services_act_graph()
+    #self.chiffre_affaires_nets_act_graph()
+    #self.repeating_panel_1.items = anvil.server.call('from_data_tables_get_intermediary_balance')
 
     # Any code you write here will run when the form opens.
 
@@ -30,50 +31,50 @@ class Form3_9_1(Form3_9_1Template):
     """This method is called when the button is clicked"""
     open_form('Form3', my_parameter="an_argument") #Retour
 
-  def vente_de_marchandises_act_graph(self):
-    data = anvil.server.call('vente_de_marchandises_actuel')
-    fig = json.loads(data)
-    self.plot_1.data = fig['data']
-    self.plot_1.layout = fig['layout']
+  #def vente_de_marchandises_act_graph(self):
+    #data = anvil.server.call('vente_de_marchandises_actuel')
+    #fig = json.loads(data)
+    #self.plot_1.data = fig['data']
+    #self.plot_1.layout = fig['layout']
 
-  def vente_de_marchandises_ant_graph(self):
-    data = anvil.server.call('vente_de_marchandises_anterieurs')
+  def from_fec_supplier_pie(self):
+    data = anvil.server.call('from_fec_supplier_diagramm')
     fig = json.loads(data)
     self.plot_2.data = fig['data']
     self.plot_2.layout = fig['layout']
 
-  def production_vendue_biens_act_graph(self):
-    data = anvil.server.call('production_vendue_de_biens_actuel')
-    fig = json.loads(data)
-    self.plot_3.data = fig['data']
-    self.plot_3.layout = fig['layout']
+  #def production_vendue_biens_act_graph(self):
+    #data = anvil.server.call('production_vendue_de_biens_actuel')
+    #fig = json.loads(data)
+    #self.plot_3.data = fig['data']
+    #self.plot_3.layout = fig['layout']
 
-  def production_vendue_biens_ant_graph(self):
-    data = anvil.server.call('production_vendue_de_biens_anterieurs')
-    fig = json.loads(data)
-    self.plot_4.data = fig['data']
-    self.plot_4.layout = fig['layout']
+  #def production_vendue_biens_ant_graph(self):
+    #data = anvil.server.call('production_vendue_de_biens_anterieurs')
+    #fig = json.loads(data)
+    #self.plot_4.data = fig['data']
+    #self.plot_4.layout = fig['layout']
 
-  def production_vendue_services_act_graph(self):
-    data = anvil.server.call('production_vendue_de_services_actuel')
-    fig = json.loads(data)
-    self.plot_5.data = fig['data']
-    self.plot_5.layout = fig['layout']
+  #def production_vendue_services_act_graph(self):
+    #data = anvil.server.call('production_vendue_de_services_actuel')
+    #fig = json.loads(data)
+    #self.plot_5.data = fig['data']
+    #self.plot_5.layout = fig['layout']
 
-  def production_vendue_services_ant_graph(self):
-    data = anvil.server.call('production_vendue_de_services_anterieurs')
-    fig = json.loads(data)
-    self.plot_6.data = fig['data']
-    self.plot_6.layout = fig['layout']
+  #def production_vendue_services_ant_graph(self):
+    #data = anvil.server.call('production_vendue_de_services_anterieurs')
+    #fig = json.loads(data)
+    #self.plot_6.data = fig['data']
+    #self.plot_6.layout = fig['layout']
 
-  def chiffre_affaires_nets_act_graph(self):
-    data = anvil.server.call('chiffre_affaires_nets_actuel')
-    fig = json.loads(data)
-    self.plot_7.data = fig['data']
-    self.plot_7.layout = fig['layout']
+  #def chiffre_affaires_nets_act_graph(self):
+    #data = anvil.server.call('chiffre_affaires_nets_actuel')
+    #fig = json.loads(data)
+    #self.plot_7.data = fig['data']
+    #self.plot_7.layout = fig['layout']
 
-  def chiffre_affaires_nets_ant_graph(self):
-    data = anvil.server.call('chiffre_affaires_nets_anterieurs')
-    fig = json.loads(data)
-    self.plot_8.data = fig['data']
-    self.plot_8.layout = fig['layout']
+  #def chiffre_affaires_nets_ant_graph(self):
+    #data = anvil.server.call('chiffre_affaires_nets_anterieurs')
+    #fig = json.loads(data)
+    #self.plot_8.data = fig['data']
+    #self.plot_8.layout = fig['layout']
