@@ -16,6 +16,7 @@ class Form11_3(Form11_3Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.fec_chart()
+    self.repeating_panel_1.items = anvil.server.call('from_data_tables_get_conformity_results')
     #self.pie_chart_issuer()
     #self.get_locations()
     #self.issuer_map()
@@ -46,26 +47,30 @@ class Form11_3(Form11_3Template):
 
   def fec_chart(self):
     # Get the data from our server function, and store it as 'db_data'
-    data = anvil.server.call('fec_graph')
+    data = anvil.server.call('from_fec_daily_movements_graph')
     fig = json.loads(data)
     self.plot_1.data = fig['data']
     self.plot_1.layout = fig['layout']
 
-    #Nombre de fournisseurs
-    #number_issuer = anvil.server.call('from_fec_number_of_issuer')
-    #self.label_3.text = number_issuer
+    #Nombre de journaux
+    number_of_accounting_books = anvil.server.call('from_fec_number_of_accounting_books')
+    self.label_3.text = number_of_accounting_books
 
-    #Charge la plus élevée
-    max_invoice = anvil.server.call('main_supplier_label')
-    self.label_1.text = max_invoice
+    #Nombre de comptes
+    number_of_accounts = anvil.server.call('from_fec_number_of_accounts')
+    self.label_1.text = number_of_accounts
 
-    #Fournisseur principal
-    main_supplier = anvil.server.call('max_invoice_label')
-    self.label_2.text = main_supplier
+    #Nombre d'écritures
+    number_of_journal_entries = anvil.server.call('from_fec_number_of_journal_entries')
+    self.label_2.text = number_of_journal_entries
 
-    #Facture en anomalie
-    anomalie_facture = anvil.server.call('anomalies_factures')
-    self.label_4.text = anomalie_facture
+    #Produit le plus significatifs
+    #anomalie_facture = anvil.server.call('anomalies_factures')
+    #self.label_4.text = anomalie_facture
+
+    #Charges la plus significatives
+    #anomalie_facture = anvil.server.call('anomalies_factures')
+    #self.label_7.text = anomalie_facture
 
 
   def pie_chart_issuer(self):
@@ -95,3 +100,7 @@ class Form11_3(Form11_3Template):
     fig = json.loads(data)
     self.plot_5.data = fig['data']
     self.plot_5.layout = fig['layout']
+
+
+
+

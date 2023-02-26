@@ -30,20 +30,22 @@ components:
     name: spacer_1
     layout_properties: {grid_position: 'ACOPCW,UEDBYS'}
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: column_panel_1
-    layout_properties: {grid_position: 'VWTQQI,CVPVJX'}
+    layout_properties: {grid_position: 'VWTQQI,CVPVJX', full_width_row: true}
     components:
     - type: DataGrid
       properties:
         role: null
         columns:
-        - {id: FJQUNL, title: Montant TTC Total, data_key: amount}
-        - {id: VAIEON, title: Date, data_key: date}
-        - {id: FSVVBH, title: Réfèrence, data_key: invoice_number}
-        - {id: AQJKRQ, title: Devise, data_key: currency}
-        - {id: REHUHE, title: Montant Net HT Total, data_key: amount_untaxed}
-        - {id: YJZLRY, title: Fournisseur, data_key: issuer}
+        - {id: FJQUNL, title: Montant TTC Total, data_key: amount, $$hashKey: 'object:107927'}
+        - {id: VAIEON, title: Date, data_key: date, $$hashKey: 'object:107928'}
+        - {id: FSVVBH, title: Réfèrence, data_key: invoice_number, $$hashKey: 'object:107929'}
+        - {id: AQJKRQ, title: Devise, data_key: currency, $$hashKey: 'object:107930'}
+        - {id: REHUHE, title: Montant Net HT Total, data_key: amount_untaxed, $$hashKey: 'object:107931'}
+        - {id: YJZLRY, title: Fournisseur, data_key: issuer, $$hashKey: 'object:107932'}
         auto_header: true
         tooltip: ''
         border: ''
@@ -56,7 +58,7 @@ components:
         spacing_below: small
         background: ''
       name: data_grid_1
-      layout_properties: {grid_position: 'BAWVWZ,FAFZMY'}
+      layout_properties: {grid_position: 'BAWVWZ,FAFZMY', full_width_row: true}
       components:
       - type: RepeatingPanel
         properties: {spacing_above: none, spacing_below: none, item_template: Form11_1.RowTemplate4}
