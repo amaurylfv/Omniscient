@@ -11,6 +11,7 @@ from anvil.tables import app_tables
 import json
 
 from ..Form3_1 import Form3_1
+from ..Form3_9 import Form3_9
 from ..Form3_10 import Form3_10
 
 class Form3(Form3Template):
@@ -24,6 +25,11 @@ class Form3(Form3Template):
   def button_1_click(self, **event_args):
     open_form('Form1', my_parameter="an_argument") #Accueil
 
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Form3_9', my_parameter="an_argument") #Balance
+
+  
   def button_11_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Form3_10', my_parameter="an_argument") #Compte de résultat
