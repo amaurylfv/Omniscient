@@ -67,7 +67,11 @@ class Form11_3(Form11_3Template):
     #Produit le plus significatifs
     #anomalie_facture = anvil.server.call('anomalies_factures')
     #self.label_4.text = anomalie_facture
-
+    
+    #Largeurs des comptes
+    account_width = anvil.server.call('from_fec_detect_account_width')
+    self.label_8.text = account_width
+    
     #Charges la plus significatives
     #anomalie_facture = anvil.server.call('anomalies_factures')
     #self.label_7.text = anomalie_facture

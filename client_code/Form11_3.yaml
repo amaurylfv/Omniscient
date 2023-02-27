@@ -78,7 +78,7 @@ components:
     properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: none, spacing_below: small, background: ''}
     name: flow_panel_1
-    layout_properties: {grid_position: 'IPMGAI,DSXEJW KHXREP,PAICYB', full_width_row: true}
+    layout_properties: {grid_position: 'IPMGAI,DSXEJW LLXEJW,XXBDFG', full_width_row: true}
     components:
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
@@ -123,6 +123,28 @@ components:
           underline: false, icon: ''}
         name: label_1
         layout_properties: {grid_position: 'KFNTSC,AIPXMR', full_width_row: true}
+    - type: ColumnPanel
+      properties: {role: card, tooltip: '', border: '', foreground: white, visible: true,
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+        spacing_below: small, background: '#d6eeff'}
+      name: card_6
+      layout_properties: {grid_position: 'IPMGAI,DSXEJW SGOALR,CGMPQH', full_width_row: true,
+        expand: true, width: null}
+      components:
+      - type: RichText
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+          foreground: '', visible: true, font_size: 11, content: Longueur des comptes,
+          font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+          format: markdown}
+        name: rich_text_6
+        layout_properties: {grid_position: 'YWNTBV,PRYGVQ'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 10, font: '', spacing_above: small,
+          icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_8
+        layout_properties: {grid_position: 'WTJLEM,RKEMGJ', full_width_row: true}
     - type: ColumnPanel
       properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -189,7 +211,7 @@ components:
         wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}',
         spacing_below: small, background: '#2a9d8f'}
       name: card_3_copy
-      layout_properties: {grid_position: 'KKMCJP,NCZFUU', expand: false, width: null,
+      layout_properties: {grid_position: 'KKMCJP,UZYRHC', expand: false, width: null,
         full_width_row: true}
       components:
       - type: RichText
