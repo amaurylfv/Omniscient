@@ -92,76 +92,94 @@ components:
           properties: {spacing_above: none, spacing_below: none, item_template: Form3_9_1.RowTemplate14}
           name: repeating_panel_1
           layout_properties: {}
-  - type: FlowPanel
-    properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
-    name: flow_panel_2
-    layout_properties: {grid_position: 'MYNOVC,NHXNOC', full_width_row: true}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_5_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: RLUTNQ,OQTBZS
+      full_width_row: true
     components:
-    - type: ColumnPanel
-      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#8cb369'}
-      name: card_1
-      layout_properties: {width: 143.406}
-      components:
-      - type: RichText
-        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Total Débit, font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        name: rich_text_1
-        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
-        components: []
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_1
-        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
-    - type: ColumnPanel
-      properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#bc4b51'}
-      name: card_2
-      layout_properties: {width: 145.812}
-      components:
-      - type: RichText
-        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Total Crédit, font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        name: rich_text_2
-        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
-        components: []
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_2
-        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}'}
-      name: card_3
-      layout_properties: {width: 134.8125}
-      components:
-      - type: RichText
-        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: Solde, font: '',
-          spacing_above: small, spacing_below: small, data: null, background: '',
-          format: markdown}
-        name: rich_text_3
-        layout_properties: {grid_position: 'SKKQPI,LPQOKI'}
-        components: []
-      - type: Label
-        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_3
-        layout_properties: {grid_position: 'ARUHNT,RKLLCG'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Dettes fournisseurs projetées, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_4_copy
+      layout_properties: {grid_position: 'RQDAFH,LBPLHX', full_width_row: true}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Dettes fournisseurs actuelles, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'RQDAFH,UGUTPP', full_width_row: true}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Dettes fournisseurs antérieurs, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_5_copy
+      layout_properties: {grid_position: 'RQDAFH,ZHMJJQ', full_width_row: true}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
+      name: plot_1_copy
+      layout_properties: {grid_position: 'DEJHOZ,JXZJTY', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_3
+      layout_properties: {grid_position: 'DEJHOZ,AFMNXG', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_2_copy
+      layout_properties: {grid_position: 'DEJHOZ,ZKSQCH', full_width_row: true}
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: card_5_copy_2
+    layout_properties:
+      col_widths: {}
+      grid_position: BBIYLJ,QUAIBX
+      full_width_row: true
+    components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Créances fournisseurs projetées, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_4_copy_2
+      layout_properties: {grid_position: 'RQDAFH,LBPLHX', full_width_row: true}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Créances fournisseurs actuelles, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_1_copy
+      layout_properties: {grid_position: 'RQDAFH,UGUTPP', full_width_row: true}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Créances fournisseurs antérieures, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_5_copy_2
+      layout_properties: {grid_position: 'RQDAFH,ZHMJJQ', full_width_row: true}
+    - type: Plot
+      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+        tooltip: '', interactive: true}
+      name: plot_1_copy_2
+      layout_properties: {grid_position: 'DEJHOZ,JXZJTY', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_3_copy
+      layout_properties: {grid_position: 'DEJHOZ,AFMNXG', full_width_row: true}
+    - type: Plot
+      properties: {}
+      name: plot_2_copy_2
+      layout_properties: {grid_position: 'DEJHOZ,ZKSQCH', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links
