@@ -88,7 +88,7 @@ components:
       layout_properties: {grid_position: 'DQKADJ,CDAXFH', expand: true, width: null}
       components:
       - type: RichText
-        properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+        properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
           foreground: '', visible: true, font_size: 11, content: Nombre de journaux,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
