@@ -43,7 +43,7 @@ components:
       name: plot_1
       layout_properties: {grid_position: 'PMNALH,QXQJLC', full_width_row: true}
   - type: FlowPanel
-    properties: {role: null, spacing: tiny, align: justify, tooltip: '', border: '',
+    properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
     name: flow_panel_4
     layout_properties: {grid_position: 'XJAAEZ,NAHNUK', full_width_row: true}
