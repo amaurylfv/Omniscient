@@ -167,7 +167,7 @@ components:
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: button_2
-    layout_properties: {grid_position: 'IFNETY,TQDSFO'}
+    layout_properties: {grid_position: 'ZHEZGD,FROCIG'}
   - type: Spacer
     properties: {height: 358}
     name: spacer_1
