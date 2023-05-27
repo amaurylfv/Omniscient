@@ -97,4 +97,29 @@ components:
       spacing_below: small, background: ''}
     name: card_1
     layout_properties: {grid_position: 'GEKSPF,KIIDRT', full_width_row: true}
-    components: []
+    components:
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: OFPEWT, title: Column 1, data_key: column_1, $$hashKey: 'object:34122'}
+        - {id: QSXSMC, title: Column 2, data_key: column_2, $$hashKey: 'object:34123'}
+        - {id: AQKLZL, title: Column 3, data_key: column_3, $$hashKey: 'object:34124'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: data_grid_1
+      layout_properties: {grid_position: 'YKKPQF,LVGQNI', full_width_row: true}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: Form5_8_1.RowTemplate16}
+        name: repeating_panel_1
+        layout_properties: {}
