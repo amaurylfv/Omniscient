@@ -216,7 +216,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: 11, content: Produit le plus significatif,
+          foreground: '', visible: true, font_size: 11, content: Racine des comptes fournisseurs,
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_5
@@ -237,7 +237,7 @@ components:
       components:
       - type: RichText
         properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-          foreground: white, visible: true, font_size: 11, content: Charges la plus significatives,
+          foreground: white, visible: true, font_size: 11, content: Racine des comptes clients,
           font: '', spacing_above: small, spacing_below: none, data: null, background: '',
           format: markdown}
         name: rich_text_4

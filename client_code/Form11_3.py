@@ -64,9 +64,9 @@ class Form11_3(Form11_3Template):
     number_of_journal_entries = anvil.server.call('from_fec_number_of_journal_entries')
     self.label_2.text = number_of_journal_entries
 
-    #Produit le plus significatifs
-    #anomalie_facture = anvil.server.call('anomalies_factures')
-    #self.label_4.text = anomalie_facture
+    #Racine des comptes fournisseurs
+    account_root = anvil.server.call('from_fec_account_payable_root')
+    self.label_4.text = account_root
     
     #Largeurs des comptes
     account_width = anvil.server.call('from_fec_detect_account_width')
