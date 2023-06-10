@@ -65,16 +65,16 @@ class Form11_3(Form11_3Template):
     self.label_2.text = number_of_journal_entries
 
     #Racine des comptes fournisseurs
-    account_root = anvil.server.call('from_fec_account_payable_root')
-    self.label_4.text = account_root
+    account_root_payables = anvil.server.call('from_fec_account_payable_root')
+    self.label_4.text = account_root_payables
     
     #Largeurs des comptes
     account_width = anvil.server.call('from_fec_detect_account_width')
     self.label_8.text = account_width
     
     #Charges la plus significatives
-    #anomalie_facture = anvil.server.call('anomalies_factures')
-    #self.label_7.text = anomalie_facture
+    account_root_receivables = anvil.server.call('from_fec_account_receivable_root')
+    self.label_7.text = account_root_receivables
 
 
   def pie_chart_issuer(self):
