@@ -76,8 +76,11 @@ class Form11_2(Form11_2Template):
 
     
   def get_locations(self):
-    anvil.server.call('get_issuer_locations')
-    
+    try :
+      anvil.server.call('get_issuer_locations')
+    except :
+      print("erreur API geocode")
+      
   def issuer_map(self):
     data = anvil.server.call('issuer_map')
     fig = json.loads(data)
