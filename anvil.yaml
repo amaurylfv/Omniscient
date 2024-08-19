@@ -4,21 +4,21 @@ services:
   client_config: {enable_v2: true}
   server_config: {auto_create_missing_columns: true}
 - source: /runtime/services/anvil/users.yml
-  client_config: {email_from_address: sign-up@Omniscient.anvil.app, use_email: true,
-    allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true,
-    remember_me_days: 0.02083, use_google: true, use_facebook: true}
+  client_config: {email_from_address: sign-up@Omniscient.anvil.app, use_email: true, allow_remember_me: true, allow_signup: true, enable_automatically: true, confirm_email: true, remember_me_days: 0.02083, use_google: true, use_facebook: true}
   server_config:
     user_table: users
     email_content:
-      confirm_address: {html: "<p>Merci de vous \xeatre enregistr\xe9e sur Omniscient\
-          \ ! Veuillez cliquer sur le lien suivant pour confirmer votre identit\xe9\
-          \ :\n\n</p><p>{{confirm_link}}\n\n</p><p>Merci \ud83d\udc41\ufe0f</p>",
-        subject: Confirmer votre adresse email}
-      reset_password: {html: "<p>Bonjour,\n\n</p><p>Vous avez demand\xe9 une r\xe9\
-          initialisation de votre mot de passe pour votre compte li\xe9 \xe0 l'adresse\
-          \ email suivante : {{email}}. \nVeuillez suivre le lien ci-dessous pour\
-          \ le r\xe9initialiser :\n\n</p><p>{{reset_link}}\n\n</p><p>Ce lien expirera\
-          \ dans 10 minutes.</p>\n\n</p><p>A bient\xf4t sur Omniscient !</p>", subject: Réinitialisation de votre mot de passe}
+      confirm_address:
+        html: |-
+          <p>Merci de vous être enregistrée sur Omniscient ! Veuillez cliquer sur le lien suivant pour confirmer votre identité :
+
+          </p><p>{{confirm_link}}
+
+          </p><p>Merci 👁️</p>
+        subject: Confirmer votre adresse email
+      reset_password:
+        html: "<p>Bonjour,\n\n</p><p>Vous avez demandé une réinitialisation de votre mot de passe pour votre compte lié à l'adresse email suivante : {{email}}. \nVeuillez suivre le lien ci-dessous pour le réinitialiser :\n\n</p><p>{{reset_link}}\n\n</p><p>Ce lien expirera dans 10 minutes.</p>\n\n</p><p>A bientôt sur Omniscient !</p>"
+        subject: Réinitialisation de votre mot de passe
 - source: /runtime/services/google.yml
   client_config:
     app_files:
@@ -51,18 +51,14 @@ services:
       markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
       spaces: [drive]
       parents:
-      - {kind: drive#parentReference, id: 1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/parents/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0',
-        parentLink: 'https://www.googleapis.com/drive/v2/files/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0',
-        isRoot: false}
+      - {kind: drive#parentReference, id: 1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/parents/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0', parentLink: 'https://www.googleapis.com/drive/v2/files/1Yfh54haAGiR8VEv75Y80v_XddI_BwLj0', isRoot: false}
       labels: {starred: false, hidden: false, trashed: false, restricted: false, viewed: true}
       iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/pdf
       headRevisionId: 0BwztPQECGdPxdjJkZDJTU3cwWXJMVUpoOEd5aGNtWWVtYm1ZPQ
       permission: roclient
       selfLink: https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7
       lastViewedByMeDate: '2022-07-31T21:20:50.862Z'
-      userPermission: {kind: drive#permission, etag: '"vCay33-biPI2m2YUlXusQyPmFFw"',
-        id: me, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/permissions/me',
-        role: owner, type: user, pendingOwner: false}
+      userPermission: {kind: drive#permission, etag: '"vCay33-biPI2m2YUlXusQyPmFFw"', id: me, selfLink: 'https://www.googleapis.com/drive/v2/files/1g1WEGr2NH3l4MIv9OoaEw8A2GhV3TVW7/permissions/me', role: owner, type: user, pendingOwner: false}
       lastModifyingUserName: Quelqu' un
       etag: '"MTY1OTMwMTIyMTAwMA"'
       kind: drive#file
